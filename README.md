@@ -3,7 +3,7 @@ This project wraps up the third year of the Computing Science course at the Univ
 
 ## Project Aims
 This project aims to expand upon existing research in the following (non-exhaustive) ways:
-1) Modelling Transactions lyaer of the Ledger.
+1) Modelling Transactions layer of the Ledger.
 2) Modelling the virtual machine to simulate smart contract run-time.
 
 ### References (amongst others)
