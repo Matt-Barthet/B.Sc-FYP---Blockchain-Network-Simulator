@@ -1,5 +1,5 @@
 # ICT 3907: Final Year Project in Computing Science
-This project wraps up the third year of the Computing Science course at the University of Malta.  This project's artefact is a stochastic, discrete-event simulator for blockchain network and is written in the Python 3.6 programming language.
+This project wraps up the third year of the Computing Science course at the University of Malta.  It's artefact is a stochastic, discrete-event simulator for blockchain network and is written in the Python 3.6 programming language.
 
 ## Project Aims
 This project aims to expand upon existing research in the following (non-exhaustive) ways:
