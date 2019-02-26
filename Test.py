@@ -1,4 +1,5 @@
 from Util import *
+import numpy as np
 
 '''
 Transaction (pure python) class represents an on-chain transaction.
@@ -11,6 +12,7 @@ class Transaction:
         self.from_address = from_address
         self.value = value
         self.fee = fee
+
 
 '''
 Block (pure python) class represents a collection of on-chain transactions.
@@ -25,6 +27,7 @@ class Block:
         self.process = process
         self.depth = depth
         self.transactions = transactions
+
 
 '''
 Block Tree class represent the collection of blocks in the network.
@@ -50,9 +53,14 @@ class Blocktree(Pyc.CComponent):
         self.addMessageBoxImport("Process", self.r_lastBlock, "Last Block")
         self.addMessageBoxExport("Process", self.v_appendedBlock, "Appended Block")
 
-    #TODO
-    def appendBlock(self):
-        print("Appending Block")
+    '''
+    Adding the given block to the list of blocks held by the block tree.
+    Updating the appendedBlock Variable to notify all the process of the latest block to the tree.
+    '''
+    def appendBlock(self, block):
+        self.blocks.append(block)
+        self.v_appendedBlock = self.v_appendedBlock.setValue(block.hash)
+
 
 '''
 Oracle class represents the abstract oracle entity.
@@ -60,15 +68,18 @@ Randomly selects the next winning process based on their merit.
 '''
 class Oracle(Pyc.CComponent):
 
-    def __init__(self, name):
+    def __init__(self, name, total_merit):
         Pyc.CComponent.__init__(self, name)
 
         '''
         Defining the system variables and references used by the process class.
         These will be used in communication through the message boxes.
         '''
+        self.merits = {}
+        self.last_time = time.time()
+        self.total_merit = total_merit
         self.v_tokenHolder = self.addVariable("Token Holder", Pyc.TVarType.t_string, "0x0")
-        self.v_meanBlockTime = self.addVariable("Mean Block Time", Pyc.TVarType.t_float, 0.0)
+        self.v_meanBlockTime = self.addVariable("Mean Block Time", Pyc.TVarType.t_float, 1.0)
         self.v_tokenGenerated = self.addVariable("Token Generated", Pyc.TVarType.t_bool, False)
         self.r_merit = self.addReference("Merit")
         self.r_address = self.addReference("Address")
@@ -96,39 +107,54 @@ class Oracle(Pyc.CComponent):
         Defining the transitions between states of the process automaton.
         '''
         self.waitingToGenerated = self.waiting.addTransition("Waiting-to-Generated")
-        self.waitingToGenerated.setCondition(self.generatedCondition)
+        self.waitingToGenerated.setCondition(self.generatedCondition, True)
         self.waitingToGenerated.addTarget(self.tokenGenerated)
 
         self.generatedToWaiting = self.tokenGenerated.addTransition("Generated-to-Waiting")
-        self.generatedToWaiting.setCondition(self.waitingCondition)
+        self.generatedToWaiting.setCondition(self.generatedCondition, False)
         self.generatedToWaiting.addTarget(self.waiting)
 
-    '''
-    Defining the conditions for the transitions of the oracle automaton.
-    '''
-    #TODO
-    def generatedCondition(self):
-        return True
+        '''
+        Defining the Piecewise Deterministic Markov Process which determines how the oracle evolves through time.
+        '''
+        self.addPDMPManager("PDMP Manager")
 
-    #TODO
-    def waitingCondition(self):
-        return True
+    '''
+    Creates a dictionary mapping the addresses of processes to their merit for the selection process.
+    '''
+    def addProcesses(self, processes):
+        for i in range(0, len(processes)):
+            normalised_merit = processes[i].v_merit.value() / self.total_merit
+            self.merits.update({processes[i].v_address.value(): normalised_merit})
 
     '''
     Oracle Method to choose the next process to generate the latest block.
-    Generates a token which updates all the processes with the address of the selected process.
-    Once complete, the method delays before entering the waiting state again.
+    Generates a token and sets the token holder to the chosen process' address.
+    Once complete, the last block time is set to the current time to send the oracle back into a waiting state.
     '''
-    #TODO
     def selectProcess(self):
-        print ("Selecting Process")
+        choice = np.random.choice(list(self.merits.keys()), 1, p=list(self.merits.values()))
+        self.v_tokenHolder = self.v_tokenHolder.setValue(choice[0])
+        self.v_tokenGenerated = self.v_tokenGenerated.setValue(True)
+        self.last_time = time.time()
+
+    '''
+    The generated condition fires true iff the elapsed time since the last process selection 
+    is greater than the mean block time. When the generated condition fires false the oracle
+    assumes the waiting state.
+    '''
+    def generatedCondition(self):
+        if time.time() - self.last_time > self.v_meanBlockTime.value():
+            return True
+        return False
+
 
 '''
 Process class represents the miners in a PoW blockchain network.
 Their network power is depicted by their merit.
 '''
 class Process(Pyc.CComponent):
-    def __init__(self, name):
+    def __init__(self, name, address, merit):
         Pyc.CComponent.__init__(self, name)
 
         '''
@@ -145,8 +171,8 @@ class Process(Pyc.CComponent):
         '''
         self.v_meanTransitTime = self.addVariable("Mean Transit Time", Pyc.TVarType.t_float, 0.0)
         self.v_lastBlock = self.addVariable("Last Block", Pyc.TVarType.t_string, "0x0")
-        self.v_merit = self.addVariable("Merit", Pyc.TVarType.t_int, 0)
-        self.v_address = self.addVariable("Address", Pyc.TVarType.t_string, "0x0")
+        self.v_merit = self.addVariable("Merit", Pyc.TVarType.t_int, merit)
+        self.v_address = self.addVariable("Address", Pyc.TVarType.t_string, address)
 
         '''
         Defining the variables that are referenced by the process class.
@@ -192,42 +218,45 @@ class Process(Pyc.CComponent):
         '''
         Defining the transitions between states of the process automaton.
         '''
-        workingToClaim = self.working.addTransition("Working-to-Claim")
-        workingToClaim.setCondition(self.tokenGeneratedCondition, True)
-        workingToClaim.addTarget(self.claimToken, Pyc.TTransType.trans)
+        self.workingToClaim = self.working.addTransition("Working-to-Claim")
+        self.workingToClaim.setCondition(self.tokenGeneratedCondition, True)
+        self.workingToClaim.addTarget(self.claimToken, Pyc.TTransType.trans)
 
-        claimToToken = self.claimToken.addTransition("Claim-to-Token")
-        claimToToken.setCondition(self.holdTokenCondition, True)
-        claimToToken.addTarget(self.tokenHeld, Pyc.TTransType.trans)
+        self.claimToToken = self.claimToken.addTransition("Claim-to-Token")
+        self.claimToToken.setCondition(self.holdTokenCondition, True)
+        self.claimToToken.addTarget(self.tokenHeld, Pyc.TTransType.trans)
 
-        claimToWorking = self.claimToken.addTransition("Claim-to-Working")
-        claimToWorking.setCondition(self.holdTokenCondition, False)
-        claimToWorking.addTarget(self.working, Pyc.TTransType.trans)
+        self.claimToWorking = self.claimToken.addTransition("Claim-to-Working")
+        self.claimToWorking.setCondition(self.holdTokenCondition, False)
+        self.claimToWorking.addTarget(self.working, Pyc.TTransType.trans)
 
-        tokenToWorking = self.tokenHeld.addTransition("Token-to-Working")
-        tokenToWorking.setCondition(self.workingCondition, True)
-        tokenToWorking.addTarget(self.working, Pyc.TTransType.trans)
+        self.tokenToWorking = self.tokenHeld.addTransition("Token-to-Working")
+        self.tokenToWorking.setCondition(self.workingCondition, True)
+        self.tokenToWorking.addTarget(self.working, Pyc.TTransType.trans)
 
         '''
-        Defining the transitions between states of the block automaton
+        Defining the transitions between states of the block automaton.
         '''
-        idleToTransit = self.idle.addTransition("Idle-to-Transit")
-        idleToTransit.setCondition(self.blockTransitCondition)
-        idleToTransit.addTarget(self.transit, Pyc.TTransType.trans)
+        self.idleToTransit = self.idle.addTransition("Idle-to-Transit")
+        self.idleToTransit.setCondition(self.blockTransitCondition)
+        self.idleToTransit.addTarget(self.transit, Pyc.TTransType.trans)
 
-        transitToArrived= self.transit.addTransition("Transit-to-Arrived")
-        transitToArrived.setCondition(self.blockArrivedCondition)
-        transitToArrived.addTarget(self.arrived, Pyc.TTransType.trans)
+        self.transitToArrived = self.transit.addTransition("Transit-to-Arrived")
+        self.transitToArrived.setCondition(self.blockArrivedCondition)
+        self.transitToArrived.addTarget(self.arrived, Pyc.TTransType.trans)
 
-        arriveToIdle = self.transit.addTransition("Arrive-to-Idle")
-        arriveToIdle.setCondition(self.blockIdleCondition)
-        arriveToIdle.addTarget(self.idle, Pyc.TTransType.trans)
+        self.arriveToIdle = self.transit.addTransition("Arrive-to-Idle")
+        self.arriveToIdle.setCondition(self.blockIdleCondition)
+        self.arriveToIdle.addTarget(self.idle, Pyc.TTransType.trans)
 
     '''
-    Defining the conditions for the transitions of the process automaton.
+    Defining the conditions for the transitions of the process automaton:
+    Token Generated: if the latest reference update contains true return true.
+    Hold Token: if the address of token holder is this process return true.
+    Working: if the appended block is updated the process returns to working state and calls newPendingBlock.
     '''
     def tokenGeneratedCondition(self):
-        return self.r_tokenGenerated
+        return self.r_tokenGenerated.value(self.r_tokenGenerated.cnctCount() - 1)
 
     #TODO
     def workingCondition(self):
@@ -256,17 +285,22 @@ class Process(Pyc.CComponent):
     Method adds a new pending block to the list stored by the process.
     First checks if the block is present in the list of pending/known blocks.
     '''
-    #TODO
-    def newPendingBlock(self):
-        print("New Pending Block")
+    def newPendingBlock(self, new_block):
+        self.pendingBlocks.append(new_block)
 
     '''
     Method simulates the reception of a new block by the process.
-    This places the new block in the list of known blocks if the father is found in the list.
     '''
     #TODO
-    def receiveBlock(self):
-        print("Receive new block")
+    def receiveBlock(self, new_block):
+
+        """
+        Adds the new block to the known list of blocks iff its father is in the list.
+        """
+        if new_block.father in self.knownBlocks:
+            self.knownBlocks.append(new_block)
+        else:
+            print()
 
     '''
     Method to "mine" a token if the selected process is the token holder.
@@ -275,12 +309,7 @@ class Process(Pyc.CComponent):
     def consumeToken(self):
         print("Conusuming Token")
 
-    '''
-    Method to put the process into a "working" state.
-    '''
-    #TODO
-    def delayProcess(self):
-        print("Delaying Process")
+
 
 '''
 Simulator class represents the implemented simulator system.
@@ -294,16 +323,17 @@ class Simulator(Pyc.CSystem):
         Initialising system oracle and block tree.
         Only one of each is needed in all configurations of the simulator.
         '''
-        self.oracle = Oracle("System Oracle")
         self.blocktree = Blocktree("Blocktree")
+        self.oracle = Oracle("System Oracle", 15)
 
         '''
         Initialising the system miners or processes.
         The amount of processes varies according to the configuration of the simulator.
         '''
         self.processes = []
+
         for i in range(0, process_count):
-            self.processes.append(Process("Process " + str(i + 1)))
+            self.processes.append(Process("Process " + str(i + 1), str(i + 1), i + 1))
 
             '''
             Connecting the message boxes of the system components.
@@ -312,6 +342,8 @@ class Simulator(Pyc.CSystem):
             self.connect(self.oracle, "Process", self.processes[i], "Oracle")
             self.connect(self.processes[i], "Blocktree", self.blocktree, "Process")
 
+        self.oracle.addProcesses(self.processes)
+
 '''
 Creating an instance of the Simulator.
 Configurations should be taken from the XML file in the project directory.
@@ -319,4 +351,10 @@ Configurations should be taken from the XML file in the project directory.
 
 #TODO - Script which runs the simulator.
 simulator = Simulator("Simulator", 5)
-print(simulator.processes[4].name())
+
+'''
+Simulating the system according to the configuration specified.
+Simulation data is stored for analysis.
+'''
+#simulator.simulate()
+
