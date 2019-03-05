@@ -1,5 +1,6 @@
 from Util import *
 import numpy as np
+import hashlib
 
 '''
 Transaction (pure python) class represents an on-chain transaction.
@@ -20,13 +21,27 @@ Blocks contain a dictionary of the transactions they encapsulate.
 Transactions are selected from an available pool based off their fee.
 '''
 class Block:
-    def __init__(self, hash, father, timestamp, process, depth, transactions):
-        self.hash = hash
-        self.father = father
-        self.timestamp = timestamp
-        self.process = process
-        self.depth = depth
-        self.transactions = transactions
+    def __init__(self, father = None, process = None, transactions = []):
+
+        """
+        If the block provided is not the genesis block, create the object according to parent block.
+        If the block has no father, ie: is the genesis block of the blockchain, create a preset genesis block.
+        """
+        if father is not None:
+            self.father = father
+            self.timestamp = time.time()
+            self.process = process
+            self.depth = father.depth + 1
+            self.transactions = transactions
+            string_to_hash = father.hash + str(self.timestamp) + process
+            hash_object = hashlib.sha256(string_to_hash.encode('utf-8'))
+            self.hash = hash_object.hexdigest()
+        else:
+            self.depth = 0
+            self.timestamp = time.time()
+            self.father = None
+            hash_object = hashlib.sha256(b'genesis')
+            self.hash = hash_object.hexdigest()
 
 
 '''
@@ -38,10 +53,16 @@ class Blocktree(Pyc.CComponent):
         Pyc.CComponent.__init__(self, name)
 
         '''
+        Creating the systems genesis block and dictionary of blocks.
+        The dictionary maps {block hash -> block object}
+        '''
+        genesis = Block()
+        self.blocks = {genesis.hash: genesis}
+
+        '''
         Defining the variables and references used by the process class.
         These will be used in communication through the message boxes.
         '''
-        self.blocks = []
         self.v_appendedBlock = self.addVariable("Appended Block", Pyc.TVarType.t_string, "0x0")
         self.r_lastBlock = self.addReference("Last Block")
 
@@ -53,13 +74,17 @@ class Blocktree(Pyc.CComponent):
         self.addMessageBoxImport("Process", self.r_lastBlock, "Last Block")
         self.addMessageBoxExport("Process", self.v_appendedBlock, "Appended Block")
 
+        '''
+        Creating sensitive method that is called whenever the reference last block changes.
+        '''
+        self.r_lastBlock.addSensitiveMethod("Append Block", self.appendBlock)
+
     '''
     Adding the given block to the list of blocks held by the block tree.
     Updating the appendedBlock Variable to notify all the process of the latest block to the tree.
     '''
-    def appendBlock(self, block):
-        self.blocks.append(block)
-        self.v_appendedBlock = self.v_appendedBlock.setValue(block.hash)
+    def appendBlock(self):
+        self.v_appendedBlock = self.v_appendedBlock.setValue(self.r_lastBlock.value(self.r_lastBlock.cnct() - 1))
 
 
 '''
@@ -114,11 +139,6 @@ class Oracle(Pyc.CComponent):
         self.generatedToWaiting.setCondition(self.generatedCondition, False)
         self.generatedToWaiting.addTarget(self.waiting)
 
-        '''
-        Defining the Piecewise Deterministic Markov Process which determines how the oracle evolves through time.
-        '''
-        self.addPDMPManager("PDMP Manager")
-
     '''
     Creates a dictionary mapping the addresses of processes to their merit for the selection process.
     '''
@@ -154,7 +174,7 @@ Process class represents the miners in a PoW blockchain network.
 Their network power is depicted by their merit.
 '''
 class Process(Pyc.CComponent):
-    def __init__(self, name, address, merit):
+    def __init__(self, name, address, merit, blocktree):
         Pyc.CComponent.__init__(self, name)
 
         '''
@@ -165,6 +185,7 @@ class Process(Pyc.CComponent):
         '''
         self.pendingBlocks = []
         self.knownBlocks = []
+        self.blocktree = blocktree
         '''
         Defining the variables used by the process class.
         These will be used in communication through the message boxes.
@@ -209,11 +230,9 @@ class Process(Pyc.CComponent):
         Constructing the Automaton which contains the possible states of the block objects.
         The initial state of a block is set to idle.
         '''
-        self.blockAutomaton = self.addAutomaton("Block Automaton")
-        self.idle = self.addState("Block Automaton", "Idle", 0)
-        self.transit = self.addState("Block Automaton", "Transit", 1)
-        self.arrived = self.addState("Block Automaton", "Arrived", 2)
-        self.blockAutomaton.setInitState(self.idle)
+        self.blockAutomatons = []
+        self.states = []
+        self.transitions = []
 
         '''
         Defining the transitions between states of the process automaton.
@@ -227,88 +246,124 @@ class Process(Pyc.CComponent):
         self.claimToToken.addTarget(self.tokenHeld, Pyc.TTransType.trans)
 
         self.claimToWorking = self.claimToken.addTransition("Claim-to-Working")
-        self.claimToWorking.setCondition(self.holdTokenCondition, False)
+        self.claimToWorking.setCondition(self.workingCondition, True)
         self.claimToWorking.addTarget(self.working, Pyc.TTransType.trans)
 
         self.tokenToWorking = self.tokenHeld.addTransition("Token-to-Working")
-        self.tokenToWorking.setCondition(self.workingCondition, True)
         self.tokenToWorking.addTarget(self.working, Pyc.TTransType.trans)
+
+        '''
+        Setting the sensitive methods which are called whenever their respective transition is fired.
+        '''
+        self.tokenToWorking.addSensitiveMethod("Consume Token", self.consumeToken)
+        self.claimToWorking.addSensitiveMethod("New Pending Block", self.newPendingBlock)
+
+    '''
+    Method to create a new automaton for a new block object.
+    Automaton, states and transitions are added to their respective lists.
+    '''
+    def addBlockAutomaton(self, block):
+        hash = block.hash
+        blockAutomaton = self.addAutomaton(hash)
+        idle = self.addState(hash, "Idle", 0)
+        transit = self.addState(hash, "Transit", 1)
+        arrived = self.addState(hash, "Arrived", 2)
+        blockAutomaton.setInitState(idle)
 
         '''
         Defining the transitions between states of the block automaton.
         '''
-        self.idleToTransit = self.idle.addTransition("Idle-to-Transit")
-        self.idleToTransit.setCondition(self.blockTransitCondition)
-        self.idleToTransit.addTarget(self.transit, Pyc.TTransType.trans)
+        idleToTransit = idle.addTransition("Idle-to-Transit")
+        idleToTransit.setCondition(self.blockTransitCondition(hash))
+        idleToTransit.addTarget(transit, Pyc.TTransType.trans)
 
-        self.transitToArrived = self.transit.addTransition("Transit-to-Arrived")
-        self.transitToArrived.setCondition(self.blockArrivedCondition)
-        self.transitToArrived.addTarget(self.arrived, Pyc.TTransType.trans)
+        transitToArrived = transit.addTransition("Transit-to-Arrived")
+        transitToArrived.setCondition(self.blockArrivedCondition(block))
+        transitToArrived.addTarget(arrived, Pyc.TTransType.trans)
 
-        self.arriveToIdle = self.transit.addTransition("Arrive-to-Idle")
-        self.arriveToIdle.setCondition(self.blockIdleCondition)
-        self.arriveToIdle.addTarget(self.idle, Pyc.TTransType.trans)
+        arrivedToIdle = transit.addTransition("Arrived-to-Idle")
+        arrivedToIdle.setCondition(self.blockIdleCondition(block))
+        arrivedToIdle.addTarget(idle, Pyc.TTransType.trans)
+
+        arrivedToIdle.addSensitiveMethod("Receive Block", self.receiveBlock(block))
+
+        self.blockAutomatons.append(blockAutomaton)
+        self.states.append(idle)
+        self.states.append(transit)
+        self.states.append(arrived)
+        self.transitions.append(idleToTransit)
+        self.transitions.append(transitToArrived)
+        self.transitions.append(arrivedToIdle)
+
+    '''
+    Defining the sensitive methods for the transitions defined above.
+    Consume Token: creates a new block object, appends it to known blocks and updates last block.
+    '''
+    def consumeToken(self):
+        father = self.knownBlocks[len(self.knownBlocks) - 1]
+        author = self.v_address.value()
+        block = Block(father, author, [])
+        self.knownBlocks.append(block)
+        self.v_lastBlock = self.v_lastBlock.setValue(block.hash)
+
+    '''
+    Adds the new pending block to the list of pending blocks.
+    The block begins it's transmission from the chosen process to this process.
+    '''
+    def newPendingBlock(self):
+        self.pendingBlocks.append(self.blocktree.blocks[self.r_appendedBlock.value(self.r_appendedBlock.cnctCount() - 1)])
+        self.addBlockAutomaton(self.blocktree.blocks[self.r_appendedBlock.value(self.r_appendedBlock.cnctCount() - 1)])
 
     '''
     Defining the conditions for the transitions of the process automaton:
     Token Generated: if the latest reference update contains true return true.
-    Hold Token: if the address of token holder is this process return true.
-    Working: if the appended block is updated the process returns to working state and calls newPendingBlock.
     '''
     def tokenGeneratedCondition(self):
         return self.r_tokenGenerated.value(self.r_tokenGenerated.cnctCount() - 1)
 
-    #TODO
-    def workingCondition(self):
-        return True
-
-    #TODO
+    '''
+    Hold Token: if the address of token holder is this process return true.
+    '''
     def holdTokenCondition(self):
-        return True
+        if self.r_tokenHolder.value(self.r_tokenGenerated.cnctCount() - 1) == self.v_address:
+            return True
+        return False
+
+    '''
+    Working: if the appended block is updated the process returns to working state and calls newPendingBlock if
+    the new pending block is not found in the list of known/pending blocks.
+    '''
+    def workingCondition(self):
+        if self.r_appendedBlock.value(self.r_appendedBlock.cnctCount() - 1) != self.v_lastBlock:
+            if self.r_appendedBlock.value(self.r_appendedBlock.cnctCount() - 1) not in self.pendingBlocks:
+                if self.r_appendedBlock.value(self.r_appendedBlock.cnctCount() - 1) not in self.knownBlocks:
+                    return True
+        return False
 
     '''
     Defining the conditions for the transitions of the block automaton.
     '''
-    #TODO
-    def blockTransitCondition(self):
-        return True
+    def blockTransitCondition(self, block):
+        if block in self.pendingBlocks:
+            return True
+        return False
 
-    #TODO
-    def blockArrivedCondition(self):
-        return True
+    def blockArrivedCondition(self, block):
+        if time.time() - block.timestamp > self.v_meanTransitTime.value():
+            return True
+        return False
 
-    #TODO
-    def blockIdleCondition(self):
-        return True
-
-    '''
-    Method adds a new pending block to the list stored by the process.
-    First checks if the block is present in the list of pending/known blocks.
-    '''
-    def newPendingBlock(self, new_block):
-        self.pendingBlocks.append(new_block)
+    def blockIdleCondition(self, block):
+        if block.father in self.knownBlocks:
+            return True
+        return False
 
     '''
     Method simulates the reception of a new block by the process.
+    Adds the new block to the known list of blocks iff its father is in the list.
     '''
-    #TODO
-    def receiveBlock(self, new_block):
-
-        """
-        Adds the new block to the known list of blocks iff its father is in the list.
-        """
-        if new_block.father in self.knownBlocks:
-            self.knownBlocks.append(new_block)
-        else:
-            print()
-
-    '''
-    Method to "mine" a token if the selected process is the token holder.
-    '''
-    #TODO
-    def consumeToken(self):
-        print("Conusuming Token")
-
+    def receiveBlock(self, block):
+        self.knownBlocks.append(block)
 
 
 '''
@@ -333,7 +388,7 @@ class Simulator(Pyc.CSystem):
         self.processes = []
 
         for i in range(0, process_count):
-            self.processes.append(Process("Process " + str(i + 1), str(i + 1), i + 1))
+            self.processes.append(Process("Process " + str(i + 1), str(i + 1), i + 1, self.blocktree))
 
             '''
             Connecting the message boxes of the system components.
@@ -349,12 +404,20 @@ Creating an instance of the Simulator.
 Configurations should be taken from the XML file in the project directory.
 '''
 
-#TODO - Script which runs the simulator.
-simulator = Simulator("Simulator", 5)
+if __name__ == '__main__':
+    try:
+        simulator = Simulator("Simulator", 5)
+        #simulator.loadParameters("Simulator.xml")
+        beginTime = time.time()
+        simulator.simulate()
+        if simulator.MPIRank() > 0:
+            exit(0)
+        endTime = time.time()
+        print ("Simulation time = %.2f s"% (endTime - beginTime))
+    except Exception as e:
+        print(type(e),e)
 
 '''
 Simulating the system according to the configuration specified.
 Simulation data is stored for analysis.
 '''
-#simulator.simulate()
-
