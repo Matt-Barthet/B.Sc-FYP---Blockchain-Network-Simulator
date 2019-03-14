@@ -64,6 +64,7 @@ class Blocktree(Pyc.CComponent):
         '''
         self.v_appendedBlock = self.addVariable("Appended Block", Pyc.TVarType.t_string, genesis.hash)
         self.r_lastBlock = self.addReference("Last Block")
+        self.r_selection = self.addReference("Selected Process")
 
         '''
         Creating the message boxes that will be used to communicate with the processes
@@ -73,17 +74,20 @@ class Blocktree(Pyc.CComponent):
         self.addMessageBoxImport("Process", self.r_lastBlock, "Last Block")
         self.addMessageBoxExport("Process", self.v_appendedBlock, "Appended Block")
 
+        self.addMessageBox("System Oracle")
+        self.addMessageBoxImport("System Oracle", self.r_selection, "Token Holder")
+
         '''
         Creating sensitive method that is called whenever the reference last block changes.
         '''
-        self.r_lastBlock.addSensitiveMethod("Append Block", self.appendBlock, 0)
+        self.r_lastBlock.addSensitiveMethod("Append Block", self.appendBlock)
 
     '''
     Adding the given block to the list of blocks held by the block tree.
     Updating the appendedBlock Variable to notify all the process of the latest block to the tree.
     '''
     def appendBlock(self):
-        self.v_appendedBlock.setValue(self.r_lastBlock.value(self.r_lastBlock.cnctCount() - 1))
+        self.v_appendedBlock.setValue(self.r_lastBlock.value(int(self.r_selection.value(0)) - 1))
 
 
 '''
@@ -103,20 +107,19 @@ class Oracle(Pyc.CComponent):
         self.last_time = time.time()
         self.total_merit = total_merit
         self.v_tokenHolder = self.addVariable("Token Holder", Pyc.TVarType.t_string, "0x0")
-        self.v_meanBlockTime = self.addVariable("Mean Block Time", Pyc.TVarType.t_float, 0.1)
+        self.v_meanBlockTime = self.addVariable("Mean Block Time", Pyc.TVarType.t_float, 1)
         self.v_tokenGenerated = self.addVariable("Token Generated", Pyc.TVarType.t_bool, False)
-        self.r_merit = self.addReference("Merit")
-        self.r_address = self.addReference("Address")
 
         '''
         Creating the message boxes that will be used to communicate with the oracle and block tree.
         Wiring the variables according to their direction in communication.
         '''
         self.addMessageBox("Process")
-        self.addMessageBoxImport("Process", self.r_merit, "Merit")
-        self.addMessageBoxImport("Process", self.r_address, "Address")
         self.addMessageBoxExport("Process", self.v_tokenHolder, "Token Holder")
         self.addMessageBoxExport("Process", self.v_tokenGenerated, "Token Generated")
+
+        self.addMessageBox("Blocktree")
+        self.addMessageBoxExport("Blocktree", self.v_tokenHolder, "Token Holder")
 
         '''
         Constructing the Automaton which contains the states of the oracle class.
@@ -155,7 +158,6 @@ class Oracle(Pyc.CComponent):
     '''
     def selectProcess(self):
         choice = np.random.choice(list(self.merits.keys()), 1, p=list(self.merits.values()))
-        print ("Selecting Process:", choice[0])
         self.v_tokenHolder.setValue(choice[0])
         self.v_tokenGenerated.setValue(False)
         self.last_time = time.time()
@@ -169,7 +171,7 @@ class Oracle(Pyc.CComponent):
     assumes the waiting state.
     '''
     def generatedCondition(self):
-        if time.time() - self.last_time > self.v_meanBlockTime.value():
+        if time.time() - self.last_time > self.v_meanBlockTime.value() and self.v_tokenGenerated.value() is False:
             return True
         return False
 
@@ -196,7 +198,7 @@ class Process(Pyc.CComponent):
         Defining the variables used by the process class.
         These will be used in communication through the message boxes.
         '''
-        self.v_meanTransitTime = self.addVariable("Mean Transit Time", Pyc.TVarType.t_float, 0.05)
+        self.v_meanTransitTime = self.addVariable("Mean Transit Time", Pyc.TVarType.t_float, 0.1)
         self.v_lastBlock = self.addVariable("Last Block", Pyc.TVarType.t_string, genesis.hash)
         self.v_merit = self.addVariable("Merit", Pyc.TVarType.t_int, merit)
         self.v_address = self.addVariable("Address", Pyc.TVarType.t_string, address)
@@ -271,16 +273,16 @@ class Process(Pyc.CComponent):
     def addBlockAutomaton(self, block):
         hash = block.hash
 
-        self.blockAutomatons.update({hash: self.addAutomaton("Block:" + hash)})
+        '''self.blockAutomatons.update({hash: self.addAutomaton("Block:" + hash)})
         self.states.update({"Idle:" + hash: self.addState("Block:" + hash, "Idle:" + hash, 0)})
         self.states.update({"Transit:" + hash: self.addState("Block:" + hash, "Transit:" + hash, 1)})
         self.states.update({"Arrived:" + hash: self.addState("Block:" + hash, "Arrived:" + hash, 2)})
-        self.blockAutomatons[hash].setInitState(self.states["Idle:" + hash])
+        self.blockAutomatons[hash].setInitState(self.states["Idle:" + hash])'''
 
         '''
         Defining the transitions between states of the block automaton.
         '''
-        self.transitions.update({"Idle-to-Transit:" + hash: self.states["Idle:" + hash].addTransition("Idle-to-Transit:" + hash)})
+        '''self.transitions.update({"Idle-to-Transit:" + hash: self.states["Idle:" + hash].addTransition("Idle-to-Transit:" + hash)})
         self.transitions["Idle-to-Transit:" + hash].setCondition(self.blockTransitCondition(block))
         self.transitions["Idle-to-Transit:" + hash].addTarget(self.states["Idle:" + hash])
 
@@ -290,7 +292,7 @@ class Process(Pyc.CComponent):
 
         self.transitions.update({"Arrived-to-Idle:" + hash: self.states["Arrived:" + hash].addTransition("Arrived-to-Idle:" + hash)})
         self.transitions["Arrived-to-Idle:" + hash].setCondition(self.blockIdleCondition(block))
-        self.transitions["Arrived-to-Idle:" + hash].addTarget(self.states["Arrived:" + hash])
+        self.transitions["Arrived-to-Idle:" + hash].addTarget(self.states["Arrived:" + hash])'''
 
 
     '''
@@ -298,38 +300,38 @@ class Process(Pyc.CComponent):
     Consume Token: creates a new block object, appends it to known blocks and updates last block.
     '''
     def consumeToken(self):
-        print ("Creating Block")
         father = self.knownBlocks[len(self.knownBlocks) - 1]
-        print(father)
         author = self.v_address.value()
         block = Block(father, author, [])
         self.knownBlocks.append(block)
         self.v_lastBlock.setValue(block.hash)
         self.blocktree.blocks.update({block.hash: block})
+        #print ("Creating Block with Process:", self.v_address.value(), "and object:", block)
+
 
     '''
     Adds the new pending block to the list of pending blocks.
     The block begins it's transmission from the chosen process to this process.
     '''
     def newPendingBlock(self):
-        print("New pending block")
-        self.pendingBlocks.append(self.blocktree.blocks[self.r_appendedBlock.value(self.r_appendedBlock.cnctCount() - 1)])
-        self.addBlockAutomaton(self.blocktree.blocks[self.r_appendedBlock.value(self.r_appendedBlock.cnctCount() - 1)])
+        #print("New pending block at process: ", self.v_address.value(), "with block:", self.blocktree.blocks[self.r_appendedBlock.value(0)])
+        self.pendingBlocks.append(self.blocktree.blocks[self.r_appendedBlock.value(0)])
+        self.addBlockAutomaton(self.blocktree.blocks[self.r_appendedBlock.value(0)])
 
     '''
     Defining the conditions for the transitions of the process automaton:
     Token Generated: if the latest reference update contains true return true.
     '''
     def tokenGeneratedCondition(self):
-        return self.r_tokenGenerated.value(self.r_tokenGenerated.cnctCount() - 1)
+        return self.r_tokenGenerated.value(0)
 
 
     '''
     Hold Token: if the address of token holder is this process return true.
     '''
     def holdTokenCondition(self):
-        if self.r_tokenHolder.value(self.r_tokenGenerated.cnctCount() - 1) == self.v_address.value():
-            if not self.r_tokenGenerated.value(self.r_tokenGenerated.cnctCount() - 1):
+        if self.r_tokenHolder.value(0) == self.v_address.value():
+            if not self.r_tokenGenerated.value(0):
                 return True
         return False
 
@@ -338,13 +340,12 @@ class Process(Pyc.CComponent):
     the new pending block is not found in the list of known/pending blocks.
     '''
     def workingCondition(self):
-        appended_block = self.r_appendedBlock.value(self.r_appendedBlock.cnctCount() - 1)
-        if appended_block != self.v_lastBlock:
+        if self.r_appendedBlock.value(0) != self.v_lastBlock.value():
             for i in range(0, len(self.pendingBlocks)):
-                if self.pendingBlocks[i] == appended_block:
+                if self.pendingBlocks[i].hash == self.r_appendedBlock.value(0):
                     return False
             for i in range(0, len(self.knownBlocks)):
-                if self.knownBlocks[i] == appended_block:
+                if self.knownBlocks[i].hash == self.r_appendedBlock.value(0):
                     return False
             return True
         return False
@@ -377,6 +378,7 @@ class Process(Pyc.CComponent):
     '''
     def receiveBlock(self, block):
         self.knownBlocks.append(block)
+        self.v_lastBlock.setValue(block.hash)
         self.pendingBlocks.remove(block)
 
 
@@ -396,6 +398,8 @@ class Simulator(Pyc.CSystem):
         '''
         self.blocktree = Blocktree("Blocktree", genesis)
         self.oracle = Oracle("System Oracle", 15)
+
+        self.connect(self.blocktree, "System Oracle", self.oracle, "Blocktree")
 
         '''
         Initialising the system miners or processes.
@@ -461,6 +465,7 @@ if __name__ == '__main__':
     timeTaken = endTime - startTime
 
     print("Time taken: ", timeTaken, "seconds.")
+    print("Blocktree structure:", simulator.blocktree.blocks)
 
     meanConsistency = consistencyRate.means()
     meanDelay = worstDelay.means()
