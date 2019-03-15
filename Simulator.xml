@@ -1,2 +1,2 @@
-<PY_PARAM NAME="Simulator Parameters" TMAX="1000" SEQ_NB="1000000" RNG="yarn5" RNG_S="0">
+<PY_PARAM NAME="Simulator Parameters" TMAX="1000" SEQ_NB="100000" RNG="yarn5" RNG_S="0">
 </PY_PARAM>

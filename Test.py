@@ -1,6 +1,7 @@
 from Util import *
 import numpy as np
 import hashlib
+from matplotlib import pyplot as plt
 
 '''
 Transaction (pure python) class represents an on-chain transaction.
@@ -151,7 +152,7 @@ class Oracle(Pyc.CComponent):
         for i in range(0, len(processes)):
             normalised_merit = processes[i].v_merit.value() / self.total_merit
             self.merits.update({processes[i].v_address.value(): normalised_merit})
-            self.transitTimes.update({processes[i].v_address.value(): processes[i].v_meanTransitTime})
+            self.transitTimes.update({processes[i].v_address.value(): processes[i].v_meanTransitTime.value()})
 
     '''
     Oracle Method to choose the next process to generate the latest block.
@@ -277,26 +278,24 @@ class Process(Pyc.CComponent):
     def addBlockAutomaton(self, block):
         hash = block.hash
 
-        '''self.blockAutomatons.update({hash: self.addAutomaton("Block:" + hash)})
+        self.blockAutomatons.update({hash: self.addAutomaton("Block:" + hash)})
         self.states.update({"Idle:" + hash: self.addState("Block:" + hash, "Idle:" + hash, 0)})
         self.states.update({"Transit:" + hash: self.addState("Block:" + hash, "Transit:" + hash, 1)})
         self.states.update({"Arrived:" + hash: self.addState("Block:" + hash, "Arrived:" + hash, 2)})
-        self.blockAutomatons[hash].setInitState(self.states["Transit:" + hash])'''
 
         '''
         Defining the transitions between states of the block automaton.
         '''
-        '''self.transitions.update({"Idle-to-Transit:" + hash: self.states["Idle:" + hash].addTransition("Idle-to-Transit:" + hash)})
+        self.transitions.update({"Idle-to-Transit:" + hash: self.states["Idle:" + hash].addTransition("Idle-to-Transit:" + hash)})
         self.transitions["Idle-to-Transit:" + hash].setCondition(self.blockTransitCondition(block))
         self.transitions["Idle-to-Transit:" + hash].addTarget(self.states["Idle:" + hash])
-
         self.transitions.update({"Transit-to-Arrived:" + hash: self.states["Transit:" + hash].addTransition("Transit-to-Arrived:" + hash)})
         self.transitions["Transit-to-Arrived:" + hash].setCondition(self.blockArrivedCondition(block))
         self.transitions["Transit-to-Arrived:" + hash].addTarget(self.states["Transit:" + hash])
-
         self.transitions.update({"Arrived-to-Idle:" + hash: self.states["Arrived:" + hash].addTransition("Arrived-to-Idle:" + hash)})
         self.transitions["Arrived-to-Idle:" + hash].setCondition(self.blockIdleCondition(block))
-        self.transitions["Arrived-to-Idle:" + hash].addTarget(self.states["Arrived:" + hash])'''
+        self.transitions["Arrived-to-Idle:" + hash].addTarget(self.states["Arrived:" + hash])
+        self.blockAutomatons[hash].setInitState(self.states["Idle:" + hash])
 
 
     '''
@@ -311,7 +310,6 @@ class Process(Pyc.CComponent):
         self.v_lastBlock.setValue(block.hash)
         self.blocktree.blocks.update({block.hash: block})
         print ("Creating Block with Process:", self.v_address.value(), "and object:", block)
-
 
     '''
     Adds the new pending block to the list of pending blocks.
@@ -328,7 +326,6 @@ class Process(Pyc.CComponent):
     '''
     def tokenGeneratedCondition(self):
         return self.r_tokenGenerated.value(0)
-
 
     '''
     Hold Token: if the address of token holder is this process return true.
@@ -363,7 +360,7 @@ class Process(Pyc.CComponent):
         return False
 
     def blockArrivedCondition(self, block):
-        meanTransitTime = 2 / self.v_meanTransitTime.value() + self.oracle.transitTimes[self.r_tokenHolder.value(0)]
+        meanTransitTime = 2 / (self.v_meanTransitTime.value() + float(self.oracle.transitTimes[self.r_tokenHolder.value(0)]))
         if time.time() - block.timestamp > meanTransitTime:
             return True
         return False
@@ -428,7 +425,6 @@ class Simulator(Pyc.CSystem):
     2) Consistency Rate - The proportion of miners which agree on the absolute blockchain
     3) Worst Process Delay - The mean length difference between the absolute blockchain and the greatest common prefix
     '''
-
     def consensusFunction(self):
         return 1.0
 
@@ -437,7 +433,6 @@ class Simulator(Pyc.CSystem):
         for i in range(0, len(self.processes)):
             if set(self.processes[i].knownBlocks) == set(self.blocktree.blocks.values()):
                 agree += 1
-        print(agree / len(self.processes) * 100)
         return agree / len(self.processes) * 100
 
     def delayFunction(self):
@@ -455,11 +450,18 @@ Simulation data is stored for analysis.
 
 if __name__ == '__main__':
 
+    '''
+    Creating the simulator object and loading the parameters.
+    Adding the number of instants at which the indicators will be calculated.
+    '''
     simulator = Simulator("Simulator", 5)
     simulator.loadParameters("Simulator.xml")
+    simulator.addInstants(0, simulator.tMax(), 5)
 
-    simulator.addInstants(0, simulator.tMax(), 1)
-
+    '''
+    Creating the indicators that will be used to quantify the systems simulation performance.
+    Setting the properties of the extracted values for each indicator (eg. mean values).
+    '''
     consensusProbability = simulator.addIndicator("Consensus Probability", simulator.consensusFunction)
     consensusProbability.setRestitutions(Pyc.TIndicatorType.all_values)
 
@@ -469,21 +471,22 @@ if __name__ == '__main__':
     worstDelay = simulator.addIndicator("Worst Delay", simulator.delayFunction)
     worstDelay.setRestitutions(Pyc.TIndicatorType.mean_values)
 
+    '''
+    Setting the start time of the simulation.
+    Running the simulation and calculating the elapsed time.
+    Retrieving the values of the indicators and their time instants.
+    '''
     startTime = time.time()
-
     simulator.simulate()
-
     endTime = time.time()
     timeTaken = endTime - startTime
-
-    print("Time taken: ", timeTaken, "seconds.")
-    print("Blocktree structure:", simulator.blocktree.blocks)
-
     meanConsistency = consistencyRate.means()
     meanDelay = worstDelay.means()
-
     instants = simulator.instants()
+
+    print("Time taken: ", timeTaken, "seconds.")
 
     '''
     Plotting the indicators extracted from the simulation of the system.
     '''
+    #plt.show()
