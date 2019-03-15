@@ -104,6 +104,7 @@ class Oracle(Pyc.CComponent):
         These will be used in communication through the message boxes.
         '''
         self.merits = {}
+        self.transitTimes = {}
         self.last_time = time.time()
         self.total_merit = total_merit
         self.v_tokenHolder = self.addVariable("Token Holder", Pyc.TVarType.t_string, "0x0")
@@ -150,6 +151,7 @@ class Oracle(Pyc.CComponent):
         for i in range(0, len(processes)):
             normalised_merit = processes[i].v_merit.value() / self.total_merit
             self.merits.update({processes[i].v_address.value(): normalised_merit})
+            self.transitTimes.update({processes[i].v_address.value(): processes[i].v_meanTransitTime})
 
     '''
     Oracle Method to choose the next process to generate the latest block.
@@ -181,7 +183,7 @@ Process class represents the miners in a PoW blockchain network.
 Their network power is depicted by their merit.
 '''
 class Process(Pyc.CComponent):
-    def __init__(self, name, address, merit, blocktree, genesis):
+    def __init__(self, name, address, merit, blocktree, genesis, oracle):
         Pyc.CComponent.__init__(self, name)
 
         '''
@@ -191,6 +193,7 @@ class Process(Pyc.CComponent):
         Known blocks contain the list of blocks that are received by the process.
         '''
         self.blocktree = blocktree
+        self.oracle = oracle
         self.pendingBlocks = []
         self.knownBlocks = [genesis]
 
@@ -210,6 +213,7 @@ class Process(Pyc.CComponent):
         self.r_appendedBlock = self.addReference("Appended Block")
         self.r_tokenHolder = self.addReference("Token Holder")
         self.r_tokenGenerated = self.addReference("Token Generated")
+        self.r_meanTransitTimes = self.addReference("Mean Transit Times")
 
         '''
         Creating the message boxes that will be used to communicate with the oracle and block tree.
@@ -277,7 +281,7 @@ class Process(Pyc.CComponent):
         self.states.update({"Idle:" + hash: self.addState("Block:" + hash, "Idle:" + hash, 0)})
         self.states.update({"Transit:" + hash: self.addState("Block:" + hash, "Transit:" + hash, 1)})
         self.states.update({"Arrived:" + hash: self.addState("Block:" + hash, "Arrived:" + hash, 2)})
-        self.blockAutomatons[hash].setInitState(self.states["Idle:" + hash])'''
+        self.blockAutomatons[hash].setInitState(self.states["Transit:" + hash])'''
 
         '''
         Defining the transitions between states of the block automaton.
@@ -306,7 +310,7 @@ class Process(Pyc.CComponent):
         self.knownBlocks.append(block)
         self.v_lastBlock.setValue(block.hash)
         self.blocktree.blocks.update({block.hash: block})
-        #print ("Creating Block with Process:", self.v_address.value(), "and object:", block)
+        print ("Creating Block with Process:", self.v_address.value(), "and object:", block)
 
 
     '''
@@ -314,7 +318,7 @@ class Process(Pyc.CComponent):
     The block begins it's transmission from the chosen process to this process.
     '''
     def newPendingBlock(self):
-        #print("New pending block at process: ", self.v_address.value(), "with block:", self.blocktree.blocks[self.r_appendedBlock.value(0)])
+        print("New pending block at process: ", self.v_address.value(), "with block:", self.blocktree.blocks[self.r_appendedBlock.value(0)])
         self.pendingBlocks.append(self.blocktree.blocks[self.r_appendedBlock.value(0)])
         self.addBlockAutomaton(self.blocktree.blocks[self.r_appendedBlock.value(0)])
 
@@ -355,19 +359,17 @@ class Process(Pyc.CComponent):
     '''
     def blockTransitCondition(self, block):
         if block in self.pendingBlocks:
-            print("Block Transit Condition")
             return True
         return False
 
     def blockArrivedCondition(self, block):
-        if time.time() - block.timestamp > self.v_meanTransitTime.value():
-            print("Block Arrived Condition")
+        meanTransitTime = 2 / self.v_meanTransitTime.value() + self.oracle.transitTimes[self.r_tokenHolder.value(0)]
+        if time.time() - block.timestamp > meanTransitTime:
             return True
         return False
 
     def blockIdleCondition(self, block):
         if block.father in self.knownBlocks:
-            print("Block Idle Condition")
             return True
         return False
 
@@ -380,6 +382,7 @@ class Process(Pyc.CComponent):
         self.knownBlocks.append(block)
         self.v_lastBlock.setValue(block.hash)
         self.pendingBlocks.remove(block)
+        print("Block Received!")
 
 
 '''
@@ -408,7 +411,7 @@ class Simulator(Pyc.CSystem):
         self.processes = []
 
         for i in range(0, process_count):
-            self.processes.append(Process("Process " + str(i + 1), str(i + 1), i + 1, self.blocktree, genesis))
+            self.processes.append(Process("Process " + str(i + 1), str(i + 1), i + 1, self.blocktree, genesis, self.oracle))
 
             '''
             Connecting the message boxes of the system components.
@@ -419,20 +422,29 @@ class Simulator(Pyc.CSystem):
 
         self.oracle.addProcesses(self.processes)
 
-'''
-Functions to compute the values of the three indicators specified below:
-1) Consensus Probability - The probability that all miners agree on the absolute blockchain
-2) Consistency Rate - The proportion of miners which agree on the absolute blockchain
-3) Worst Process Delay - The mean length difference between the absolute blockchain and the greatest common prefix
-'''
-def consensusFunction():
-    return 1.0
+    '''
+    Functions to compute the values of the three indicators specified below:
+    1) Consensus Probability - The probability that all miners agree on the absolute blockchain
+    2) Consistency Rate - The proportion of miners which agree on the absolute blockchain
+    3) Worst Process Delay - The mean length difference between the absolute blockchain and the greatest common prefix
+    '''
 
-def consistencyFunction():
-    return 1.0
+    def consensusFunction(self):
+        return 1.0
 
-def delayFunction():
-    return 1.0
+    def consistencyFunction(self):
+        agree = 0
+        for i in range(0, len(self.processes)):
+            if set(self.processes[i].knownBlocks) == set(self.blocktree.blocks.values()):
+                agree += 1
+        print(agree / len(self.processes) * 100)
+        return agree / len(self.processes) * 100
+
+    def delayFunction(self):
+        differences = []
+        for i in range(0, len(self.processes)):
+            differences.append(len(self.blocktree.blocks) - len(self.processes[i].knownBlocks))
+        return sum(differences) / len(differences)
 
 '''
 Creating an instance of the Simulator.
@@ -448,13 +460,13 @@ if __name__ == '__main__':
 
     simulator.addInstants(0, simulator.tMax(), 1)
 
-    consensusProbability = simulator.addIndicator("Consensus Probability", consensusFunction)
+    consensusProbability = simulator.addIndicator("Consensus Probability", simulator.consensusFunction)
     consensusProbability.setRestitutions(Pyc.TIndicatorType.all_values)
 
-    consistencyRate = simulator.addIndicator("Consistency Rate", consistencyFunction)
+    consistencyRate = simulator.addIndicator("Consistency Rate", simulator.consistencyFunction)
     consistencyRate.setRestitutions(Pyc.TIndicatorType.mean_values)
 
-    worstDelay = simulator.addIndicator("Worst Delay", delayFunction)
+    worstDelay = simulator.addIndicator("Worst Delay", simulator.delayFunction)
     worstDelay.setRestitutions(Pyc.TIndicatorType.mean_values)
 
     startTime = time.time()
