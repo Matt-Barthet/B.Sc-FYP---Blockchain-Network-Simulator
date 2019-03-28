@@ -7,7 +7,6 @@ import random
 '''
 Block (pure python) class represents a collection of on-chain transactions.
 Blocks contain a dictionary of the transactions they encapsulate.
-Transactions are selected from an available pool based off their fee.
 '''
 class Block:
     def __init__(self, father = None, process = None, transactions = []):
