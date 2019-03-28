@@ -117,11 +117,12 @@ class Process(Pyc.CComponent):
         Defining the transitions between states of the process automaton.
         '''
         self.workingToClaim = self.working.addTransition("Working-to-Claim")
-        self.workingToClaim.setCondition(self.tokenGeneratedCondition)
+        self.workingToClaim.setCondition(lambda: self.r_tokenGenerated.value(0))
         self.workingToClaim.addTarget(self.claimToken, Pyc.TTransType.trans)
 
         self.claimToToken = self.claimToken.addTransition("Claim-to-Token")
-        self.claimToToken.setCondition(self.holdTokenCondition)
+        self.claimToToken.setCondition(lambda: self.r_tokenHolder.value(0) == self.v_address.value()
+                                       and not self.r_tokenGenerated.value(0))
         self.claimToToken.addTarget(self.tokenHeld, Pyc.TTransType.trans)
 
         self.claimToWorking = self.claimToken.addTransition("Claim-to-Working")
@@ -130,6 +131,9 @@ class Process(Pyc.CComponent):
 
         self.tokenToWorking = self.tokenHeld.addTransition("Token-to-Working")
         self.tokenToWorking.addTarget(self.working, Pyc.TTransType.trans)
+
+        self.tokenToWorking.addSensitiveMethod("Consume Token", self.consumeToken)
+        self.claimToWorking.addSensitiveMethod("New Pending Block", self.newPendingBlock)
 
         for i in range(0,3):
             self.transitingBlocks.append(genesis)
@@ -166,11 +170,6 @@ class Process(Pyc.CComponent):
         self.transitions[-4].addSensitiveMethod("Receive Block2", self.receiveBlock2)
         self.transitions[-1].addSensitiveMethod("Receive Block3", self.receiveBlock3)
 
-        '''
-        Setting the sensitive methods which are called whenever their respective transition is fired.
-        '''
-        self.tokenToWorking.addSensitiveMethod("Consume Token", self.consumeToken)
-        self.claimToWorking.addSensitiveMethod("New Pending Block", self.newPendingBlock)
 
         self.meanTransitTime = [0,0,0]
 
@@ -220,22 +219,6 @@ class Process(Pyc.CComponent):
         print("PORT 3 -Block Received:", self.transitingBlocks[2], "at process:", self.v_address.value())
         self.knownBlocks.append(self.transitingBlocks[2])
         self.pendingBlocks.remove(self.transitingBlocks[2])
-
-    '''
-    Defining the conditions for the transitions of the process automaton:
-    Token Generated: if the latest reference update contains true return true.
-    '''
-    def tokenGeneratedCondition(self):
-        return self.r_tokenGenerated.value(0)
-
-    '''
-    Hold Token: if the address of token holder is this process return true.
-    '''
-    def holdTokenCondition(self):
-        if self.r_tokenHolder.value(0) == self.v_address.value():
-            if not self.r_tokenGenerated.value(0):
-                return True
-        return False
 
     '''
     Working: if the appended block is updated the process returns to working state and calls newPendingBlock if
