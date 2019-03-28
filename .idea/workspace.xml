@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f794acc1-f886-4bad-9df4-0e95e651fae4" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Backup.py" afterPath="" />
       <change beforePath="$PROJECT_DIR$/Simulator.py" afterPath="$PROJECT_DIR$/Simulator.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,23 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-      <file leaf-file-name="Simulator.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Simulator.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Simulator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="71">
-              <caret line="50" column="94" lean-forward="false" selection-start-line="50" selection-start-column="94" selection-end-line="50" selection-end-column="94" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Simulator-Old.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Simulator-Old.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="59">
+              <caret line="7" column="75" lean-forward="false" selection-start-line="7" selection-start-column="75" selection-end-line="7" selection-end-column="75" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -93,9 +80,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Test.py" />
-        <option value="$PROJECT_DIR$/Simulator.py" />
         <option value="$PROJECT_DIR$/Simulator.xml" />
         <option value="$PROJECT_DIR$/Backup.py" />
+        <option value="$PROJECT_DIR$/Simulator.py" />
       </list>
     </option>
   </component>
@@ -121,6 +108,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -132,8 +121,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -265,7 +252,21 @@
       <option name="project" value="LOCAL" />
       <updated>1553777869889</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Renamed Code Files">
+      <created>1553778058878</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1553778058878</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Removed Outdated Comment">
+      <created>1553779387137</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1553779387137</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView">
@@ -332,7 +333,9 @@
     <MESSAGE value="Added message box between oracle and blocktree to identify where the latest update is coming from.&#10;Fixed issues with the process automaton and oracle automaton for the creation and reception of pending blocks.&#10;TODO: identify fix for the block automata, including the simulate transit of blocks among the processes." />
     <MESSAGE value="Clunky Fix for Block Automaton Issue with independently conditions.&#10;Needs refining." />
     <MESSAGE value="Created Connection class to schedule block arrivals.&#10;Added basic scheduler to place new pending blocks in one of the established process Connections.&#10;Current Implementation extracts similar to results to those found in the paper." />
-    <option name="LAST_COMMIT_MESSAGE" value="Created Connection class to schedule block arrivals.&#10;Added basic scheduler to place new pending blocks in one of the established process Connections.&#10;Current Implementation extracts similar to results to those found in the paper." />
+    <MESSAGE value="Renamed Code Files" />
+    <MESSAGE value="Removed Outdated Comment" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed Outdated Comment" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -803,28 +806,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Backup.py">
+    <entry file="file://$PROJECT_DIR$/Backup.py" />
+    <entry file="file://$PROJECT_DIR$/Simulator-Old.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="879">
-          <caret line="356" column="47" lean-forward="false" selection-start-line="356" selection-start-column="47" selection-end-line="356" selection-end-column="47" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Simulator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="71">
-          <caret line="50" column="94" lean-forward="false" selection-start-line="50" selection-start-column="94" selection-end-line="50" selection-end-column="94" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Simulator-Old.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="59">
+          <caret line="7" column="75" lean-forward="false" selection-start-line="7" selection-start-column="75" selection-end-line="7" selection-end-column="75" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>

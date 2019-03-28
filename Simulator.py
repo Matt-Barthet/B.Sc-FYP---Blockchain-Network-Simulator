@@ -6,10 +6,9 @@ import random
 
 '''
 Block (pure python) class represents a collection of on-chain transactions.
-Blocks contain a dictionary of the transactions they encapsulate.
 '''
 class Block:
-    def __init__(self, father = None, process = None, transactions = []):
+    def __init__(self, father = None, process = None):
 
         """
         If the block provided is not the genesis block, create the object according to parent block.
@@ -20,7 +19,6 @@ class Block:
             self.timestamp = time.time()
             self.process = process
             self.depth = father.depth + 1
-            self.transactions = transactions
             string_to_hash = father.hash + str(self.timestamp) + process
             hash_object = hashlib.sha256(string_to_hash.encode('utf-8'))
             self.hash = hash_object.hexdigest()
