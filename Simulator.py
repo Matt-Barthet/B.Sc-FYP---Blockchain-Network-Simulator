@@ -44,7 +44,7 @@ class Process(Pyc.CComponent):
         self.pendingBlocks = []
         self.knownBlocks = [genesis]
 
-        self.v_meanTransitTime = self.addVariable("Mean Transit Time", Pyc.TVarType.t_float, 0.1)
+        self.v_meanTransitTime = self.addVariable("Mean Transit Time", Pyc.TVarType.t_float, 0.021)
         self.v_lastBlock = self.addVariable("Last Block", Pyc.TVarType.t_string, genesis.hash)
         self.v_merit = self.addVariable("Merit", Pyc.TVarType.t_int, merit)
         self.v_address = self.addVariable("Address", Pyc.TVarType.t_string, address)
@@ -90,7 +90,7 @@ class Process(Pyc.CComponent):
     def consumeToken(self):
         father = self.knownBlocks[len(self.knownBlocks) - 1]
         author = self.v_address.value()
-        block = Block(father, author, [])
+        block = Block(father, author)
         self.knownBlocks.append(block)
         self.v_lastBlock.setValue(block.hash)
         self.blocktree.blocks.update({block.hash: block})
@@ -328,7 +328,7 @@ class Simulator(Pyc.CSystem):
 
 if __name__ == '__main__':
 
-    process_count = 4
+    process_count = 2
     simulator = Simulator("Simulator", process_count)
     simulator.loadParameters("Simulator.xml")
     simulator.addInstants(0, simulator.tMax(), 20)
@@ -342,7 +342,6 @@ if __name__ == '__main__':
 
     startTime = time.time()
     simulator.simulate()
-
     endTime = time.time()
     timeTaken = endTime - startTime
 
