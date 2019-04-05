@@ -35,7 +35,7 @@ Process class represents the miners in a PoW blockchain network.
 Their network power is depicted by their merit.
 '''
 class Process(Pyc.CComponent):
-    def __init__(self, name, address, merit, blocktree, genesis, oracle):
+    def __init__(self, name, address, merit, blocktree, genesis, oracle, block_size):
         Pyc.CComponent.__init__(self, name)
 
         self.connections = []
@@ -43,8 +43,9 @@ class Process(Pyc.CComponent):
         self.oracle = oracle
         self.pendingBlocks = []
         self.knownBlocks = [genesis]
+        transitTime = block_size * 0.08 / 600
 
-        self.v_meanTransitTime = self.addVariable("Mean Transit Time", Pyc.TVarType.t_float, 0.021)
+        self.v_meanTransitTime = self.addVariable("Mean Transit Time", Pyc.TVarType.t_float, 0.2)
         self.v_lastBlock = self.addVariable("Last Block", Pyc.TVarType.t_string, genesis.hash)
         self.v_merit = self.addVariable("Merit", Pyc.TVarType.t_int, merit)
         self.v_address = self.addVariable("Address", Pyc.TVarType.t_string, address)
@@ -109,7 +110,8 @@ class Process(Pyc.CComponent):
                 connection.currentBlock = new_pending
                 connection.currentTransitTime = meanTransitTime
                 return
-            elif smallest is 0:
+        for connection in self.connections:
+            if smallest is 0:
                 smallest = connection
             elif len(connection.idleQueue) < len(self.connections[smallest]):
                 smallest = connection
@@ -179,7 +181,6 @@ Uses depth values to identify the ordering of blocks.
 class Blocktree(Pyc.CComponent):
     def __init__(self, name, genesis):
         Pyc.CComponent.__init__(self, name)
-
         self.blocks = {genesis.hash: genesis}
 
         self.v_appendedBlock = self.addVariable("Appended Block", Pyc.TVarType.t_string, genesis.hash)
@@ -213,7 +214,7 @@ class Oracle(Pyc.CComponent):
         self.last_time = time.time()
         self.total_merit = total_merit
         self.v_tokenHolder = self.addVariable("Token Holder", Pyc.TVarType.t_string, "1")
-        self.v_meanBlockTime = self.addVariable("Mean Block Time", Pyc.TVarType.t_float, 1)
+        self.v_meanBlockTime = self.addVariable("Mean Block Time", Pyc.TVarType.t_float, 2)
         self.v_tokenGenerated = self.addVariable("Token Generated", Pyc.TVarType.t_bool, False)
 
         self.addMessageBox("Process")
@@ -255,7 +256,7 @@ class Oracle(Pyc.CComponent):
         self.v_tokenHolder.setValue(choice[0])
         self.v_tokenGenerated.setValue(False)
         self.last_time = time.time()
-        self.waitingTime = random.expovariate(1 / self.v_meanBlockTime.value())
+        self.waitingTime = random.expovariate(1/self.v_meanBlockTime.value())
 
     def generate(self):
         self.v_tokenGenerated.setValue(True)
@@ -266,11 +267,10 @@ Simulator class represents the implemented simulator system.
 Creates and connects the various components outlined above.
 '''
 class Simulator(Pyc.CSystem):
-    def __init__(self, name, process_count):
+    def __init__(self, name, process_count, blocksize):
         Pyc.CSystem.__init__(self, name)
 
         genesis = Block()
-
         self.blocktree = Blocktree("Blocktree", genesis)
 
         merits = []
@@ -278,21 +278,17 @@ class Simulator(Pyc.CSystem):
             merits.append(np.random.randint(1,10))
 
         self.oracle = Oracle("System Oracle", sum(merits))
-
         self.connect(self.blocktree, "System Oracle", self.oracle, "Blocktree")
-
         self.processes = []
 
         for i in range(0, process_count):
-            self.processes.append(Process("Process " + str(i + 1), str(i + 1), merits[i], self.blocktree, genesis, self.oracle))
+            self.processes.append(Process("Process " + str(i + 1), str(i + 1), merits[i], self.blocktree, genesis, self.oracle, blocksize))
             self.connect(self.oracle, "Process", self.processes[i], "Oracle")
             self.connect(self.processes[i], "Blocktree", self.blocktree, "Process")
-
             for j in range(0, 5):
                 self.processes[i].connections.append(ProcessConnection("Process" + str(i) + "Connection" + str(j), self.processes[i]))
 
         self.oracle.addProcesses(self.processes)
-
 
     '''
     Functions to compute the values of the three indicators specified below:
@@ -328,10 +324,11 @@ class Simulator(Pyc.CSystem):
 
 if __name__ == '__main__':
 
-    process_count = 2
-    simulator = Simulator("Simulator", process_count)
+    process_count = 100
+    blocksize = 1024
+    simulator = Simulator("Simulator", process_count, blocksize)
     simulator.loadParameters("Simulator.xml")
-    simulator.addInstants(0, simulator.tMax(), 20)
+    simulator.addInstants(0, 2, 9)
 
     consensusProbability = simulator.addIndicator("Consensus Probability", simulator.consensusFunction)
     consensusProbability.setRestitutions(Pyc.TIndicatorType.mean_values)
@@ -345,17 +342,42 @@ if __name__ == '__main__':
     endTime = time.time()
     timeTaken = endTime - startTime
 
-    meanConsensus = consensusProbability.means()
-    meanConsistency = consistencyRate.means()
-    meanDelay = worstDelay.means()
-    instants = simulator.instants()
+    meanConsensus = list(consensusProbability.means())[0]
+    meanConsistency = list(consistencyRate.means())[0]
+    meanDelay = list(worstDelay.means())[0]
 
-    print("Time taken:", timeTaken, "seconds.\n")
+    print(simulator.processes[0].knownBlocks)
+    print(simulator.blocktree.blocks)
+
+    '''
+    print("Average Time taken:", timeTaken, "seconds.\n", file=open("Simulation-Run-" + str(int(time.time())) + ".txt", "wt"))
+    print("Network Parameters:", file=open("Simulation-Run-" + str(int(time.time())) + ".txt", "at"))
+    print("Number of Processors:", process_count, file=open("Simulation-Run-" + str(int(time.time())) + ".txt", "at"))
+    print("Block Interval Time:", simulator.oracle.v_meanBlockTime.value(),
+          file=open("Simulation-Run-" + str(int(time.time())) + ".txt", "at"))
+    print("Block Transit Time:", simulator.processes[0].v_meanTransitTime.value(),
+          file=open("Simulation-Run-" + str(int(time.time())) + ".txt", "at"))
+    print("Block Size:", blocksize, "KB", file=open("Simulation-Run-" + str(int(time.time())) + ".txt", "at"))
+    print("\nIndicators:", file=open("Simulation-Run-" + str(int(time.time())) + ".txt", "at"))
+
+    print("Mean Consensus Probability Indicator List:", meanConsensus,
+          file=open("Simulation-Run-" + str(int(time.time())) + ".txt", "at"))
+    print("Mean Consistency Indicator List:", meanConsistency,
+          file=open("Simulation-Run-" + str(int(time.time())) + ".txt", "at"))
+    print("Worst Process Delay List:", meanDelay,
+          file=open("Simulation-Run-" + str(int(time.time())) + ".txt", "at"))
+    '''
+    print("Average Time taken:", timeTaken, "seconds.\n")
+    print("Network Parameters:")
     print("Number of Processors:", process_count)
-    print("Mean Consensus Probability Indicator:", list(meanConsensus)[0])
-    print("Mean Consistency Indicator:", list(meanConsistency)[0])
-    print("Worst Process Delay:", list(meanDelay)[0])
+    print("Block Interval Time:", simulator.oracle.v_meanBlockTime.value())
+    print("Block Transit Time:", simulator.processes[0].v_meanTransitTime.value())
+    print("Block Size:", blocksize, "KB")
+    print("\nIndicators:")
 
+    print("Mean Consensus Probability Indicator List:", meanConsensus)
+    print("Mean Consistency Indicator List:", meanConsistency)
+    print("Worst Process Delay List:", meanDelay)
     '''
     Plotting the indicators extracted from the simulation of the system.
     '''
