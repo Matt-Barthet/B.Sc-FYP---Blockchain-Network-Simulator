@@ -8,13 +8,16 @@ import random
 Block (pure python) class represents a collection of on-chain transactions.
 '''
 class Block:
-    def __init__(self, father = None, process = None):
+    def __init__(self, father = None, process = None, size = None, transaction_size = None, transaction_count = None):
 
         """
         If the block provided is not the genesis block, create the object according to parent block.
         If the block has no father, ie: is the genesis block of the blockchain, create a preset genesis block.
         """
         if father is not None:
+            self.size = size
+            self.transaction_size = transaction_size
+            self.number_of_transactions = transaction_count
             self.father = father
             self.timestamp = time.time()
             self.process = process
@@ -24,6 +27,7 @@ class Block:
             self.hash = hash_object.hexdigest()
         else:
             self.depth = 0
+            self.size = 1024
             self.timestamp = time.time()
             self.father = None
             hash_object = hashlib.sha256(b'genesis')
@@ -35,7 +39,7 @@ Process class represents the miners in a PoW blockchain network.
 Their network power is depicted by their merit.
 '''
 class Process(Pyc.CComponent):
-    def __init__(self, name, address, merit, blocktree, genesis, oracle, block_size):
+    def __init__(self, name, address, merit, blocktree, genesis, oracle):
         Pyc.CComponent.__init__(self, name)
 
         self.connections = []
@@ -43,9 +47,11 @@ class Process(Pyc.CComponent):
         self.oracle = oracle
         self.pendingBlocks = []
         self.knownBlocks = [genesis]
-        transitTime = block_size * 0.08 / 600
 
-        self.v_meanTransitTime = self.addVariable("Mean Transit Time", Pyc.TVarType.t_float, 0.2)
+        self.tps = [1650, 1300, 2000]
+        self.transaction_size = [0.64, 0.41, 0.75]
+
+        self.v_connectionSpeed = self.addVariable("Mean Transit Time", Pyc.TVarType.t_float, 0.08/600)
         self.v_lastBlock = self.addVariable("Last Block", Pyc.TVarType.t_string, genesis.hash)
         self.v_merit = self.addVariable("Merit", Pyc.TVarType.t_int, merit)
         self.v_address = self.addVariable("Address", Pyc.TVarType.t_string, address)
@@ -56,12 +62,13 @@ class Process(Pyc.CComponent):
         self.r_meanTransitTimes = self.addReference("Mean Transit Times")
 
         self.addMessageBox("Oracle")
-        self.addMessageBox("Blocktree")
         self.addMessageBoxImport("Oracle", self.r_tokenHolder, "Token Holder")
         self.addMessageBoxImport("Oracle", self.r_tokenGenerated, "Token Generated")
-        self.addMessageBoxImport("Blocktree", self.r_appendedBlock, "Appended Block")
         self.addMessageBoxExport("Oracle", self.v_address, "Address")
         self.addMessageBoxExport("Oracle", self.v_merit, "Merit")
+
+        self.addMessageBox("Blocktree")
+        self.addMessageBoxImport("Blocktree", self.r_appendedBlock, "Appended Block")
         self.addMessageBoxExport("Blocktree", self.v_lastBlock, "Last Block")
 
         self.processAutomaton = self.addAutomaton("Process Automaton")
@@ -88,17 +95,32 @@ class Process(Pyc.CComponent):
         self.tokenToWorking.addSensitiveMethod("Consume Token", self.consumeToken)
         self.claimToWorking.addSensitiveMethod("New Pending Block", self.newPendingBlock)
 
+    def generate_block_properties(self):
+        while True:
+            transactionSize = np.random.exponential(self.transaction_size[0])
+            if self.transaction_size[1] < transactionSize < self.transaction_size[2]:
+                break
+        while True:
+            transaction_count = np.random.exponential(self.tps[0])
+            if self.tps[1] < transaction_count < self.tps[2]:
+                break
+        size = [self.oracle.v_meanBlockTime * transactionSize * (transaction_count), transactionSize, transaction_count]
+        return size
+
     def consumeToken(self):
+        properties = self.generate_block_properties()
         father = self.knownBlocks[len(self.knownBlocks) - 1]
         author = self.v_address.value()
-        block = Block(father, author)
+        block = Block(father, author, properties[0], properties[1], properties[2])
         self.knownBlocks.append(block)
         self.v_lastBlock.setValue(block.hash)
         self.blocktree.blocks.update({block.hash: block})
 
+        print("Block Created: Size", int(block.size), "Kb.")
+
     def newPendingBlock(self):
         new_pending = self.blocktree.blocks[self.r_appendedBlock.value(0)]
-        meanTransitTime = random.expovariate(2 / (self.v_meanTransitTime.value() + float(self.oracle.transitTimes[self.r_tokenHolder.value(0)])))
+        meanTransitTime = random.expovariate(2 / (self.v_connectionSpeed.value() + float(self.oracle.transitTimes[self.r_tokenHolder.value(0)]) * new_pending.size))
         self.pendingBlocks.append(new_pending)
         for connection in self.connections:
             if connection.currentBlock is None:
@@ -213,9 +235,12 @@ class Oracle(Pyc.CComponent):
         self.transitTimes = {}
         self.last_time = time.time()
         self.total_merit = total_merit
+
+        self.blockInterval = [0.98, 0.81, 1.43]
+
         self.v_tokenHolder = self.addVariable("Token Holder", Pyc.TVarType.t_string, "1")
-        self.v_meanBlockTime = self.addVariable("Mean Block Time", Pyc.TVarType.t_float, 2)
         self.v_tokenGenerated = self.addVariable("Token Generated", Pyc.TVarType.t_bool, False)
+        self.v_meanBlockTime = 0
 
         self.addMessageBox("Process")
         self.addMessageBoxExport("Process", self.v_tokenHolder, "Token Holder")
@@ -230,7 +255,7 @@ class Oracle(Pyc.CComponent):
         self.processAutomaton.setInitState(self.waiting)
 
         self.waitingToGenerated = self.waiting.addTransition("Waiting-to-Generated")
-        self.waitingToGenerated.setCondition(lambda: time.time() - self.last_time > self.waitingTime and not self.v_tokenGenerated.value())
+        self.waitingToGenerated.setCondition(lambda: time.time() - self.last_time > self.v_meanBlockTime and not self.v_tokenGenerated.value())
         self.waitingToGenerated.addTarget(self.tokenGenerated)
 
         self.generatedToWaiting = self.tokenGenerated.addTransition("Generated-to-Waiting")
@@ -238,13 +263,13 @@ class Oracle(Pyc.CComponent):
 
         self.waitingToGenerated.addSensitiveMethod("Generate Token", self.generate, 0)
         self.generatedToWaiting.addSensitiveMethod("Select Process", self.selectProcess, 0)
-        self.waitingTime = 0
+
 
     def addProcesses(self, processes):
         for i in range(0, len(processes)):
             normalised_merit = processes[i].v_merit.value() / self.total_merit
             self.merits.update({processes[i].v_address.value(): normalised_merit})
-            self.transitTimes.update({processes[i].v_address.value(): processes[i].v_meanTransitTime.value()})
+            self.transitTimes.update({processes[i].v_address.value(): processes[i].v_connectionSpeed.value()})
 
     '''
     Oracle Method to choose the next process to generate the latest block.
@@ -256,7 +281,11 @@ class Oracle(Pyc.CComponent):
         self.v_tokenHolder.setValue(choice[0])
         self.v_tokenGenerated.setValue(False)
         self.last_time = time.time()
-        self.waitingTime = random.expovariate(1/self.v_meanBlockTime.value())
+
+        while True:
+            self.v_meanBlockTime = np.random.exponential(self.blockInterval[0])
+            if self.blockInterval[1] < self.v_meanBlockTime < self.blockInterval[2]:
+                break
 
     def generate(self):
         self.v_tokenGenerated.setValue(True)
@@ -267,7 +296,7 @@ Simulator class represents the implemented simulator system.
 Creates and connects the various components outlined above.
 '''
 class Simulator(Pyc.CSystem):
-    def __init__(self, name, process_count, blocksize):
+    def __init__(self, name, process_count):
         Pyc.CSystem.__init__(self, name)
 
         genesis = Block()
@@ -282,7 +311,7 @@ class Simulator(Pyc.CSystem):
         self.processes = []
 
         for i in range(0, process_count):
-            self.processes.append(Process("Process " + str(i + 1), str(i + 1), merits[i], self.blocktree, genesis, self.oracle, blocksize))
+            self.processes.append(Process("Process " + str(i + 1), str(i + 1), merits[i], self.blocktree, genesis, self.oracle))
             self.connect(self.oracle, "Process", self.processes[i], "Oracle")
             self.connect(self.processes[i], "Blocktree", self.blocktree, "Process")
             for j in range(0, 5):
@@ -292,9 +321,6 @@ class Simulator(Pyc.CSystem):
 
     '''
     Functions to compute the values of the three indicators specified below:
-    1) Consensus Probability - The probability that all miners agree on the absolute blockchain
-    2) Consistency Rate - The proportion of miners which agree on the absolute blockchain
-    3) Worst Process Delay - The mean length difference between the absolute blockchain and the greatest common prefix
     '''
     def consensusFunction(self):
         yesCount = 0
@@ -321,15 +347,29 @@ class Simulator(Pyc.CSystem):
             differences.append(len(self.blocktree.blocks) - len(self.processes[i].knownBlocks))
         return max(differences)
 
+    def blockSizeCalculator(self):
+        size = 0
+        for i in self.blocktree.blocks.keys():
+            size += self.blocktree.blocks[i].size
+        return size / len(self.blocktree.blocks)
+
 
 if __name__ == '__main__':
 
-    process_count = 100
-    blocksize = 1024
-    simulator = Simulator("Simulator", process_count, blocksize)
+    """
+    Establishing the parameters to be used by the simulator.
+    The process count refers to the number of nodes/miners in the system.
+    """
+    process_count = 257
+    simulator = Simulator("Simulator", process_count)
     simulator.loadParameters("Simulator.xml")
-    simulator.addInstants(0, 2, 9)
-
+    simulator.addInstants(0, simulator.tMax(), 50)
+    """
+    Defining the system indicators used to quantify the performance of the model.
+    1) Consensus Probability - The probability that all miners agree on the absolute blockchain
+    2) Consistency Rate - The proportion of miners which agree on the absolute blockchain
+    3) Worst Process Delay - The average difference between the absolute chain and the most delayed process
+    """
     consensusProbability = simulator.addIndicator("Consensus Probability", simulator.consensusFunction)
     consensusProbability.setRestitutions(Pyc.TIndicatorType.mean_values)
     consistencyRate = simulator.addIndicator("Consistency Rate", simulator.consistencyFunction)
@@ -337,6 +377,10 @@ if __name__ == '__main__':
     worstDelay = simulator.addIndicator("Worst Delay", simulator.delayFunction)
     worstDelay.setRestitutions(Pyc.TIndicatorType.mean_values)
 
+    """
+    Running the simulation, recording its execution time and the results of the indicators.
+    The result of the simulation is dumped into a text file with the current timestamp.
+    """
     startTime = time.time()
     simulator.simulate()
     endTime = time.time()
@@ -345,9 +389,7 @@ if __name__ == '__main__':
     meanConsensus = list(consensusProbability.means())[0]
     meanConsistency = list(consistencyRate.means())[0]
     meanDelay = list(worstDelay.means())[0]
-
-    print(simulator.processes[0].knownBlocks)
-    print(simulator.blocktree.blocks)
+    blockSize = simulator.blockSizeCalculator()
 
     '''
     print("Average Time taken:", timeTaken, "seconds.\n", file=open("Simulation-Run-" + str(int(time.time())) + ".txt", "wt"))
@@ -355,7 +397,7 @@ if __name__ == '__main__':
     print("Number of Processors:", process_count, file=open("Simulation-Run-" + str(int(time.time())) + ".txt", "at"))
     print("Block Interval Time:", simulator.oracle.v_meanBlockTime.value(),
           file=open("Simulation-Run-" + str(int(time.time())) + ".txt", "at"))
-    print("Block Transit Time:", simulator.processes[0].v_meanTransitTime.value(),
+    print("Block Transit Time:", simulator.processes[0].v_connectionSpeed.value(),
           file=open("Simulation-Run-" + str(int(time.time())) + ".txt", "at"))
     print("Block Size:", blocksize, "KB", file=open("Simulation-Run-" + str(int(time.time())) + ".txt", "at"))
     print("\nIndicators:", file=open("Simulation-Run-" + str(int(time.time())) + ".txt", "at"))
@@ -367,17 +409,16 @@ if __name__ == '__main__':
     print("Worst Process Delay List:", meanDelay,
           file=open("Simulation-Run-" + str(int(time.time())) + ".txt", "at"))
     '''
-    print("Average Time taken:", timeTaken, "seconds.\n")
+    print("Average Time taken:", round(timeTaken, 3), "seconds.\n")
     print("Network Parameters:")
     print("Number of Processors:", process_count)
-    print("Block Interval Time:", simulator.oracle.v_meanBlockTime.value())
-    print("Block Transit Time:", simulator.processes[0].v_meanTransitTime.value())
-    print("Block Size:", blocksize, "KB")
     print("\nIndicators:")
 
-    print("Mean Consensus Probability Indicator List:", meanConsensus)
-    print("Mean Consistency Indicator List:", meanConsistency)
-    print("Worst Process Delay List:", meanDelay)
+    print("Mean Consensus Probability Indicator List:", round(meanConsensus,3))
+    print("Mean Consistency Indicator List:", round(meanConsistency, 3))
+    print("Worst Process Delay List:", round(meanDelay, 3))
+    print("Block Size:", round(blockSize, 3), "KB")
+
     '''
     Plotting the indicators extracted from the simulation of the system.
     '''
