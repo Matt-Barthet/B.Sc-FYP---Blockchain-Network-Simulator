@@ -329,7 +329,7 @@ class Simulator(Pyc.CSystem):
         for i in range(0, len(self.processes)):
             if set(self.processes[i].knownBlocks) == set(self.blocktree.blocks.values()):
                 agree += 1
-        if agree is len(self.processes):
+        if agree == len(self.processes):
             yesCount += 1
         counter += 1
         return yesCount / counter
@@ -360,10 +360,10 @@ if __name__ == '__main__':
     Establishing the parameters to be used by the simulator.
     The process count refers to the number of nodes/miners in the system.
     """
-    process_count = 257
+    process_count = 1000
     simulator = Simulator("Simulator", process_count)
     simulator.loadParameters("Simulator.xml")
-    simulator.addInstants(0, simulator.tMax(), 50)
+    simulator.addInstants(0, simulator.tMax(), 10)
     """
     Defining the system indicators used to quantify the performance of the model.
     1) Consensus Probability - The probability that all miners agree on the absolute blockchain
