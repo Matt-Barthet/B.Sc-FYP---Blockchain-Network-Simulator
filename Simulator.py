@@ -49,9 +49,10 @@ class Process(Pyc.CComponent):
         self.knownBlocks = [genesis]
 
         self.tps = [1650, 1300, 2000]
+        self.tps = [165, 130, 200]
         self.transaction_size = [0.64, 0.41, 0.75]
 
-        self.v_connectionSpeed = self.addVariable("Mean Transit Time", Pyc.TVarType.t_float, 0.08/600)
+        self.v_connectionSpeed = self.addVariable("Mean Transit Time", Pyc.TVarType.t_float, 0.08/60)
         self.v_lastBlock = self.addVariable("Last Block", Pyc.TVarType.t_string, genesis.hash)
         self.v_merit = self.addVariable("Merit", Pyc.TVarType.t_int, merit)
         self.v_address = self.addVariable("Address", Pyc.TVarType.t_string, address)
@@ -237,6 +238,7 @@ class Oracle(Pyc.CComponent):
         self.total_merit = total_merit
 
         self.blockInterval = [0.98, 0.81, 1.43]
+        self.blockInterval = [9.8, 8.1, 14.3]
 
         self.v_tokenHolder = self.addVariable("Token Holder", Pyc.TVarType.t_string, "1")
         self.v_tokenGenerated = self.addVariable("Token Generated", Pyc.TVarType.t_bool, False)
@@ -360,10 +362,10 @@ if __name__ == '__main__':
     Establishing the parameters to be used by the simulator.
     The process count refers to the number of nodes/miners in the system.
     """
-    process_count = 1000
+    process_count = 10000
     simulator = Simulator("Simulator", process_count)
     simulator.loadParameters("Simulator.xml")
-    simulator.addInstants(0, simulator.tMax(), 10)
+    simulator.addInstants(0, simulator.tMax(), 50)
     """
     Defining the system indicators used to quantify the performance of the model.
     1) Consensus Probability - The probability that all miners agree on the absolute blockchain
