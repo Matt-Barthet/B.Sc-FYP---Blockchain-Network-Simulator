@@ -374,7 +374,7 @@ if __name__ == '__main__':
     block_interval = [0.98, 0.81, 1.23]
     transaction_count = [1650, 1300, 2000]
     transaction_size = [0.64, 0.41, 0.75]
-    connection_speed = 0.08/30
+    connection_speed = 0.08/600
 
     simulator = Simulator("Simulator", process_count, transaction_count, transaction_size, connection_speed, block_interval)
     simulator.loadParameters("Simulator.xml")
