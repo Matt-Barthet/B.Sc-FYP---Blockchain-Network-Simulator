@@ -1,7 +1,7 @@
 import os
 import numpy as np
 
-directory = "./60 processes/"
+directory = "./100 processes/"
 
 meanConsensus = []
 meanConsistency = []
