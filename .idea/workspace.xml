@@ -3,175 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f794acc1-f886-4bad-9df4-0e95e651fae4" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/10 processes/0.1/Simulation-Run-1554906881.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/10 processes/0.1/Simulation-Run-1554906887.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/10 processes/0.1/Simulation-Run-1554906891.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/10 processes/0.1/Simulation-Run-1554906895.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/10 processes/0.1/Simulation-Run-1554906899.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/10 processes/0.1/Simulation-Run-1554906902.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/10 processes/0.1/Simulation-Run-1554906906.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/10 processes/0.1/Simulation-Run-1554906910.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/10 processes/0.1/Simulation-Run-1554906914.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/10 processes/0.1/Simulation-Run-1554906918.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/10 processes/0.1/Simulation-Run-1554906922.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/10 processes/0.2/Simulation-Run-1554906930.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/10 processes/0.2/Simulation-Run-1554906934.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/10 processes/0.2/Simulation-Run-1554906938.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/10 processes/0.2/Simulation-Run-1554906942.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/10 processes/0.2/Simulation-Run-1554906946.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/10 processes/0.2/Simulation-Run-1554906950.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/10 processes/0.2/Simulation-Run-1554906954.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/10 processes/0.2/Simulation-Run-1554906958.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/10 processes/0.2/Simulation-Run-1554906962.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/10 processes/0.2/Simulation-Run-1554906966.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/10 processes/0.2/Simulation-Run-1554906970.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/10 processes/0.5/Simulation-Run-1554906974.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/10 processes/0.5/Simulation-Run-1554906978.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/10 processes/0.5/Simulation-Run-1554906982.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/10 processes/0.5/Simulation-Run-1554906986.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/10 processes/0.5/Simulation-Run-1554906990.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/10 processes/0.5/Simulation-Run-1554906994.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/10 processes/0.5/Simulation-Run-1554906998.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/10 processes/0.5/Simulation-Run-1554907002.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/10 processes/0.5/Simulation-Run-1554907006.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/10 processes/0.5/Simulation-Run-1554907010.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/10 processes/0.7/Simulation-Run-1554907014.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/10 processes/0.7/Simulation-Run-1554907018.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/10 processes/0.7/Simulation-Run-1554907023.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/10 processes/0.7/Simulation-Run-1554907028.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/10 processes/0.7/Simulation-Run-1554907033.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/10 processes/0.7/Simulation-Run-1554907038.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/10 processes/0.7/Simulation-Run-1554907043.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/10 processes/0.7/Simulation-Run-1554907048.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/10 processes/0.7/Simulation-Run-1554907052.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/10 processes/0.7/Simulation-Run-1554907057.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/10 processes/0.99/Simulation-Run-1554907062.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/10 processes/0.99/Simulation-Run-1554907066.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/10 processes/0.99/Simulation-Run-1554907071.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/10 processes/0.99/Simulation-Run-1554907078.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/10 processes/0.99/Simulation-Run-1554907082.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/10 processes/0.99/Simulation-Run-1554907086.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/10 processes/0.99/Simulation-Run-1554907090.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/10 processes/0.99/Simulation-Run-1554907094.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/10 processes/0.99/Simulation-Run-1554907098.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/10 processes/0.99/Simulation-Run-1554907102.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/10 processes/0.99/Simulation-Run-1554907108.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20 processes/0.1/Simulation-Run-1554907270.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20 processes/0.1/Simulation-Run-1554907274.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20 processes/0.1/Simulation-Run-1554907278.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20 processes/0.1/Simulation-Run-1554907282.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20 processes/0.1/Simulation-Run-1554907285.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20 processes/0.1/Simulation-Run-1554907289.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20 processes/0.1/Simulation-Run-1554907293.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20 processes/0.1/Simulation-Run-1554907297.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20 processes/0.1/Simulation-Run-1554907301.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20 processes/0.1/Simulation-Run-1554907306.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20 processes/0.1/Simulation-Run-1554907310.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20 processes/0.2/Simulation-Run-1554907320.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20 processes/0.2/Simulation-Run-1554907324.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20 processes/0.2/Simulation-Run-1554907327.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20 processes/0.2/Simulation-Run-1554907331.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20 processes/0.2/Simulation-Run-1554907335.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20 processes/0.2/Simulation-Run-1554907339.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20 processes/0.2/Simulation-Run-1554907343.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20 processes/0.2/Simulation-Run-1554907346.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20 processes/0.2/Simulation-Run-1554907350.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20 processes/0.2/Simulation-Run-1554907354.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20 processes/0.2/Simulation-Run-1554907359.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20 processes/0.7/Simulation-Run-1554907405.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20 processes/0.7/Simulation-Run-1554907409.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20 processes/0.7/Simulation-Run-1554907413.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20 processes/0.7/Simulation-Run-1554907417.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20 processes/0.7/Simulation-Run-1554907421.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20 processes/0.7/Simulation-Run-1554907425.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20 processes/0.7/Simulation-Run-1554907429.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20 processes/0.7/Simulation-Run-1554907433.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20 processes/0.7/Simulation-Run-1554907437.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20 processes/0.7/Simulation-Run-1554907448.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20 processes/0.7/Simulation-Run-1554907463.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/20 processes/0.99/Simulation-Run-1554907472.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/4 processes/0.5/Simulation-Run-1554904911.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/4 processes/0.5/Simulation-Run-1554904915.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/4 processes/0.5/Simulation-Run-1554904920.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/4 processes/0.5/Simulation-Run-1554904924.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/4 processes/0.5/Simulation-Run-1554904930.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/4 processes/0.5/Simulation-Run-1554904939.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/4 processes/0.5/Simulation-Run-1554904944.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/4 processes/0.5/Simulation-Run-1554904949.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/4 processes/0.5/Simulation-Run-1554904953.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/4 processes/0.5/Simulation-Run-1554904959.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/4 processes/0.7/Simulation-Run-1554904971.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/4 processes/0.7/Simulation-Run-1554904975.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/4 processes/0.7/Simulation-Run-1554904978.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/4 processes/0.7/Simulation-Run-1554904982.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/4 processes/0.7/Simulation-Run-1554904986.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/4 processes/0.7/Simulation-Run-1554904990.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/4 processes/0.7/Simulation-Run-1554904993.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/4 processes/0.7/Simulation-Run-1554904997.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/4 processes/0.7/Simulation-Run-1554905000.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/4 processes/0.7/Simulation-Run-1554905011.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/4 processes/0.99/Simulation-Run-1554905016.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/4 processes/0.99/Simulation-Run-1554905019.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/4 processes/0.99/Simulation-Run-1554905023.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/4 processes/0.99/Simulation-Run-1554905027.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/4 processes/0.99/Simulation-Run-1554905031.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/4 processes/0.99/Simulation-Run-1554905035.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/4 processes/0.99/Simulation-Run-1554905041.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/4 processes/0.99/Simulation-Run-1554905045.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/4 processes/0.99/Simulation-Run-1554905049.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/4 processes/0.99/Simulation-Run-1554905054.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/6 processes/0.1/Simulation-Run-1554905333.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/6 processes/0.1/Simulation-Run-1554905345.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/6 processes/0.1/Simulation-Run-1554905351.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/6 processes/0.1/Simulation-Run-1554905356.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/6 processes/0.1/Simulation-Run-1554905361.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/6 processes/0.1/Simulation-Run-1554905365.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/6 processes/0.1/Simulation-Run-1554905369.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/6 processes/0.1/Simulation-Run-1554905382.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/6 processes/0.1/Simulation-Run-1554905390.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/6 processes/0.1/Simulation-Run-1554905394.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/6 processes/0.2/Simulation-Run-1554905399.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/6 processes/0.2/Simulation-Run-1554905404.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/6 processes/0.2/Simulation-Run-1554905408.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/6 processes/0.2/Simulation-Run-1554905412.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/6 processes/0.2/Simulation-Run-1554905417.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/6 processes/0.2/Simulation-Run-1554905423.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/6 processes/0.2/Simulation-Run-1554905429.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/6 processes/0.2/Simulation-Run-1554905442.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/6 processes/0.2/Simulation-Run-1554906110.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/6 processes/0.2/Simulation-Run-1554906114.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/6 processes/0.5/Simulation-Run-1554906493.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/6 processes/0.5/Simulation-Run-1554906496.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/6 processes/0.5/Simulation-Run-1554906500.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/6 processes/0.5/Simulation-Run-1554906504.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/6 processes/0.5/Simulation-Run-1554906508.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/6 processes/0.5/Simulation-Run-1554906512.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/6 processes/0.5/Simulation-Run-1554906516.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/6 processes/0.5/Simulation-Run-1554906528.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/6 processes/0.5/Simulation-Run-1554906532.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/6 processes/0.7/Simulation-Run-1554906554.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/6 processes/0.7/Simulation-Run-1554906559.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/6 processes/0.7/Simulation-Run-1554906563.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/6 processes/0.7/Simulation-Run-1554906567.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/6 processes/0.7/Simulation-Run-1554906571.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/6 processes/0.7/Simulation-Run-1554906575.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/6 processes/0.7/Simulation-Run-1554906579.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/6 processes/0.7/Simulation-Run-1554906583.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/6 processes/0.7/Simulation-Run-1554906587.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/6 processes/0.7/Simulation-Run-1554906591.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/6 processes/0.99/Simulation-Run-1554906602.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/6 processes/0.99/Simulation-Run-1554906606.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/6 processes/0.99/Simulation-Run-1554906610.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/6 processes/0.99/Simulation-Run-1554906614.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/6 processes/0.99/Simulation-Run-1554906618.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/6 processes/0.99/Simulation-Run-1554906622.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/6 processes/0.99/Simulation-Run-1554906626.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/6 processes/0.99/Simulation-Run-1554906636.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/6 processes/0.99/Simulation-Run-1554906643.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/6 processes/0.99/Simulation-Run-1554906648.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ReadOutputFiles.py" afterPath="$PROJECT_DIR$/ReadOutputFiles.py" />
       <change beforePath="$PROJECT_DIR$/Simulator.py" afterPath="$PROJECT_DIR$/Simulator.py" />
-      <change beforePath="$PROJECT_DIR$/Simulator.xml" afterPath="$PROJECT_DIR$/Simulator.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -195,8 +27,8 @@
       <file leaf-file-name="Simulator.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Simulator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2169">
-              <caret line="109" column="43" lean-forward="false" selection-start-line="109" selection-start-column="43" selection-end-line="109" selection-end-column="43" />
+            <state relative-caret-position="470">
+              <caret line="376" column="30" lean-forward="false" selection-start-line="376" selection-start-column="30" selection-end-line="376" selection-end-column="30" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
                 <element signature="e#336#463#0" expanded="false" />
@@ -604,7 +436,21 @@
       <option name="project" value="LOCAL" />
       <updated>1554921805749</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Added session dumps for block statistics and propagation statistics.">
+      <created>1555411045242</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1555411045242</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Added session dumps for block statistics and propagation statistics.">
+      <created>1555415334200</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1555415334200</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TodoView">
@@ -623,9 +469,9 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16166404" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.20101011" sideWeight="0.5021008" order="11" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32860938" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34986714" sideWeight="0.49789914" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34986714" sideWeight="0.49789914" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24960506" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949513" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -678,7 +524,8 @@
     <MESSAGE value="Added Block Size equation.&#10;Added File Output for dumping simulation results." />
     <MESSAGE value="Added transaction properties to blocks:&#10;- Blocks now contain a number of transactions which impact the size of the block (transaction rate and size).&#10;- The random numbers generated in the system were modified to be constrained in a tighter, more realistic range.&#10;- The average block size was added as an indicator at the end of a simulation" />
     <MESSAGE value="Added script to read session dumps,&#10;Added directed file output to required folder,&#10;Minor code cleanup" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added script to read session dumps,&#10;Added directed file output to required folder,&#10;Minor code cleanup" />
+    <MESSAGE value="Added session dumps for block statistics and propagation statistics." />
+    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -913,8 +760,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Simulator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2169">
-          <caret line="109" column="43" lean-forward="false" selection-start-line="109" selection-start-column="43" selection-end-line="109" selection-end-column="43" />
+        <state relative-caret-position="470">
+          <caret line="376" column="30" lean-forward="false" selection-start-line="376" selection-start-column="30" selection-end-line="376" selection-end-column="30" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
             <element signature="e#336#463#0" expanded="false" />
