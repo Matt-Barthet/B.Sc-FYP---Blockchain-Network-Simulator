@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f794acc1-f886-4bad-9df4-0e95e651fae4" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Simulator.py" afterPath="$PROJECT_DIR$/Simulator.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -450,7 +449,14 @@
       <option name="project" value="LOCAL" />
       <updated>1555415334200</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Attempting to commit text files">
+      <created>1555415455109</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1555415455109</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TodoView">
@@ -525,7 +531,8 @@
     <MESSAGE value="Added transaction properties to blocks:&#10;- Blocks now contain a number of transactions which impact the size of the block (transaction rate and size).&#10;- The random numbers generated in the system were modified to be constrained in a tighter, more realistic range.&#10;- The average block size was added as an indicator at the end of a simulation" />
     <MESSAGE value="Added script to read session dumps,&#10;Added directed file output to required folder,&#10;Minor code cleanup" />
     <MESSAGE value="Added session dumps for block statistics and propagation statistics." />
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="Attempting to commit text files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Attempting to commit text files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
