@@ -2,10 +2,174 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f794acc1-f886-4bad-9df4-0e95e651fae4" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/ReadOutputFiles.py" />
-      <change beforePath="$PROJECT_DIR$/.idea/Blockchain_Simulator.iml" afterPath="$PROJECT_DIR$/.idea/Blockchain_Simulator.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/10 processes/0.1/Simulation-Run-1554906881.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/10 processes/0.1/Simulation-Run-1554906887.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/10 processes/0.1/Simulation-Run-1554906891.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/10 processes/0.1/Simulation-Run-1554906895.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/10 processes/0.1/Simulation-Run-1554906899.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/10 processes/0.1/Simulation-Run-1554906902.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/10 processes/0.1/Simulation-Run-1554906906.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/10 processes/0.1/Simulation-Run-1554906910.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/10 processes/0.1/Simulation-Run-1554906914.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/10 processes/0.1/Simulation-Run-1554906918.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/10 processes/0.1/Simulation-Run-1554906922.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/10 processes/0.2/Simulation-Run-1554906930.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/10 processes/0.2/Simulation-Run-1554906934.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/10 processes/0.2/Simulation-Run-1554906938.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/10 processes/0.2/Simulation-Run-1554906942.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/10 processes/0.2/Simulation-Run-1554906946.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/10 processes/0.2/Simulation-Run-1554906950.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/10 processes/0.2/Simulation-Run-1554906954.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/10 processes/0.2/Simulation-Run-1554906958.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/10 processes/0.2/Simulation-Run-1554906962.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/10 processes/0.2/Simulation-Run-1554906966.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/10 processes/0.2/Simulation-Run-1554906970.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/10 processes/0.5/Simulation-Run-1554906974.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/10 processes/0.5/Simulation-Run-1554906978.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/10 processes/0.5/Simulation-Run-1554906982.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/10 processes/0.5/Simulation-Run-1554906986.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/10 processes/0.5/Simulation-Run-1554906990.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/10 processes/0.5/Simulation-Run-1554906994.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/10 processes/0.5/Simulation-Run-1554906998.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/10 processes/0.5/Simulation-Run-1554907002.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/10 processes/0.5/Simulation-Run-1554907006.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/10 processes/0.5/Simulation-Run-1554907010.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/10 processes/0.7/Simulation-Run-1554907014.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/10 processes/0.7/Simulation-Run-1554907018.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/10 processes/0.7/Simulation-Run-1554907023.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/10 processes/0.7/Simulation-Run-1554907028.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/10 processes/0.7/Simulation-Run-1554907033.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/10 processes/0.7/Simulation-Run-1554907038.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/10 processes/0.7/Simulation-Run-1554907043.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/10 processes/0.7/Simulation-Run-1554907048.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/10 processes/0.7/Simulation-Run-1554907052.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/10 processes/0.7/Simulation-Run-1554907057.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/10 processes/0.99/Simulation-Run-1554907062.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/10 processes/0.99/Simulation-Run-1554907066.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/10 processes/0.99/Simulation-Run-1554907071.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/10 processes/0.99/Simulation-Run-1554907078.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/10 processes/0.99/Simulation-Run-1554907082.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/10 processes/0.99/Simulation-Run-1554907086.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/10 processes/0.99/Simulation-Run-1554907090.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/10 processes/0.99/Simulation-Run-1554907094.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/10 processes/0.99/Simulation-Run-1554907098.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/10 processes/0.99/Simulation-Run-1554907102.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/10 processes/0.99/Simulation-Run-1554907108.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20 processes/0.1/Simulation-Run-1554907270.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20 processes/0.1/Simulation-Run-1554907274.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20 processes/0.1/Simulation-Run-1554907278.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20 processes/0.1/Simulation-Run-1554907282.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20 processes/0.1/Simulation-Run-1554907285.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20 processes/0.1/Simulation-Run-1554907289.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20 processes/0.1/Simulation-Run-1554907293.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20 processes/0.1/Simulation-Run-1554907297.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20 processes/0.1/Simulation-Run-1554907301.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20 processes/0.1/Simulation-Run-1554907306.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20 processes/0.1/Simulation-Run-1554907310.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20 processes/0.2/Simulation-Run-1554907320.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20 processes/0.2/Simulation-Run-1554907324.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20 processes/0.2/Simulation-Run-1554907327.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20 processes/0.2/Simulation-Run-1554907331.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20 processes/0.2/Simulation-Run-1554907335.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20 processes/0.2/Simulation-Run-1554907339.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20 processes/0.2/Simulation-Run-1554907343.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20 processes/0.2/Simulation-Run-1554907346.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20 processes/0.2/Simulation-Run-1554907350.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20 processes/0.2/Simulation-Run-1554907354.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20 processes/0.2/Simulation-Run-1554907359.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20 processes/0.7/Simulation-Run-1554907405.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20 processes/0.7/Simulation-Run-1554907409.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20 processes/0.7/Simulation-Run-1554907413.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20 processes/0.7/Simulation-Run-1554907417.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20 processes/0.7/Simulation-Run-1554907421.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20 processes/0.7/Simulation-Run-1554907425.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20 processes/0.7/Simulation-Run-1554907429.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20 processes/0.7/Simulation-Run-1554907433.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20 processes/0.7/Simulation-Run-1554907437.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20 processes/0.7/Simulation-Run-1554907448.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20 processes/0.7/Simulation-Run-1554907463.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/20 processes/0.99/Simulation-Run-1554907472.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/4 processes/0.5/Simulation-Run-1554904911.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/4 processes/0.5/Simulation-Run-1554904915.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/4 processes/0.5/Simulation-Run-1554904920.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/4 processes/0.5/Simulation-Run-1554904924.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/4 processes/0.5/Simulation-Run-1554904930.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/4 processes/0.5/Simulation-Run-1554904939.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/4 processes/0.5/Simulation-Run-1554904944.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/4 processes/0.5/Simulation-Run-1554904949.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/4 processes/0.5/Simulation-Run-1554904953.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/4 processes/0.5/Simulation-Run-1554904959.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/4 processes/0.7/Simulation-Run-1554904971.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/4 processes/0.7/Simulation-Run-1554904975.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/4 processes/0.7/Simulation-Run-1554904978.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/4 processes/0.7/Simulation-Run-1554904982.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/4 processes/0.7/Simulation-Run-1554904986.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/4 processes/0.7/Simulation-Run-1554904990.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/4 processes/0.7/Simulation-Run-1554904993.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/4 processes/0.7/Simulation-Run-1554904997.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/4 processes/0.7/Simulation-Run-1554905000.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/4 processes/0.7/Simulation-Run-1554905011.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/4 processes/0.99/Simulation-Run-1554905016.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/4 processes/0.99/Simulation-Run-1554905019.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/4 processes/0.99/Simulation-Run-1554905023.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/4 processes/0.99/Simulation-Run-1554905027.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/4 processes/0.99/Simulation-Run-1554905031.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/4 processes/0.99/Simulation-Run-1554905035.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/4 processes/0.99/Simulation-Run-1554905041.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/4 processes/0.99/Simulation-Run-1554905045.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/4 processes/0.99/Simulation-Run-1554905049.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/4 processes/0.99/Simulation-Run-1554905054.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/6 processes/0.1/Simulation-Run-1554905333.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/6 processes/0.1/Simulation-Run-1554905345.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/6 processes/0.1/Simulation-Run-1554905351.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/6 processes/0.1/Simulation-Run-1554905356.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/6 processes/0.1/Simulation-Run-1554905361.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/6 processes/0.1/Simulation-Run-1554905365.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/6 processes/0.1/Simulation-Run-1554905369.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/6 processes/0.1/Simulation-Run-1554905382.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/6 processes/0.1/Simulation-Run-1554905390.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/6 processes/0.1/Simulation-Run-1554905394.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/6 processes/0.2/Simulation-Run-1554905399.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/6 processes/0.2/Simulation-Run-1554905404.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/6 processes/0.2/Simulation-Run-1554905408.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/6 processes/0.2/Simulation-Run-1554905412.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/6 processes/0.2/Simulation-Run-1554905417.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/6 processes/0.2/Simulation-Run-1554905423.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/6 processes/0.2/Simulation-Run-1554905429.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/6 processes/0.2/Simulation-Run-1554905442.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/6 processes/0.2/Simulation-Run-1554906110.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/6 processes/0.2/Simulation-Run-1554906114.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/6 processes/0.5/Simulation-Run-1554906493.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/6 processes/0.5/Simulation-Run-1554906496.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/6 processes/0.5/Simulation-Run-1554906500.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/6 processes/0.5/Simulation-Run-1554906504.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/6 processes/0.5/Simulation-Run-1554906508.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/6 processes/0.5/Simulation-Run-1554906512.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/6 processes/0.5/Simulation-Run-1554906516.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/6 processes/0.5/Simulation-Run-1554906528.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/6 processes/0.5/Simulation-Run-1554906532.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/6 processes/0.7/Simulation-Run-1554906554.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/6 processes/0.7/Simulation-Run-1554906559.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/6 processes/0.7/Simulation-Run-1554906563.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/6 processes/0.7/Simulation-Run-1554906567.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/6 processes/0.7/Simulation-Run-1554906571.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/6 processes/0.7/Simulation-Run-1554906575.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/6 processes/0.7/Simulation-Run-1554906579.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/6 processes/0.7/Simulation-Run-1554906583.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/6 processes/0.7/Simulation-Run-1554906587.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/6 processes/0.7/Simulation-Run-1554906591.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/6 processes/0.99/Simulation-Run-1554906602.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/6 processes/0.99/Simulation-Run-1554906606.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/6 processes/0.99/Simulation-Run-1554906610.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/6 processes/0.99/Simulation-Run-1554906614.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/6 processes/0.99/Simulation-Run-1554906618.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/6 processes/0.99/Simulation-Run-1554906622.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/6 processes/0.99/Simulation-Run-1554906626.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/6 processes/0.99/Simulation-Run-1554906636.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/6 processes/0.99/Simulation-Run-1554906643.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/6 processes/0.99/Simulation-Run-1554906648.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/ReadOutputFiles.py" afterPath="$PROJECT_DIR$/ReadOutputFiles.py" />
       <change beforePath="$PROJECT_DIR$/Simulator.py" afterPath="$PROJECT_DIR$/Simulator.py" />
       <change beforePath="$PROJECT_DIR$/Simulator.xml" afterPath="$PROJECT_DIR$/Simulator.xml" />
     </list>
@@ -18,23 +182,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-      <file leaf-file-name="ReadOutputFiles.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ReadOutputFiles.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-368">
-              <caret line="7" column="14" lean-forward="false" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Simulator.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Simulator.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="59" lean-forward="false" selection-start-line="0" selection-start-column="59" selection-end-line="0" selection-end-column="59" />
+              <caret line="0" column="57" lean-forward="false" selection-start-line="0" selection-start-column="57" selection-end-line="0" selection-end-column="57" />
               <folding />
             </state>
           </provider>
@@ -43,10 +195,39 @@
       <file leaf-file-name="Simulator.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Simulator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="364" column="18" lean-forward="false" selection-start-line="364" selection-start-column="18" selection-end-line="364" selection-end-column="18" />
+            <state relative-caret-position="-2169">
+              <caret line="109" column="43" lean-forward="false" selection-start-line="109" selection-start-column="43" selection-end-line="109" selection-end-column="43" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
+                <element signature="e#336#463#0" expanded="false" />
+                <element signature="e#2108#5023#0" expanded="false" />
+                <element signature="e#7590#7661#0" expanded="false" />
+                <element signature="e#7703#8143#0" expanded="false" />
+                <element signature="e#8191#9926#0" expanded="false" />
+                <element signature="e#10096#10981#0" expanded="false" />
+                <element signature="e#11143#13958#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Bitcoin_Transit_1555358620.241947.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Bitcoin Runs/1000 Nodes/Bitcoin_Transit_1555358620.241947.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="173129">
+              <caret line="19979" column="15" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="155844" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReadOutputFiles.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ReadOutputFiles.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="46" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -88,9 +269,11 @@
       <find>NEw Pending block</find>
       <find>newpendingblock</find>
       <find>v_meanTransitTime</find>
+      <find>tps</find>
     </findStrings>
     <replaceStrings>
       <replace>v_connectionSpeed</replace>
+      <replace>transaction_count</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -129,14 +312,21 @@
         <option value="$PROJECT_DIR$/2 processes/0.5/ReadOutputFiles.py" />
         <option value="$PROJECT_DIR$/2 processes/0.5/Simulation-Run-1554884427.txt" />
         <option value="$PROJECT_DIR$/ReadOutputFiles.py" />
+        <option value="$PROJECT_DIR$/dataPlotter.py" />
+        <option value="$PROJECT_DIR$/Bitcoin_Sim_1555095060.538634.txt" />
+        <option value="$PROJECT_DIR$/Bitcoin_Sim_1555095424.533463.txt" />
+        <option value="$PROJECT_DIR$/Bitcoin_Sim_1555095279.101758.txt" />
+        <option value="$PROJECT_DIR$/Bitcoin_Sim_1555099445.305094.txt" />
+        <option value="$PROJECT_DIR$/Bitcoin_Sim_1555337112.568697.txt" />
+        <option value="$PROJECT_DIR$/Bitcoin_Sim_1555338281.316163.txt" />
+        <option value="$PROJECT_DIR$/ReadTransitDump.py" />
         <option value="$PROJECT_DIR$/Simulator.xml" />
         <option value="$PROJECT_DIR$/Simulator.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
-    <option name="x" value="966" />
-    <option name="width" value="954" />
+    <option name="width" value="1920" />
     <option name="height" value="1200" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -157,6 +347,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -167,36 +358,18 @@
             <path>
               <item name="Final-Year-Project" type="b2602c69:ProjectViewProjectNode" />
               <item name="Final-Year-Project" type="462c0819:PsiDirectoryNode" />
-              <item name="2 processes" type="462c0819:PsiDirectoryNode" />
+              <item name="Bitcoin Runs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Final-Year-Project" type="b2602c69:ProjectViewProjectNode" />
               <item name="Final-Year-Project" type="462c0819:PsiDirectoryNode" />
-              <item name="60 processes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Final-Year-Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Final-Year-Project" type="462c0819:PsiDirectoryNode" />
-              <item name="60 processes" type="462c0819:PsiDirectoryNode" />
-              <item name="0.1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Final-Year-Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Final-Year-Project" type="462c0819:PsiDirectoryNode" />
-              <item name="60 processes" type="462c0819:PsiDirectoryNode" />
-              <item name="0.5" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Final-Year-Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Final-Year-Project" type="462c0819:PsiDirectoryNode" />
-              <item name="60 processes" type="462c0819:PsiDirectoryNode" />
-              <item name="0.7" type="462c0819:PsiDirectoryNode" />
+              <item name="Bitcoin Runs" type="462c0819:PsiDirectoryNode" />
+              <item name="1000 Nodes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -207,6 +380,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Bitcoin Runs/1000 Nodes" />
+      <recent name="$PROJECT_DIR$/Bitcoin Runs/100 nodes" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/2 processes/0.5" />
       <recent name="$PROJECT_DIR$/2 processes" />
@@ -224,7 +399,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Unnamed (1)">
+  <component name="RunManager" selected="Python.Unnamed">
     <configuration name="ReadOutputFiles" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -279,14 +454,34 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <list size="3">
+    <configuration name="dataPlotter" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Blockchain_Simulator" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dataPlotter.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Python.Unnamed" />
       <item index="1" class="java.lang.String" itemvalue="Python.Unnamed (1)" />
       <item index="2" class="java.lang.String" itemvalue="Python.ReadOutputFiles" />
+      <item index="3" class="java.lang.String" itemvalue="Python.dataPlotter" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Python.ReadOutputFiles" />
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="Python.dataPlotter" />
+        <item index="1" class="java.lang.String" itemvalue="Python.ReadOutputFiles" />
       </list>
     </recent_temporary>
   </component>
@@ -402,7 +597,14 @@
       <option name="project" value="LOCAL" />
       <updated>1554646468546</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Added script to read session dumps,&#10;Added directed file output to required folder,&#10;Minor code cleanup">
+      <created>1554921805749</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1554921805749</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TodoView">
@@ -415,21 +617,21 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1200" extended-state="6" />
+    <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16166404" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.20101011" sideWeight="0.5021008" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.20101011" sideWeight="0.5021008" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34986714" sideWeight="0.49789914" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24960506" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949513" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949513" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39946857" sideWeight="0.49789914" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -441,21 +643,22 @@
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20101011" sideWeight="0.5021008" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.20101011" sideWeight="0.5021008" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29281184" sideWeight="0.49789914" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16041666" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34986714" sideWeight="0.49789914" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949513" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16166404" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24960506" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39957717" sideWeight="0.49789914" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39946857" sideWeight="0.49789914" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -474,7 +677,8 @@
     <MESSAGE value="Removed more unnecessary code" />
     <MESSAGE value="Added Block Size equation.&#10;Added File Output for dumping simulation results." />
     <MESSAGE value="Added transaction properties to blocks:&#10;- Blocks now contain a number of transactions which impact the size of the block (transaction rate and size).&#10;- The random numbers generated in the system were modified to be constrained in a tighter, more realistic range.&#10;- The average block size was added as an indicator at the end of a simulation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added transaction properties to blocks:&#10;- Blocks now contain a number of transactions which impact the size of the block (transaction rate and size).&#10;- The random numbers generated in the system were modified to be constrained in a tighter, more realistic range.&#10;- The average block size was added as an indicator at the end of a simulation" />
+    <MESSAGE value="Added script to read session dumps,&#10;Added directed file output to required folder,&#10;Minor code cleanup" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added script to read session dumps,&#10;Added directed file output to required folder,&#10;Minor code cleanup" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -485,12 +689,53 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="33" />
+      <option name="time" value="34" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Simulation-Run-1554883097.txt">
+    <entry file="file://$PROJECT_DIR$/Bitcoin_Sim_1555332716.0839648.txt" />
+    <entry file="file://$PROJECT_DIR$/Bitcoin_Sim_1555332823.5900779.txt" />
+    <entry file="file://$PROJECT_DIR$/Bitcoin_Sim_1555333102.005492.txt" />
+    <entry file="file://$PROJECT_DIR$/Bitcoin_Sim_1555333102.7104099.txt" />
+    <entry file="file://$PROJECT_DIR$/Bitcoin_Sim_1555333121.8732731.txt" />
+    <entry file="file://$PROJECT_DIR$/Bitcoin_Sim_1555333346.970046.txt" />
+    <entry file="file://$PROJECT_DIR$/Bitcoin_Sim_1555333410.384077.txt" />
+    <entry file="file://$PROJECT_DIR$/Bitcoin_Sim_1555333482.289064.txt" />
+    <entry file="file://$PROJECT_DIR$/Bitcoin_Sim_1555334002.070428.txt" />
+    <entry file="file://$PROJECT_DIR$/Bitcoin_Sim_1555333641.8467798.txt" />
+    <entry file="file://$PROJECT_DIR$/Bitcoin_Sim_1555336470.647444.txt" />
+    <entry file="file://$PROJECT_DIR$/Bitcoin_Sim_1555336976.230106.txt" />
+    <entry file="file://$PROJECT_DIR$/Bitcoin_Sim_1555334812.5936341.txt" />
+    <entry file="file://$PROJECT_DIR$/Bitcoin_Sim_1555336995.127315.txt" />
+    <entry file="file://$PROJECT_DIR$/Bitcoin_Sim_1555337112.568697.txt" />
+    <entry file="file://$PROJECT_DIR$/Bitcoin_Sim_1555337031.1342258.txt" />
+    <entry file="file://$PROJECT_DIR$/Bitcoin_Transit_1555337341.118848.txt" />
+    <entry file="file://$PROJECT_DIR$/Bitcoin_Sim_1555337341.1188421.txt" />
+    <entry file="file://$PROJECT_DIR$/Bitcoin_Transit_1555337600.413426.txt" />
+    <entry file="file://$PROJECT_DIR$/Bitcoin_Sim_1555337600.41342.txt" />
+    <entry file="file://$PROJECT_DIR$/Bitcoin_Sim_1555337627.335574.txt" />
+    <entry file="file://$PROJECT_DIR$/Bitcoin_Transit_1555337627.3355799.txt" />
+    <entry file="file://$PROJECT_DIR$/Bitcoin_Transit_1555337875.471189.txt" />
+    <entry file="file://$PROJECT_DIR$/Bitcoin_Sim_1555337875.471182.txt" />
+    <entry file="file://$PROJECT_DIR$/Bitcoin_Sim_1555338196.550366.txt" />
+    <entry file="file://$PROJECT_DIR$/Bitcoin_Transit_1555338196.5503721.txt" />
+    <entry file="file://$PROJECT_DIR$/Bitcoin_Transit_1555338281.316169.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2157266">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Bitcoin_Sim_1555338281.316163.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15570">
+          <caret line="1038" column="40" lean-forward="false" selection-start-line="1038" selection-start-column="40" selection-end-line="1038" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Bitcoin_Transit_1555342745.484589.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -498,7 +743,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Simulation-Run-1554883105.txt">
+    <entry file="file://$PROJECT_DIR$/Bitcoin_Sim_1555340433.817473.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -506,7 +751,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Simulation-Run-1554883433.txt">
+    <entry file="file://$PROJECT_DIR$/Bitcoin_Transit_1555340433.817479.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Bitcoin_Sim_1555342745.484583.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -514,7 +766,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Simulation-Run-1554883462.txt">
+    <entry file="file://$PROJECT_DIR$/Bitcoin_Sim_1555343085.782388.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7049">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Bitcoin_Sim_1555343553.580958.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -522,7 +781,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Simulation-Run-1554883380.txt">
+    <entry file="file://$PROJECT_DIR$/Bitcoin_Transit_1555344084.063755.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -530,7 +789,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Simulation-Run-1554883397.txt">
+    <entry file="file://$PROJECT_DIR$/Bitcoin_Sim_1555344084.063749.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -538,7 +797,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Simulation-Run-1554883403.txt">
+    <entry file="file://$PROJECT_DIR$/Bitcoin_Transit_1555346212.522801.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="134866" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Bitcoin_Sim_1555346212.522796.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-15414">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Bitcoin_Transit_1555358493.0526562.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Bitcoin_Transit_1555358588.0656571.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -546,103 +829,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Simulation-Run-1554883426.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Simulation-Run-1554883415.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Simulation-Run-1554883517.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Simulation-Run-1554883524.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Simulation-Run-1554883532.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Simulation-Run-1554883545.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/result1.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Output-Calculator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="34" lean-forward="false" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Simulation-Run-1554884317.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Simulation-Run-1554885539.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Simulation-Run-1554885519.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2 processes/0.5/Simulation-Run-1554884427.txt">
+    <entry file="file://$PROJECT_DIR$/ReadTransitDump.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Simulation-Run-1554897277.txt">
+    <entry file="file://$PROJECT_DIR$/ReadOutputFiles.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Bitcoin_Transit_1555410624.208225.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -650,7 +855,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/4 processes/0.99/Simulation-Run-1554905016.txt">
+    <entry file="file://$PROJECT_DIR$/Bitcoin_Sim_1555410624.208218.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -658,7 +863,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/4 processes/0.99/Simulation-Run-1554905019.txt">
+    <entry file="file://$PROJECT_DIR$/Bitcoin_Sim_1555410730.7273788.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -666,7 +871,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/4 processes/0.99/Simulation-Run-1554905023.txt">
+    <entry file="file://$PROJECT_DIR$/Bitcoin_Transit_1555410780.008856.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -674,7 +879,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/4 processes/0.99/Simulation-Run-1554905027.txt">
+    <entry file="file://$PROJECT_DIR$/Bitcoin_Sim_1555410780.0088499.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -682,194 +887,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/4 processes/0.99/Simulation-Run-1554905035.txt">
+    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/1000 Nodes/Bitcoin_Sim_1555358620.241941.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="-15231">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/4 processes/0.99/Simulation-Run-1554905041.txt">
+    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/1000 Nodes/Bitcoin_Transit_1555358620.241947.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/4 processes/0.99/Simulation-Run-1554905045.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/4 processes/0.99/Simulation-Run-1554905049.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/4 processes/0.99/Simulation-Run-1554905054.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/20 processes/0.99/Simulation-Run-1554907509.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/20 processes/0.99/Simulation-Run-1554907505.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/20 processes/0.99/Simulation-Run-1554907500.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/20 processes/0.99/Simulation-Run-1554907492.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/20 processes/0.99/Simulation-Run-1554907496.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/20 processes/0.99/Simulation-Run-1554907488.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/20 processes/0.99/Simulation-Run-1554907480.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/20 processes/0.5/Simulation-Run-1554907395.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/20 processes/0.5/Simulation-Run-1554907391.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/20 processes/0.5/Simulation-Run-1554907387.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/20 processes/0.5/Simulation-Run-1554907399.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/20 processes/0.5/Simulation-Run-1554907383.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/20 processes/0.5/Simulation-Run-1554907380.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/20 processes/0.5/Simulation-Run-1554907376.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/20 processes/0.5/Simulation-Run-1554907367.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/20 processes/0.5/Simulation-Run-1554907364.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/20 processes/0.99/Simulation-Run-1554907476.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/20 processes/0.99/Simulation-Run-1554907484.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/20 processes/0.99/Simulation-Run-1554907472.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="173129">
+          <caret line="19979" column="15" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="155844" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -877,27 +906,24 @@
     <entry file="file://$PROJECT_DIR$/Simulator.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="59" lean-forward="false" selection-start-line="0" selection-start-column="59" selection-end-line="0" selection-end-column="59" />
+          <caret line="0" column="57" lean-forward="false" selection-start-line="0" selection-start-column="57" selection-end-line="0" selection-end-column="57" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ReadOutputFiles.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-368">
-          <caret line="7" column="14" lean-forward="false" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Simulator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="364" column="18" lean-forward="false" selection-start-line="364" selection-start-column="18" selection-end-line="364" selection-end-column="18" />
+        <state relative-caret-position="-2169">
+          <caret line="109" column="43" lean-forward="false" selection-start-line="109" selection-start-column="43" selection-end-line="109" selection-end-column="43" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#336#463#0" expanded="false" />
+            <element signature="e#2108#5023#0" expanded="false" />
+            <element signature="e#7590#7661#0" expanded="false" />
+            <element signature="e#7703#8143#0" expanded="false" />
+            <element signature="e#8191#9926#0" expanded="false" />
+            <element signature="e#10096#10981#0" expanded="false" />
+            <element signature="e#11143#13958#0" expanded="false" />
           </folding>
         </state>
       </provider>

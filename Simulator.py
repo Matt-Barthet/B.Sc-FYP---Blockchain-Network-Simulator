@@ -1,9 +1,13 @@
 from Util import *
 import numpy as np
 import hashlib
-import random
 
-
+filename = "Bitcoin_Sim_" + str(time.time()) + ".txt"
+transit_file = "Bitcoin_Transit_" + str(time.time()) + ".txt"
+'''
+Function to generate a random number from an exponential distribution,
+contained within an upper and lower bound.
+'''
 def generateBoundedExponential(values):
     while True:
         value = np.random.exponential(values[0])
@@ -34,33 +38,29 @@ class Block:
         else:
             self.depth = 0
             self.size = 1024
+            self.transaction_count = 1650
+            self.transaction_size = 0.64
             self.timestamp = time.time()
             self.father = None
             hash_object = hashlib.sha256(b'genesis')
             self.hash = hash_object.hexdigest()
-
-        print("Block Created: Size", int(self.size), "Kb.")
-
 
 '''
 Process class represents the miners in a PoW blockchain network.
 Their network power is depicted by their merit.
 '''
 class Process(Pyc.CComponent):
-    def __init__(self, name, address, merit, blocktree, genesis, oracle, transit):
+    def __init__(self, name, address, merit, blocktree, genesis, oracle, transaction_count, transaction_size, connection_speed):
         Pyc.CComponent.__init__(self, name)
-        self.transit = transit
         self.connections = []
         self.blocktree = blocktree
         self.oracle = oracle
         self.pendingBlocks = []
         self.knownBlocks = [genesis]
+        self.transaction_count = transaction_count
+        self.transaction_size = transaction_size
 
-        #self.tps = [1650, 1300, 2000]
-        self.tps = [165, 130, 200]
-        self.transaction_size = [0.64, 0.41, 0.75]
-
-        self.v_connectionSpeed = self.addVariable("Mean Transit Time", Pyc.TVarType.t_float, 0.08/60)
+        self.v_connectionSpeed = self.addVariable("Mean Transit Time", Pyc.TVarType.t_float, connection_speed)
         self.v_lastBlock = self.addVariable("Last Block", Pyc.TVarType.t_string, genesis.hash)
         self.v_merit = self.addVariable("Merit", Pyc.TVarType.t_int, merit)
         self.v_address = self.addVariable("Address", Pyc.TVarType.t_string, address)
@@ -106,7 +106,7 @@ class Process(Pyc.CComponent):
 
     def generate_block_properties(self):
         transaction_size = generateBoundedExponential(self.transaction_size)
-        transaction_count = generateBoundedExponential(self.tps)
+        transaction_count = generateBoundedExponential(self.transaction_count)
         size = [self.oracle.v_meanBlockTime * transaction_size * (transaction_count), transaction_size, transaction_count]
         return size
 
@@ -119,12 +119,19 @@ class Process(Pyc.CComponent):
         self.v_lastBlock.setValue(block.hash)
         self.blocktree.blocks.update({block.hash: block})
 
+        print("Block Created:", block.hash, file=open(filename, "at"))
+        print("Block Depth:", block.depth, file=open(filename, "at"))
+        print("Previous Block:", father.hash, file=open(filename, "at"))
+        print("Size:", str(block.size), "KB", file=open(filename, "at"))
+        print("Transaction Size:", str(block.transaction_size), "KB", file=open(filename, "at"))
+        print("Number of Transactions:", str(block.transaction_count), file=open(filename, "at"))
+        print("Block Interval:", block.timestamp - father.timestamp, file=open(filename, "at"))
+        print(file=open(filename, "at"))
+
     def newPendingBlock(self):
         new_pending = self.blocktree.blocks[self.r_appendedBlock.value(0)]
-        #meanTransitTime = random.expovariate(2 / (self.v_connectionSpeed.value() + float(self.oracle.transitTimes[self.r_tokenHolder.value(0)]) * new_pending.size))
-        #meanTransitTime = generateBoundedExponential([self.transit, self.transit * 0.75, self.transit * 1.25])
-        meanTransitTime = np.random.exponential(self.transit)
-
+        meanTransitTime = np.random.exponential(self.v_connectionSpeed.value() * new_pending.size)
+        print(new_pending.depth, "      ", np.round(meanTransitTime, 3), file=open(transit_file, "at"))
         self.pendingBlocks.append(new_pending)
         for connection in self.connections:
             if connection.currentBlock is None:
@@ -232,7 +239,7 @@ Randomly selects the next winning process based on their merit.
 '''
 class Oracle(Pyc.CComponent):
 
-    def __init__(self, name, total_merit):
+    def __init__(self, name, total_merit, blockInterval):
         Pyc.CComponent.__init__(self, name)
 
         self.merits = {}
@@ -240,9 +247,7 @@ class Oracle(Pyc.CComponent):
         self.last_time = time.time()
         self.total_merit = total_merit
 
-        #self.blockInterval = [0.98, 0.81, 1.43]
-        #self.blockInterval = [9.8, 8.1, 14.3]
-        self.blockInterval = [1, 0.75, 1.25]
+        self.blockInterval = blockInterval
 
         self.v_tokenHolder = self.addVariable("Token Holder", Pyc.TVarType.t_string, "1")
         self.v_tokenGenerated = self.addVariable("Token Generated", Pyc.TVarType.t_bool, False)
@@ -297,7 +302,7 @@ Simulator class represents the implemented simulator system.
 Creates and connects the various components outlined above.
 '''
 class Simulator(Pyc.CSystem):
-    def __init__(self, name, process_count, transit):
+    def __init__(self, name, process_count, transaction_count, transaction_size, connection_speed, blockInterval):
         Pyc.CSystem.__init__(self, name)
 
         genesis = Block()
@@ -307,12 +312,12 @@ class Simulator(Pyc.CSystem):
         for i in range(0, process_count):
             merits.append(np.random.randint(1,10))
 
-        self.oracle = Oracle("System Oracle", sum(merits))
+        self.oracle = Oracle("System Oracle", sum(merits), blockInterval)
         self.connect(self.blocktree, "System Oracle", self.oracle, "Blocktree")
         self.processes = []
 
         for i in range(0, process_count):
-            self.processes.append(Process("Process " + str(i + 1), str(i + 1), merits[i], self.blocktree, genesis, self.oracle, transit))
+            self.processes.append(Process("Process " + str(i + 1), str(i + 1), merits[i], self.blocktree, genesis, self.oracle, transaction_count, transaction_size, connection_speed))
             self.connect(self.oracle, "Process", self.processes[i], "Oracle")
             self.connect(self.processes[i], "Blocktree", self.blocktree, "Process")
             for j in range(0, 5):
@@ -349,10 +354,14 @@ class Simulator(Pyc.CSystem):
         return max(differences)
 
     def blockSizeCalculator(self):
-        size = 0
+        block_size = 0
+        counts = 0
+        transaction_size = 0
         for i in self.blocktree.blocks.keys():
-            size += self.blocktree.blocks[i].size
-        return size / len(self.blocktree.blocks)
+            block_size += self.blocktree.blocks[i].size
+            counts += self.blocktree.blocks[i].transaction_count
+            transaction_size += self.blocktree.blocks[i].transaction_size
+        return [block_size / len(self.blocktree.blocks), counts / len(self.blocktree.blocks), transaction_size / len(self.blocktree.blocks)]
 
 
 if __name__ == '__main__':
@@ -362,8 +371,12 @@ if __name__ == '__main__':
     The process count refers to the number of nodes/miners in the system.
     """
     process_count = 100
-    transit = 0.99
-    simulator = Simulator("Simulator", process_count, transit)
+    block_interval = [0.98, 0.81, 1.23]
+    transaction_count = [1650, 1300, 2000]
+    transaction_size = [0.64, 0.41, 0.75]
+    connection_speed = 0.08/30
+
+    simulator = Simulator("Simulator", process_count, transaction_count, transaction_size, connection_speed, block_interval)
     simulator.loadParameters("Simulator.xml")
     simulator.addInstants(0, simulator.tMax(), 60)
     """
@@ -383,6 +396,7 @@ if __name__ == '__main__':
     Running the simulation, recording its execution time and the results of the indicators.
     The result of the simulation is dumped into a text file with the current timestamp.
     """
+    print("Bitcoin Simulation Run:\n", file=open(filename, "wt"))
     startTime = time.time()
     simulator.simulate()
     endTime = time.time()
@@ -393,23 +407,15 @@ if __name__ == '__main__':
     meanDelay = list(worstDelay.means())[0]
     blockSize = simulator.blockSizeCalculator()
 
-    print("Average Time taken:", round(timeTaken, 3), "seconds.\n")
-    print("Network Parameters:")
-    print("Number of Processors:", process_count)
-    print("\nIndicators:")
+    print("Time taken:", round(timeTaken, 3), "seconds.\n", file=open(filename, "at"))
+    print("Network Parameters:", file=open(filename, "at"))
+    print("Number of Nodes:", process_count, file=open(filename, "at"))
+    print(file=open(filename, "at"))
+    print("\nIndicators:", file=open(filename, "at"))
 
-    print("Mean Consensus Probability:", round(meanConsensus,3))
-    print("Mean Consistency:", round(meanConsistency, 3))
-    print("Worst Process Delay:", round(meanDelay, 3))
-    print("Block Size:", round(blockSize, 3), "KB")
-
-    directory = "./" + str(process_count) + " processes/" + str(transit) + "/"
-    '''
-    print(round(meanConsensus, 3), file = open(directory + "Simulation-Run-" + str(int(time.time())) + ".txt", "at"))
-    print(round(meanConsistency, 3), file = open(directory + "Simulation-Run-" + str(int(time.time())) + ".txt", "at"))
-    print(round(meanDelay, 3), file = open(directory + "Simulation-Run-" + str(int(time.time())) + ".txt", "at"))
-    '''
-    '''
-    Plotting the indicators extracted from the simulation of the system.
-    '''
-    #plt.show()
+    print("Mean Consensus Probability:", round(meanConsensus,3), file=open(filename, "at"))
+    print("Mean Consistency:", round(meanConsistency, 3), file=open(filename, "at"))
+    print("Worst Process Delay:", round(meanDelay, 3), file=open(filename, "at"))
+    print("Block Size:", round(blockSize[0], 3), "KB", file=open(filename, "at"))
+    print("Transaction Size:", round(blockSize[2], 3), "KB", file=open(filename, "at"))
+    print("Transaction Count:", round(blockSize[1], 3), file=open(filename, "at"))
