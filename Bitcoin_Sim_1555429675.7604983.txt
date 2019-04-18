@@ -1,0 +1,1362 @@
+Bitcoin Simulation Run:
+
+Block Created: c17da8395cccb3a028a35f99344184392ddf05195038d3bf96d79446d0906f3f
+Block Depth: 1
+Previous Block: aeebad4a796fcc2e15dc4c6061b45ed9b373f26adfc798ca7d2d8cc58182718e
+Size: 1136.9501522686392 KB
+Transaction Size: 0.7299564329824503 KB
+Number of Transactions: 1713.4382640384458
+Block Interval: 63.546764612197876
+
+Block Created: 1d2aece7d4db992480ddafa16714875ef99daa01adee670cafd8137b91bb628b
+Block Depth: 2
+Previous Block: c17da8395cccb3a028a35f99344184392ddf05195038d3bf96d79446d0906f3f
+Size: 877.0285970099916 KB
+Transaction Size: 0.4867108984247127 KB
+Number of Transactions: 1994.671306231288
+Block Interval: 56.086506843566895
+
+Block Created: 01e34760b7960328d0825705023417df24d0f396a34625c288bfce0f3964f12d
+Block Depth: 3
+Previous Block: 1d2aece7d4db992480ddafa16714875ef99daa01adee670cafd8137b91bb628b
+Size: 1028.4778072314582 KB
+Transaction Size: 0.528463429576936 KB
+Number of Transactions: 1879.2706360803434
+Block Interval: 54.662532806396484
+
+Block Created: 141b022f1fd2c240b0bf40fe981960effd733cdc73e152eebb5a9cc9f246ea7a
+Block Depth: 4
+Previous Block: 01e34760b7960328d0825705023417df24d0f396a34625c288bfce0f3964f12d
+Size: 767.4027678209044 KB
+Transaction Size: 0.45406531959998353 KB
+Number of Transactions: 1412.3020859241938
+Block Interval: 62.860984325408936
+
+Block Created: b0ad37c9e6de0bfbe09b96dd493cfa7900d68831254809ca40e467c6a29df5d1
+Block Depth: 5
+Previous Block: 141b022f1fd2c240b0bf40fe981960effd733cdc73e152eebb5a9cc9f246ea7a
+Size: 929.0804698156114 KB
+Transaction Size: 0.6158994520123233 KB
+Number of Transactions: 1461.0576238293552
+Block Interval: 72.6277666091919
+
+Block Created: 573e034aa1ab3483158e0c2497e3d5ce08d58e08c7e2d58fa7acab92ecf67111
+Block Depth: 6
+Previous Block: b0ad37c9e6de0bfbe09b96dd493cfa7900d68831254809ca40e467c6a29df5d1
+Size: 1039.4466136351991 KB
+Transaction Size: 0.5438902598754751 KB
+Number of Transactions: 1920.588485072711
+Block Interval: 64.93289637565613
+
+Block Created: 6c26547777497ea7bb576f75055e438062d2dda4a9f00bec631b7e0dd0126b3c
+Block Depth: 7
+Previous Block: 573e034aa1ab3483158e0c2497e3d5ce08d58e08c7e2d58fa7acab92ecf67111
+Size: 588.8829569984973 KB
+Transaction Size: 0.4686956319257704 KB
+Number of Transactions: 1472.4819525364674
+Block Interval: 62.15432810783386
+
+Block Created: 72aaaeadf728ad6970e743550ed870a29fe737d7e4d139f5cef57a79448abe46
+Block Depth: 8
+Previous Block: 6c26547777497ea7bb576f75055e438062d2dda4a9f00bec631b7e0dd0126b3c
+Size: 720.6682514079837 KB
+Transaction Size: 0.5301570438228331 KB
+Number of Transactions: 1651.208510005761
+Block Interval: 53.3126220703125
+
+Block Created: 5f9038c8715c443dbfec10ab4cca2e56738fc67666a7e7cd2f37997329c8b6ac
+Block Depth: 9
+Previous Block: 72aaaeadf728ad6970e743550ed870a29fe737d7e4d139f5cef57a79448abe46
+Size: 1192.1035294990625 KB
+Transaction Size: 0.5955583756861439 KB
+Number of Transactions: 1663.0262534496048
+Block Interval: 49.706507205963135
+
+Block Created: ba1a084fab5ec44a2e5733c2d84f0161423dadb94b922d32c734a79b17777e41
+Block Depth: 10
+Previous Block: 5f9038c8715c443dbfec10ab4cca2e56738fc67666a7e7cd2f37997329c8b6ac
+Size: 711.5245835464857 KB
+Transaction Size: 0.45550800513074374 KB
+Number of Transactions: 1328.9120790706957
+Block Interval: 75.01168203353882
+
+Block Created: e7b88141156a35d3bf25a15ecc71a5db81f6ecb4a4c377fd0dbbcb4ad6f55c1d
+Block Depth: 11
+Previous Block: ba1a084fab5ec44a2e5733c2d84f0161423dadb94b922d32c734a79b17777e41
+Size: 784.7860573714139 KB
+Transaction Size: 0.5509839857007475 KB
+Number of Transactions: 1445.9119026714525
+Block Interval: 73.4522967338562
+
+Block Created: ff13f0834e7fa6e1790010c46ae29c435ff8df16ceaec09a2c744960289d52d4
+Block Depth: 12
+Previous Block: e7b88141156a35d3bf25a15ecc71a5db81f6ecb4a4c377fd0dbbcb4ad6f55c1d
+Size: 812.1725930159403 KB
+Transaction Size: 0.7153713774833051 KB
+Number of Transactions: 1353.4462613118803
+Block Interval: 62.49647378921509
+
+Block Created: 667f250f0512b20ac902e78ab00d5c74f10af56859c9571b0139ee2c40e134f3
+Block Depth: 13
+Previous Block: ff13f0834e7fa6e1790010c46ae29c435ff8df16ceaec09a2c744960289d52d4
+Size: 915.0481446850212 KB
+Transaction Size: 0.42492504711933365 KB
+Number of Transactions: 1764.1323440147598
+Block Interval: 51.574201583862305
+
+Block Created: 74d1dd6d0d60085daca7a64bdb7848441c25f194db2b3bb1dfb0e1a275e8f5af
+Block Depth: 14
+Previous Block: 667f250f0512b20ac902e78ab00d5c74f10af56859c9571b0139ee2c40e134f3
+Size: 964.4806209624753 KB
+Transaction Size: 0.7463283375787739 KB
+Number of Transactions: 1376.1044406045487
+Block Interval: 76.56508541107178
+
+Block Created: 4c43de04f20d81bf1b378b06a2428dfbc14d319ac122f3e90d6769e4fdf7a67b
+Block Depth: 15
+Previous Block: 74d1dd6d0d60085daca7a64bdb7848441c25f194db2b3bb1dfb0e1a275e8f5af
+Size: 1033.2923694304052 KB
+Transaction Size: 0.7040100911917688 KB
+Number of Transactions: 1442.139217537283
+Block Interval: 57.08842325210571
+
+Block Created: cbaf6f009a8ce4c85637c32ad93321ac306bfdaacce4e7d21ad84320062eb6ad
+Block Depth: 16
+Previous Block: 4c43de04f20d81bf1b378b06a2428dfbc14d319ac122f3e90d6769e4fdf7a67b
+Size: 609.7010285830996 KB
+Transaction Size: 0.49248887513422135 KB
+Number of Transactions: 1524.609620054148
+Block Interval: 64.13669538497925
+
+Block Created: 8234dd761f92ce5681e7df75d3ee1c665b138276869cc2cf22eef3c5846d6eec
+Block Depth: 17
+Previous Block: cbaf6f009a8ce4c85637c32ad93321ac306bfdaacce4e7d21ad84320062eb6ad
+Size: 945.4872898309629 KB
+Transaction Size: 0.6711468083293758 KB
+Number of Transactions: 1600.7896929677406
+Block Interval: 51.929898738861084
+
+Block Created: 0a778b209ead4d2cf8034e2f2aa2fc5f921c70cf841b9fb99d2c2cd8b2093e99
+Block Depth: 18
+Previous Block: 8234dd761f92ce5681e7df75d3ee1c665b138276869cc2cf22eef3c5846d6eec
+Size: 1019.1804409452333 KB
+Transaction Size: 0.7337001599586225 KB
+Number of Transactions: 1520.7020954566394
+Block Interval: 55.22327017784119
+
+Block Created: d16e5667e7af902aec4ee295c19ba19e9a910d8ec71b1df7e894159040ca3ea8
+Block Depth: 19
+Previous Block: 0a778b209ead4d2cf8034e2f2aa2fc5f921c70cf841b9fb99d2c2cd8b2093e99
+Size: 1095.1299368622742 KB
+Transaction Size: 0.523630814839616 KB
+Number of Transactions: 1796.4534840802755
+Block Interval: 55.69414258003235
+
+Block Created: 1234f1e0348f163b340378c0dbe9d75ac8e1bae0d26af1d74370dbd11ad692e3
+Block Depth: 20
+Previous Block: d16e5667e7af902aec4ee295c19ba19e9a910d8ec71b1df7e894159040ca3ea8
+Size: 1036.081818170929 KB
+Transaction Size: 0.46944816117043475 KB
+Number of Transactions: 1797.6350050836902
+Block Interval: 71.430104970932
+
+Block Created: e0c66c196974afe6312109916b32c4b4cf35bebcf676d2dfaa19626265129fe8
+Block Depth: 21
+Previous Block: 1234f1e0348f163b340378c0dbe9d75ac8e1bae0d26af1d74370dbd11ad692e3
+Size: 961.0146386500411 KB
+Transaction Size: 0.5243103606832489 KB
+Number of Transactions: 1906.5090233669614
+Block Interval: 77.44337749481201
+
+Block Created: 92d5efadf0e18e1bc05c6b6179936a99e81f2b54c50aafdb7943bbd5e0d6a53e
+Block Depth: 22
+Previous Block: e0c66c196974afe6312109916b32c4b4cf35bebcf676d2dfaa19626265129fe8
+Size: 658.468369055516 KB
+Transaction Size: 0.4745367928536479 KB
+Number of Transactions: 1617.282675949039
+Block Interval: 62.67116618156433
+
+Block Created: 69058b7534a223b4e6bc76db53e341666a2e4b8de3b30ba54d193ca6a3ca0b4d
+Block Depth: 23
+Previous Block: 92d5efadf0e18e1bc05c6b6179936a99e81f2b54c50aafdb7943bbd5e0d6a53e
+Size: 1036.9221047054552 KB
+Transaction Size: 0.5660931712442567 KB
+Number of Transactions: 1592.9031082482581
+Block Interval: 52.2949755191803
+
+Block Created: e5bd468ceef2180cf47e528e6022e4d3a19dc08e40a24acd9a50a899da255267
+Block Depth: 24
+Previous Block: 69058b7534a223b4e6bc76db53e341666a2e4b8de3b30ba54d193ca6a3ca0b4d
+Size: 874.4759141563695 KB
+Transaction Size: 0.49179668011768507 KB
+Number of Transactions: 1651.3116271699166
+Block Interval: 73.6805419921875
+
+Block Created: eb7f17d5960a15257961ee74502b21dc6e453576967b8439038be8e5d5f698bd
+Block Depth: 25
+Previous Block: e5bd468ceef2180cf47e528e6022e4d3a19dc08e40a24acd9a50a899da255267
+Size: 1116.5982881973036 KB
+Transaction Size: 0.7205011027765987 KB
+Number of Transactions: 1735.9477410975128
+Block Interval: 68.95032358169556
+
+Block Created: 7f08dd8c0f1aaeb88852cb8ad2f15585f23c0b10546c1c61df1bd4321be4a313
+Block Depth: 26
+Previous Block: eb7f17d5960a15257961ee74502b21dc6e453576967b8439038be8e5d5f698bd
+Size: 580.0430323572594 KB
+Transaction Size: 0.4194203407411889 KB
+Number of Transactions: 1444.2942368869728
+Block Interval: 53.74169850349426
+
+Block Created: d9495ecb692e774a43b6d564dd13b7e0c4e2a3b8febfdef8a06251a747c78ae1
+Block Depth: 27
+Previous Block: 7f08dd8c0f1aaeb88852cb8ad2f15585f23c0b10546c1c61df1bd4321be4a313
+Size: 628.2746731701761 KB
+Transaction Size: 0.45187279536858543 KB
+Number of Transactions: 1436.9930316977138
+Block Interval: 60.616631507873535
+
+Block Created: bae1a84fe1f7fcb4bb2122fe0ceb5c595283a3f9e3c4e50015f9f73e74bfc3eb
+Block Depth: 28
+Previous Block: d9495ecb692e774a43b6d564dd13b7e0c4e2a3b8febfdef8a06251a747c78ae1
+Size: 577.4546855635128 KB
+Transaction Size: 0.42578944495556303 KB
+Number of Transactions: 1350.6007124281055
+Block Interval: 59.70642828941345
+
+Block Created: 3637dbd6e743de12c579cc5cbb5d600eb1414ab4dcaa5ee27f011004915de16d
+Block Depth: 29
+Previous Block: bae1a84fe1f7fcb4bb2122fe0ceb5c595283a3f9e3c4e50015f9f73e74bfc3eb
+Size: 748.9644058500407 KB
+Transaction Size: 0.47237279127671494 KB
+Number of Transactions: 1319.1635279079906
+Block Interval: 65.76677227020264
+
+Block Created: 0ada26410f3eef687e91469780147ba65562a6b1611893955e352011cbe72d0a
+Block Depth: 30
+Previous Block: 3637dbd6e743de12c579cc5cbb5d600eb1414ab4dcaa5ee27f011004915de16d
+Size: 883.5324099892218 KB
+Transaction Size: 0.7473409466474548 KB
+Number of Transactions: 1334.4966719720367
+Block Interval: 76.30004024505615
+
+Block Created: 99539b019506ab7cf351fffe9d7e81ff07e18d9bc176b4b122fa94a5d4c1180a
+Block Depth: 31
+Previous Block: 0ada26410f3eef687e91469780147ba65562a6b1611893955e352011cbe72d0a
+Size: 1276.4410389262746 KB
+Transaction Size: 0.5958061031757034 KB
+Number of Transactions: 1907.4257732179751
+Block Interval: 57.192174673080444
+
+Block Created: 5a2e13b94723bde70dee65fc51f8d507006d4a2e587105c423c4f702424167ac
+Block Depth: 32
+Previous Block: 99539b019506ab7cf351fffe9d7e81ff07e18d9bc176b4b122fa94a5d4c1180a
+Size: 1122.126077904208 KB
+Transaction Size: 0.676646606741749 KB
+Number of Transactions: 1973.5667242017546
+Block Interval: 71.16780471801758
+
+Block Created: 682d05175699b4ceaa96e4d507beaa9936907b6189dd8c928ac31066953183a6
+Block Depth: 33
+Previous Block: 5a2e13b94723bde70dee65fc51f8d507006d4a2e587105c423c4f702424167ac
+Size: 670.948598471431 KB
+Transaction Size: 0.6030050453220333 KB
+Number of Transactions: 1329.2377976682076
+Block Interval: 54.26321268081665
+
+Block Created: afb08e6a3c254c4284b367b5e796d8633303250e33067897b79a3d27a7b81ea7
+Block Depth: 34
+Previous Block: 682d05175699b4ceaa96e4d507beaa9936907b6189dd8c928ac31066953183a6
+Size: 1135.7259436396118 KB
+Transaction Size: 0.49695689507950086 KB
+Number of Transactions: 1947.2624059852083
+Block Interval: 50.41225600242615
+
+Block Created: 0f9a4ad9707f44cd9a5d00574b45fa6e9c36bf2aac787dd0e69d255bfe9f339c
+Block Depth: 35
+Previous Block: afb08e6a3c254c4284b367b5e796d8633303250e33067897b79a3d27a7b81ea7
+Size: 689.5873177758597 KB
+Transaction Size: 0.4891487607013922 KB
+Number of Transactions: 1578.1371258846466
+Block Interval: 74.23557543754578
+
+Block Created: 98c187f12e3a79021e9a1b27ba72b597227e7d2af9c843785388093567e84867
+Block Depth: 36
+Previous Block: 0f9a4ad9707f44cd9a5d00574b45fa6e9c36bf2aac787dd0e69d255bfe9f339c
+Size: 994.8987704899121 KB
+Transaction Size: 0.5845834402445386 KB
+Number of Transactions: 1935.593975800174
+Block Interval: 59.43294548988342
+
+Block Created: 7a6dbc2bc504a411da4b5a988284f317b004a7cf73878875e210d0c08b120f56
+Block Depth: 37
+Previous Block: 98c187f12e3a79021e9a1b27ba72b597227e7d2af9c843785388093567e84867
+Size: 940.2342827560711 KB
+Transaction Size: 0.4561353023856675 KB
+Number of Transactions: 1862.6160886898822
+Block Interval: 54.22133183479309
+
+Block Created: 255d754f8dcc9c0e34c667b966d8b11c6d2c2335afa59583720255f3d3dbc35c
+Block Depth: 38
+Previous Block: 7a6dbc2bc504a411da4b5a988284f317b004a7cf73878875e210d0c08b120f56
+Size: 957.9966220998143 KB
+Transaction Size: 0.6099531060365089 KB
+Number of Transactions: 1480.9099700036127
+Block Interval: 66.71657180786133
+
+Block Created: b32307b32035a5aa0eaaf9700e61b603239ae093f468f79c50c4739ab443ac44
+Block Depth: 39
+Previous Block: 255d754f8dcc9c0e34c667b966d8b11c6d2c2335afa59583720255f3d3dbc35c
+Size: 944.3458211507673 KB
+Transaction Size: 0.6980629710673141 KB
+Number of Transactions: 1383.2931090718373
+Block Interval: 69.70911121368408
+
+Block Created: 4f151f4d4c7c30cee128cc47b5e46262ff86bc8a9ec82cefa5174346c9f622ba
+Block Depth: 40
+Previous Block: b32307b32035a5aa0eaaf9700e61b603239ae093f468f79c50c4739ab443ac44
+Size: 842.3124117021815 KB
+Transaction Size: 0.43986288207489077 KB
+Number of Transactions: 1776.7441929256456
+Block Interval: 60.113778829574585
+
+Block Created: 31944c8811dfdfa7b786e2436db52de2337ddfcf31260a4a48059636b3390039
+Block Depth: 41
+Previous Block: 4f151f4d4c7c30cee128cc47b5e46262ff86bc8a9ec82cefa5174346c9f622ba
+Size: 1657.5224977123153 KB
+Transaction Size: 0.7203434172628301 KB
+Number of Transactions: 1909.8716496750653
+Block Interval: 66.20835709571838
+
+Block Created: c9264f22c59253864285ff3954fd7e496abb43a9348a3ccd3022858a9ad66881
+Block Depth: 42
+Previous Block: 31944c8811dfdfa7b786e2436db52de2337ddfcf31260a4a48059636b3390039
+Size: 560.5728907026821 KB
+Transaction Size: 0.4425022326605016 KB
+Number of Transactions: 1477.7106658428108
+Block Interval: 75.6926794052124
+
+Block Created: dd0a15afebd4ab4e59da01d7c90a973696446781d6c9847d7e0a28d2a4fd3dfd
+Block Depth: 43
+Previous Block: c9264f22c59253864285ff3954fd7e496abb43a9348a3ccd3022858a9ad66881
+Size: 802.9732019656456 KB
+Transaction Size: 0.6809926117346118 KB
+Number of Transactions: 1331.6491010870436
+Block Interval: 51.661986112594604
+
+Block Created: 0464ce9e35cf072278b51071224451ce731bdc2e3baf6f873f239d671ef35973
+Block Depth: 44
+Previous Block: dd0a15afebd4ab4e59da01d7c90a973696446781d6c9847d7e0a28d2a4fd3dfd
+Size: 1042.0538700540096 KB
+Transaction Size: 0.6197194216829369 KB
+Number of Transactions: 1675.43380062046
+Block Interval: 56.077056884765625
+
+Block Created: bb6b8bc9c30876491fdf9acf6a040a37d584aeb1a36b35780f82884c08ffe34f
+Block Depth: 45
+Previous Block: 0464ce9e35cf072278b51071224451ce731bdc2e3baf6f873f239d671ef35973
+Size: 734.88012230784 KB
+Transaction Size: 0.47688210698437167 KB
+Number of Transactions: 1773.2678758474947
+Block Interval: 62.02888250350952
+
+Block Created: 535760a2b32a587f55a5ebd88b21b80cd92bf1eca14848c4220b3b9973fe4fb1
+Block Depth: 46
+Previous Block: bb6b8bc9c30876491fdf9acf6a040a37d584aeb1a36b35780f82884c08ffe34f
+Size: 1043.4084121773155 KB
+Transaction Size: 0.6963598744220747 KB
+Number of Transactions: 1567.016795297809
+Block Interval: 58.310059785842896
+
+Block Created: b24a7c248e642a197f2f3ae0b2f047d896d13922dad330587d1157ed7e9610af
+Block Depth: 47
+Previous Block: 535760a2b32a587f55a5ebd88b21b80cd92bf1eca14848c4220b3b9973fe4fb1
+Size: 758.1192833125901 KB
+Transaction Size: 0.6068534566767673 KB
+Number of Transactions: 1345.848024406532
+Block Interval: 63.44264078140259
+
+Block Created: 4abb6faa4804415a37c0d122206d0ed807a326b04489b613ab101df9c16dc770
+Block Depth: 48
+Previous Block: b24a7c248e642a197f2f3ae0b2f047d896d13922dad330587d1157ed7e9610af
+Size: 720.7398833714565 KB
+Transaction Size: 0.5073965086972254 KB
+Number of Transactions: 1718.310554858597
+Block Interval: 57.06660318374634
+
+Block Created: f32ae32f871383d45bc97304eb010293706bdedd20c7279f7b3826331aac4d30
+Block Depth: 49
+Previous Block: 4abb6faa4804415a37c0d122206d0ed807a326b04489b613ab101df9c16dc770
+Size: 746.5175554570869 KB
+Transaction Size: 0.6358519336148487 KB
+Number of Transactions: 1364.4381470076073
+Block Interval: 50.06219291687012
+
+Block Created: 2ef152c39a85885ec9f93b9caf12c2cefd475ed0b5b409373b3c3bc404354f1f
+Block Depth: 50
+Previous Block: f32ae32f871383d45bc97304eb010293706bdedd20c7279f7b3826331aac4d30
+Size: 1007.0408637678793 KB
+Transaction Size: 0.685772598435675 KB
+Number of Transactions: 1617.0398750950621
+Block Interval: 58.52399134635925
+
+Block Created: 1ce83d243172a59976c94764e01de593a2915a4affcbde92e247880f1346a568
+Block Depth: 51
+Previous Block: 2ef152c39a85885ec9f93b9caf12c2cefd475ed0b5b409373b3c3bc404354f1f
+Size: 1372.3070978713351 KB
+Transaction Size: 0.7063559167027195 KB
+Number of Transactions: 1664.727613674193
+Block Interval: 56.90684723854065
+
+Block Created: 49fa55c5107b55296cda80fbe56b3581237080ea68efe469a0a714e5eb653e6a
+Block Depth: 52
+Previous Block: 1ce83d243172a59976c94764e01de593a2915a4affcbde92e247880f1346a568
+Size: 842.936610133998 KB
+Transaction Size: 0.6077870183933645 KB
+Number of Transactions: 1337.782515175326
+Block Interval: 73.87146353721619
+
+Block Created: 60b38c27a91b4148229e85f7f59e84e19c2e4c65776bb0fad358d7cf79374a13
+Block Depth: 53
+Previous Block: 49fa55c5107b55296cda80fbe56b3581237080ea68efe469a0a714e5eb653e6a
+Size: 509.4022678499082 KB
+Transaction Size: 0.42551080802448177 KB
+Number of Transactions: 1410.134030326171
+Block Interval: 62.415528297424316
+
+Block Created: 319b22c8b59e3e3ebbcabf6d508efda397834fc15eb01cc7493290a74d422143
+Block Depth: 54
+Previous Block: 60b38c27a91b4148229e85f7f59e84e19c2e4c65776bb0fad358d7cf79374a13
+Size: 1261.5272295322836 KB
+Transaction Size: 0.6775710807915012 KB
+Number of Transactions: 1673.8221756560815
+Block Interval: 56.27298188209534
+
+Block Created: fa977334e01a1dbb10932fabf49ae6de51c00dc877fdb1964eb054bdd554e9cb
+Block Depth: 55
+Previous Block: 319b22c8b59e3e3ebbcabf6d508efda397834fc15eb01cc7493290a74d422143
+Size: 541.2581527942169 KB
+Transaction Size: 0.4730033952171585 KB
+Number of Transactions: 1397.9621698674105
+Block Interval: 72.13491892814636
+
+Block Created: 842adef10940cc37970738a3b5c58735c791910dcb42d38408265065bc6ffcf6
+Block Depth: 56
+Previous Block: fa977334e01a1dbb10932fabf49ae6de51c00dc877fdb1964eb054bdd554e9cb
+Size: 633.6948595302225 KB
+Transaction Size: 0.42422258753041014 KB
+Number of Transactions: 1652.8686726360195
+Block Interval: 49.755342960357666
+
+Block Created: ce8765e79cfbfbeb69d088a782319bbcb7b883d9409c896cd7738d8d089892e0
+Block Depth: 57
+Previous Block: 842adef10940cc37970738a3b5c58735c791910dcb42d38408265065bc6ffcf6
+Size: 1007.4746135337226 KB
+Transaction Size: 0.6301143230180166 KB
+Number of Transactions: 1410.2725417948295
+Block Interval: 59.30675220489502
+
+Block Created: c2eff734f2449b0b8c3b0780aa39e5f29139314f9a8cdc34c8d63c5c66610c72
+Block Depth: 58
+Previous Block: ce8765e79cfbfbeb69d088a782319bbcb7b883d9409c896cd7738d8d089892e0
+Size: 978.7665532509416 KB
+Transaction Size: 0.47825986510136076 KB
+Number of Transactions: 1955.646906300931
+Block Interval: 72.46977853775024
+
+Block Created: 8eb2e075189cdb212f9fbef8f59131f25475952d565040a9b64cb6d92a3aa84a
+Block Depth: 59
+Previous Block: c2eff734f2449b0b8c3b0780aa39e5f29139314f9a8cdc34c8d63c5c66610c72
+Size: 627.9600663704127 KB
+Transaction Size: 0.48771178556864975 KB
+Number of Transactions: 1584.2749862181042
+Block Interval: 63.14913296699524
+
+Block Created: 29f4db062cca2cb98a7292797db0ee97bcaea9f536e6d5bcab770745f7fb6439
+Block Depth: 60
+Previous Block: 8eb2e075189cdb212f9fbef8f59131f25475952d565040a9b64cb6d92a3aa84a
+Size: 883.1586059723948 KB
+Transaction Size: 0.4723205246143035 KB
+Number of Transactions: 1879.8382522839745
+Block Interval: 52.42728233337402
+
+Block Created: 402c48aaeaef9a36c39c942d80c42e64d1dc7f7c0822d106581edca6e750535f
+Block Depth: 61
+Previous Block: 29f4db062cca2cb98a7292797db0ee97bcaea9f536e6d5bcab770745f7fb6439
+Size: 1293.6025027027142 KB
+Transaction Size: 0.6580815930777861 KB
+Number of Transactions: 1847.4328162948036
+Block Interval: 63.83065629005432
+
+Block Created: ff67e028375acf954d556f39ed8b970b90e2f9db48d72da74cc96bf7545b065e
+Block Depth: 62
+Previous Block: 402c48aaeaef9a36c39c942d80c42e64d1dc7f7c0822d106581edca6e750535f
+Size: 666.6214379642405 KB
+Transaction Size: 0.4757710774232683 KB
+Number of Transactions: 1425.7802174698165
+Block Interval: 68.47003221511841
+
+Block Created: 8592a968757b1328a9e22b7ed4c1e895e9f9ab3a15c5e5e5193be4a90f3194ad
+Block Depth: 63
+Previous Block: ff67e028375acf954d556f39ed8b970b90e2f9db48d72da74cc96bf7545b065e
+Size: 898.8888927342203 KB
+Transaction Size: 0.6672654251916628 KB
+Number of Transactions: 1318.5303682323076
+Block Interval: 64.94383597373962
+
+Block Created: be7c96ab6654e9b080c51f7ef10c88c1b15f63c544aa19662c0ccbb83c69d83d
+Block Depth: 64
+Previous Block: 8592a968757b1328a9e22b7ed4c1e895e9f9ab3a15c5e5e5193be4a90f3194ad
+Size: 1392.1646703063925 KB
+Transaction Size: 0.611229726193689 KB
+Number of Transactions: 1872.4225709373782
+Block Interval: 68.36397123336792
+
+Block Created: c9d12a292e8ffbdfb482fe69b1d9c9dab492ad137c6e98defed1d73db26d43b2
+Block Depth: 65
+Previous Block: be7c96ab6654e9b080c51f7ef10c88c1b15f63c544aa19662c0ccbb83c69d83d
+Size: 573.8159755652555 KB
+Transaction Size: 0.48917354327210577 KB
+Number of Transactions: 1302.7559862316355
+Block Interval: 77.29490566253662
+
+Block Created: ad79be711c153241e86516bec01b8a3401cf358dcb7f380ae1bdd7b15b61e78a
+Block Depth: 66
+Previous Block: c9d12a292e8ffbdfb482fe69b1d9c9dab492ad137c6e98defed1d73db26d43b2
+Size: 737.8652527920899 KB
+Transaction Size: 0.4844838380788678 KB
+Number of Transactions: 1460.4150273452826
+Block Interval: 57.87348484992981
+
+Block Created: de34bd02802b0d44f4b0544bca435f1ad66867a3a276e44ac189e0da267bdcbd
+Block Depth: 67
+Previous Block: ad79be711c153241e86516bec01b8a3401cf358dcb7f380ae1bdd7b15b61e78a
+Size: 914.2047652150067 KB
+Transaction Size: 0.523835614576061 KB
+Number of Transactions: 1646.5135796666493
+Block Interval: 67.46312952041626
+
+Block Created: b3c79259e5c4c7142ba0c2463c0a0ae1e9a3db43a49edd273d8a51b458f6f686
+Block Depth: 68
+Previous Block: de34bd02802b0d44f4b0544bca435f1ad66867a3a276e44ac189e0da267bdcbd
+Size: 841.9438107280595 KB
+Transaction Size: 0.49951158472752677 KB
+Number of Transactions: 1477.2823469756743
+Block Interval: 68.91916108131409
+
+Block Created: d3b21b287c6d79bb2c8e01032f4038b615b176367058f36a2c513655dec0eeab
+Block Depth: 69
+Previous Block: b3c79259e5c4c7142ba0c2463c0a0ae1e9a3db43a49edd273d8a51b458f6f686
+Size: 1119.5865226488706 KB
+Transaction Size: 0.7117093566327912 KB
+Number of Transactions: 1688.9025782656263
+Block Interval: 69.36390662193298
+
+Block Created: 642e75e8fee002ef6f90196168b75c745d81e9b7a66c6737ac8134e3947fd483
+Block Depth: 70
+Previous Block: d3b21b287c6d79bb2c8e01032f4038b615b176367058f36a2c513655dec0eeab
+Size: 1006.0187296345725 KB
+Transaction Size: 0.726961142413852 KB
+Number of Transactions: 1508.4577522510008
+Block Interval: 56.31278991699219
+
+Block Created: ccc1d39ed508c30bce787e65f97ac6f29a1ea03bbab8e4a39dac5cfd108cb109
+Block Depth: 71
+Previous Block: 642e75e8fee002ef6f90196168b75c745d81e9b7a66c6737ac8134e3947fd483
+Size: 1512.274528212382 KB
+Transaction Size: 0.6476476500576369 KB
+Number of Transactions: 1950.794430345608
+Block Interval: 58.57559561729431
+
+Block Created: 3ffb41472ceb6ff8b7eaf833359fac7fba3272667cdd51e47a1e35d1fcc453b5
+Block Depth: 72
+Previous Block: ccc1d39ed508c30bce787e65f97ac6f29a1ea03bbab8e4a39dac5cfd108cb109
+Size: 1033.3851720044333 KB
+Transaction Size: 0.594005621342055 KB
+Number of Transactions: 1918.553995102688
+Block Interval: 76.11541700363159
+
+Block Created: b6481f95589db226b44231a55e9b22265adeb8e36f31885d694578751ca5823a
+Block Depth: 73
+Previous Block: 3ffb41472ceb6ff8b7eaf833359fac7fba3272667cdd51e47a1e35d1fcc453b5
+Size: 726.7019949427134 KB
+Transaction Size: 0.48124786090433086 KB
+Number of Transactions: 1724.092452217698
+Block Interval: 55.15229630470276
+
+Block Created: 47265cad9c4e20af24e8ba86beca8ee910a919aa22da55be21949fcbb552c3c0
+Block Depth: 74
+Previous Block: b6481f95589db226b44231a55e9b22265adeb8e36f31885d694578751ca5823a
+Size: 1146.6909642238397 KB
+Transaction Size: 0.7420331324314395 KB
+Number of Transactions: 1564.757036227946
+Block Interval: 60.996317625045776
+
+Block Created: 3b797eb08a0c9adebb14a79ea1679a177db5361615304c323bfe457332324af9
+Block Depth: 75
+Previous Block: 47265cad9c4e20af24e8ba86beca8ee910a919aa22da55be21949fcbb552c3c0
+Size: 693.9103713820141 KB
+Transaction Size: 0.4827085364506202 KB
+Number of Transactions: 1726.5679030254737
+Block Interval: 66.6618869304657
+
+Block Created: 671a8e9ce78fd105fbd34dd8b45bae19f95deba72a9e657990d3db64b741d008
+Block Depth: 76
+Previous Block: 3b797eb08a0c9adebb14a79ea1679a177db5361615304c323bfe457332324af9
+Size: 921.3533099125146 KB
+Transaction Size: 0.6924995580267002 KB
+Number of Transactions: 1447.860241900365
+Block Interval: 50.8922975063324
+
+Block Created: cc5cd0ed6b775d268ada12e523653066c191a9ce53950d000347cc4d670fc59d
+Block Depth: 77
+Previous Block: 671a8e9ce78fd105fbd34dd8b45bae19f95deba72a9e657990d3db64b741d008
+Size: 841.1585338135583 KB
+Transaction Size: 0.5521934403801321 KB
+Number of Transactions: 1413.4443492386752
+Block Interval: 62.50118088722229
+
+Block Created: 938af1635c399d1c702527bb7c30fa36c4a7bfbf63b3d225afcc6d26f1584479
+Block Depth: 78
+Previous Block: cc5cd0ed6b775d268ada12e523653066c191a9ce53950d000347cc4d670fc59d
+Size: 758.274934802046 KB
+Transaction Size: 0.42815709407813507 KB
+Number of Transactions: 1682.7994919955265
+Block Interval: 71.51860880851746
+
+Block Created: 415599ebee9e4dbdb761b7c693141f924b0cdb94a9835cb8e45ffa4cb6b17a58
+Block Depth: 79
+Previous Block: 938af1635c399d1c702527bb7c30fa36c4a7bfbf63b3d225afcc6d26f1584479
+Size: 1172.6732242951637 KB
+Transaction Size: 0.5937321200353072 KB
+Number of Transactions: 1631.9472714168603
+Block Interval: 70.67564392089844
+
+Block Created: d01ee155d006f476ce5d3ec79069c2ea9b2ca8c02f801a97c3cfe76d05ad6e51
+Block Depth: 80
+Previous Block: 415599ebee9e4dbdb761b7c693141f924b0cdb94a9835cb8e45ffa4cb6b17a58
+Size: 754.1755859385926 KB
+Transaction Size: 0.4652450028629886 KB
+Number of Transactions: 1435.9695679250772
+Block Interval: 79.73210096359253
+
+Block Created: e36ea4c4e67bd9bbfbee7d5bdce8fc6f6ddf0197e492b28d137a9c4ad1e20ed0
+Block Depth: 81
+Previous Block: d01ee155d006f476ce5d3ec79069c2ea9b2ca8c02f801a97c3cfe76d05ad6e51
+Size: 975.7772577536551 KB
+Transaction Size: 0.6674463377689546 KB
+Number of Transactions: 1552.7818122671044
+Block Interval: 73.00392532348633
+
+Block Created: 92291e2c50b97656e12ef2b0a992e8b72c52ca63e16a2aa94b6eb1dc2a809d19
+Block Depth: 82
+Previous Block: e36ea4c4e67bd9bbfbee7d5bdce8fc6f6ddf0197e492b28d137a9c4ad1e20ed0
+Size: 635.8428850971462 KB
+Transaction Size: 0.428476800794904 KB
+Number of Transactions: 1742.4004519576972
+Block Interval: 63.191612005233765
+
+Block Created: 0e6b6cb4079c8024278cf967bb8ebaaf2a8cf244a653cc017dbd2a67baf46ea1
+Block Depth: 83
+Previous Block: 92291e2c50b97656e12ef2b0a992e8b72c52ca63e16a2aa94b6eb1dc2a809d19
+Size: 1078.891313657937 KB
+Transaction Size: 0.7144752529765819 KB
+Number of Transactions: 1324.7097802108303
+Block Interval: 58.67364048957825
+
+Block Created: 4988837adf1b914a180b6d1c0070844f9cb41753f97b10e104e6ddb20aa5a562
+Block Depth: 84
+Previous Block: 0e6b6cb4079c8024278cf967bb8ebaaf2a8cf244a653cc017dbd2a67baf46ea1
+Size: 1059.3398920201016 KB
+Transaction Size: 0.7247448516089664 KB
+Number of Transactions: 1617.9580787658872
+Block Interval: 70.68174028396606
+
+Block Created: d9cb50a1916777f55f159a73cb22d12f31f44f7f1acad81b82cd25b73d3e876d
+Block Depth: 85
+Previous Block: 4988837adf1b914a180b6d1c0070844f9cb41753f97b10e104e6ddb20aa5a562
+Size: 603.5130918906709 KB
+Transaction Size: 0.41535495461771 KB
+Number of Transactions: 1671.9591132801534
+Block Interval: 62.91167759895325
+
+Block Created: dd548e82879d40cda4943bdd3362dc2488143f500bca4a3b11ce3b85d9c9c17e
+Block Depth: 86
+Previous Block: d9cb50a1916777f55f159a73cb22d12f31f44f7f1acad81b82cd25b73d3e876d
+Size: 667.7301661143348 KB
+Transaction Size: 0.4246970013121852 KB
+Number of Transactions: 1831.676314173322
+Block Interval: 53.168862104415894
+
+Block Created: 3ca037da73e4da52e659ad1ab76abbe084cd04bc35dcadd19ee1072b2fd1e0aa
+Block Depth: 87
+Previous Block: dd548e82879d40cda4943bdd3362dc2488143f500bca4a3b11ce3b85d9c9c17e
+Size: 1084.3056259645427 KB
+Transaction Size: 0.665907683447486 KB
+Number of Transactions: 1329.362303175376
+Block Interval: 53.02379012107849
+
+Block Created: 1023260d6c59cf1641005f1d699e5bb91ca9a0805af7b41a8963e4326dbad919
+Block Depth: 88
+Previous Block: 3ca037da73e4da52e659ad1ab76abbe084cd04bc35dcadd19ee1072b2fd1e0aa
+Size: 871.807598256616 KB
+Transaction Size: 0.5594349615748765 KB
+Number of Transactions: 1562.5855138458533
+Block Interval: 84.37268090248108
+
+Block Created: 10f0f00dda06278853e304b5d3a7bbaa3bd3824469794592e8df699088be736b
+Block Depth: 89
+Previous Block: 1023260d6c59cf1641005f1d699e5bb91ca9a0805af7b41a8963e4326dbad919
+Size: 1113.8337000677925 KB
+Transaction Size: 0.6465214202340888 KB
+Number of Transactions: 1902.9313233890969
+Block Interval: 66.84865856170654
+
+Block Created: 88ea658916473a45e9bf678f1a47d773020a29dc1bf87d71814f3f5608f56366
+Block Depth: 90
+Previous Block: 10f0f00dda06278853e304b5d3a7bbaa3bd3824469794592e8df699088be736b
+Size: 1291.910643910957 KB
+Transaction Size: 0.6917773115909133 KB
+Number of Transactions: 1802.5929025041557
+Block Interval: 62.304279088974
+
+Block Created: 360968a65ab82174bce01e152a0b1470a733512d65c4147030e0b3f779d7ebc1
+Block Depth: 91
+Previous Block: 88ea658916473a45e9bf678f1a47d773020a29dc1bf87d71814f3f5608f56366
+Size: 857.5934230758422 KB
+Transaction Size: 0.5319185612914646 KB
+Number of Transactions: 1593.8170214185375
+Block Interval: 63.1762638092041
+
+Block Created: 2676af71283aa13bd1f5c51a7d3f16e6b5f1a785bc76bea6b8e8a4a7ee503689
+Block Depth: 92
+Previous Block: 360968a65ab82174bce01e152a0b1470a733512d65c4147030e0b3f779d7ebc1
+Size: 1119.1716934422093 KB
+Transaction Size: 0.6722823647442212 KB
+Number of Transactions: 1921.1163147042005
+Block Interval: 70.9087405204773
+
+Block Created: 3fc922c07f485c518d03232325091ac063aee60ef34e1beaba67c22409f7ccf3
+Block Depth: 93
+Previous Block: 2676af71283aa13bd1f5c51a7d3f16e6b5f1a785bc76bea6b8e8a4a7ee503689
+Size: 784.6141163136338 KB
+Transaction Size: 0.5397767030936942 KB
+Number of Transactions: 1551.576246273536
+Block Interval: 87.91330623626709
+
+Block Created: 5a297484b933db6f5f03c3fa97b66cd2d94adb672c03d6bde55f963d7cfb9f8e
+Block Depth: 93
+Previous Block: 2676af71283aa13bd1f5c51a7d3f16e6b5f1a785bc76bea6b8e8a4a7ee503689
+Size: 611.1672326971094 KB
+Transaction Size: 0.46334207676073874 KB
+Number of Transactions: 1375.280652582117
+Block Interval: 112.92582750320435
+
+Block Created: e394c792a47091482b31888f2ba642a31388bbed533b0c67e0e79c92c576cd95
+Block Depth: 94
+Previous Block: 5a297484b933db6f5f03c3fa97b66cd2d94adb672c03d6bde55f963d7cfb9f8e
+Size: 795.1261098982161 KB
+Transaction Size: 0.4806564710396042 KB
+Number of Transactions: 1892.104305316806
+Block Interval: 66.1386890411377
+
+Block Created: fc3e7ab93fe3683c206ce2269b6c920d0f1d7e82c158ba43164518c390e677ae
+Block Depth: 95
+Previous Block: e394c792a47091482b31888f2ba642a31388bbed533b0c67e0e79c92c576cd95
+Size: 1353.0159407178649 KB
+Transaction Size: 0.7284336880683364 KB
+Number of Transactions: 1839.9983398068232
+Block Interval: 55.124515771865845
+
+Block Created: b6b0fbb391154ca41fb8e4d651cf5528b0eb467e76373e75d094d6b8b98cba05
+Block Depth: 96
+Previous Block: fc3e7ab93fe3683c206ce2269b6c920d0f1d7e82c158ba43164518c390e677ae
+Size: 800.2103577530057 KB
+Transaction Size: 0.4368207221247395 KB
+Number of Transactions: 1682.4247369706104
+Block Interval: 65.2954831123352
+
+Block Created: 51cf36f4c34a00aafdb75eb5950f9a03de5fd079770620df945510cafea34c78
+Block Depth: 97
+Previous Block: b6b0fbb391154ca41fb8e4d651cf5528b0eb467e76373e75d094d6b8b98cba05
+Size: 834.6404232056057 KB
+Transaction Size: 0.4776369065570103 KB
+Number of Transactions: 1494.6084629905843
+Block Interval: 69.97871375083923
+
+Block Created: dc914b9bd94a4da821830f405c491e0372ada0a980cc74128430eb921e883d8c
+Block Depth: 98
+Previous Block: 51cf36f4c34a00aafdb75eb5950f9a03de5fd079770620df945510cafea34c78
+Size: 1152.3233571732803 KB
+Transaction Size: 0.6888160503925624 KB
+Number of Transactions: 1779.3087549554657
+Block Interval: 78.4666862487793
+
+Block Created: 44a0703643972edb18a744295389207953caf128f8054c95e60e5f5085354c86
+Block Depth: 99
+Previous Block: dc914b9bd94a4da821830f405c491e0372ada0a980cc74128430eb921e883d8c
+Size: 1159.7147099059255 KB
+Transaction Size: 0.693314108556058 KB
+Number of Transactions: 1859.0292840600496
+Block Interval: 61.40686225891113
+
+Block Created: 508d98bc0f300c39192f48d660c9a44db5bc45284784a9c335797e11d8ba67f9
+Block Depth: 100
+Previous Block: 44a0703643972edb18a744295389207953caf128f8054c95e60e5f5085354c86
+Size: 1083.180332445892 KB
+Transaction Size: 0.6168032791175156 KB
+Number of Transactions: 1665.2265005671695
+Block Interval: 56.592406272888184
+
+Block Created: 673fc06566185606d0086701eabe9be9b4b8febe50a229b3bd52a5e9ca9fcbae
+Block Depth: 101
+Previous Block: 508d98bc0f300c39192f48d660c9a44db5bc45284784a9c335797e11d8ba67f9
+Size: 736.3949010142485 KB
+Transaction Size: 0.44550073876428303 KB
+Number of Transactions: 1818.4270948324356
+Block Interval: 63.917060136795044
+
+Block Created: 4501ddacaf89bfe22240c6b9c01aae4ef970032fed089b76edcbdd22040cb6ec
+Block Depth: 102
+Previous Block: 673fc06566185606d0086701eabe9be9b4b8febe50a229b3bd52a5e9ca9fcbae
+Size: 1011.6260606294429 KB
+Transaction Size: 0.5938776369597456 KB
+Number of Transactions: 1973.8253453159377
+Block Interval: 56.2991578578949
+
+Block Created: 2b59c9eac53fead189db5ef509d43a85900262c76644b1db457f7b8b9751efbe
+Block Depth: 103
+Previous Block: 4501ddacaf89bfe22240c6b9c01aae4ef970032fed089b76edcbdd22040cb6ec
+Size: 731.816429872761 KB
+Transaction Size: 0.48457138744296474 KB
+Number of Transactions: 1303.665001068067
+Block Interval: 61.2250542640686
+
+Block Created: 4d10e2d9a54b5bc3eaa9541c69f5a524f5bb5a72f2367bba087d708c5dee554b
+Block Depth: 104
+Previous Block: 2b59c9eac53fead189db5ef509d43a85900262c76644b1db457f7b8b9751efbe
+Size: 1093.6820514128 KB
+Transaction Size: 0.7023950390041095 KB
+Number of Transactions: 1798.2879661119493
+Block Interval: 79.96761631965637
+
+Block Created: 52d82ec1be84f80fbc8b5c58950c6e5ad8b527b180efde558d35d293610695fc
+Block Depth: 105
+Previous Block: 4d10e2d9a54b5bc3eaa9541c69f5a524f5bb5a72f2367bba087d708c5dee554b
+Size: 1049.561623911437 KB
+Transaction Size: 0.6339072146037712 KB
+Number of Transactions: 1379.3377405326526
+Block Interval: 57.307084798812866
+
+Block Created: 251b126a312ba012fb272d7ae3c4b54cafb4357e1487955d64847306ac5d25a5
+Block Depth: 106
+Previous Block: 52d82ec1be84f80fbc8b5c58950c6e5ad8b527b180efde558d35d293610695fc
+Size: 796.8957730545495 KB
+Transaction Size: 0.5445999171414632 KB
+Number of Transactions: 1631.4756187768278
+Block Interval: 74.65861988067627
+
+Block Created: 24ffcc33feca27a991c7c7cf8abe828436eb3ed672ab3641930333201b12b243
+Block Depth: 107
+Previous Block: 251b126a312ba012fb272d7ae3c4b54cafb4357e1487955d64847306ac5d25a5
+Size: 1474.9901132246364 KB
+Transaction Size: 0.7417451624516105 KB
+Number of Transactions: 1865.377203080337
+Block Interval: 62.89240312576294
+
+Block Created: fd451fe36577fc56e7dcdf2017b48fe259a3f7b4ef084e365ab34feed3732db6
+Block Depth: 108
+Previous Block: 24ffcc33feca27a991c7c7cf8abe828436eb3ed672ab3641930333201b12b243
+Size: 521.8172919217521 KB
+Transaction Size: 0.46019741341096043 KB
+Number of Transactions: 1373.0622972836
+Block Interval: 70.80585384368896
+
+Block Created: d165c415433338693814a6cdbddbc7e8e5351ea0baba746c6ac536530fecc5b4
+Block Depth: 109
+Previous Block: fd451fe36577fc56e7dcdf2017b48fe259a3f7b4ef084e365ab34feed3732db6
+Size: 697.1273833240116 KB
+Transaction Size: 0.4238232795098586 KB
+Number of Transactions: 1619.835485365427
+Block Interval: 55.05403804779053
+
+Block Created: 6c2f4a1a4ac2132715c39e75bae5ad8dfd2d86a092439ccc2ef42cac19fc8add
+Block Depth: 110
+Previous Block: d165c415433338693814a6cdbddbc7e8e5351ea0baba746c6ac536530fecc5b4
+Size: 786.8906566661221 KB
+Transaction Size: 0.49835679151412754 KB
+Number of Transactions: 1687.2750776737967
+Block Interval: 67.79062986373901
+
+Block Created: 6c2fde89890d59f9fa3583922de77f5b78b1b2498989931685c5ca90ea82ace1
+Block Depth: 111
+Previous Block: 6c2f4a1a4ac2132715c39e75bae5ad8dfd2d86a092439ccc2ef42cac19fc8add
+Size: 764.7967136214078 KB
+Transaction Size: 0.41299038983167846 KB
+Number of Transactions: 1983.1235544923406
+Block Interval: 68.33753180503845
+
+Block Created: 1b0775963509411bb0ff92f713d35f6960a6c7dd725205bb8d82aba2f8224346
+Block Depth: 112
+Previous Block: 6c2fde89890d59f9fa3583922de77f5b78b1b2498989931685c5ca90ea82ace1
+Size: 677.3812893834678 KB
+Transaction Size: 0.4567543124818489 KB
+Number of Transactions: 1513.7033953338448
+Block Interval: 66.78294730186462
+
+Block Created: 675d0e5158d1d20a49cabbbbe9c712c62d3dbd864983976832c0203b6a009d96
+Block Depth: 113
+Previous Block: 1b0775963509411bb0ff92f713d35f6960a6c7dd725205bb8d82aba2f8224346
+Size: 834.1713969042816 KB
+Transaction Size: 0.5055792684044252 KB
+Number of Transactions: 1845.377142886461
+Block Interval: 68.4106183052063
+
+Block Created: 88ac5f99252660adc7fc826c645d057276241883d00aa9c14183bf1a6d36b135
+Block Depth: 114
+Previous Block: 675d0e5158d1d20a49cabbbbe9c712c62d3dbd864983976832c0203b6a009d96
+Size: 693.5873511735354 KB
+Transaction Size: 0.4688864169450563 KB
+Number of Transactions: 1685.9045381126914
+Block Interval: 56.92308521270752
+
+Block Created: 03e700ae68fa8d6d0fffc8f4c03ab1e507635244ef51ae931ceaee2916d798f8
+Block Depth: 115
+Previous Block: 88ac5f99252660adc7fc826c645d057276241883d00aa9c14183bf1a6d36b135
+Size: 697.7746313208958 KB
+Transaction Size: 0.6220796834183658 KB
+Number of Transactions: 1369.2593244702819
+Block Interval: 54.38232183456421
+
+Block Created: c169ed7084f40d1bac6587cdb612b0700a1b0adce3e472c1a2bba710c81d3ef7
+Block Depth: 116
+Previous Block: 03e700ae68fa8d6d0fffc8f4c03ab1e507635244ef51ae931ceaee2916d798f8
+Size: 1114.1392082423783 KB
+Transaction Size: 0.6676556407044969 KB
+Number of Transactions: 1579.369775404435
+Block Interval: 49.86819386482239
+
+Block Created: 41656830fc04e895122d89336987866fd342869d203283a3c4a6a735cf194bbf
+Block Depth: 117
+Previous Block: c169ed7084f40d1bac6587cdb612b0700a1b0adce3e472c1a2bba710c81d3ef7
+Size: 706.9392590853412 KB
+Transaction Size: 0.47120424093347735 KB
+Number of Transactions: 1469.6859914292638
+Block Interval: 63.85074830055237
+
+Block Created: 26b29aca3ae3055a8a7f7530b90250775070a2950d48650a698435eec064676a
+Block Depth: 118
+Previous Block: 41656830fc04e895122d89336987866fd342869d203283a3c4a6a735cf194bbf
+Size: 905.9231645578859 KB
+Transaction Size: 0.4496331229460246 KB
+Number of Transactions: 1766.546169822377
+Block Interval: 65.98388695716858
+
+Block Created: 320c006dbe6f000c2b29a4be60dfe51e45cf79dc97c6fc3ef59f4188305aeef6
+Block Depth: 119
+Previous Block: 26b29aca3ae3055a8a7f7530b90250775070a2950d48650a698435eec064676a
+Size: 740.7366032017778 KB
+Transaction Size: 0.4388387878384608 KB
+Number of Transactions: 1533.6415344945976
+Block Interval: 69.26278448104858
+
+Block Created: 7e3449b57bcedc1d9d4d2c320f4f9fd394a832df647cff287f200fc704a04b39
+Block Depth: 120
+Previous Block: 320c006dbe6f000c2b29a4be60dfe51e45cf79dc97c6fc3ef59f4188305aeef6
+Size: 698.834835917677 KB
+Transaction Size: 0.43394493006423623 KB
+Number of Transactions: 1447.9764441737786
+Block Interval: 67.25964617729187
+
+Block Created: 6fbe6a7d86ddff91302b5bdc1f8fd823b033b9c06572e37f442a281712dd9d1e
+Block Depth: 121
+Previous Block: 7e3449b57bcedc1d9d4d2c320f4f9fd394a832df647cff287f200fc704a04b39
+Size: 896.1340601950003 KB
+Transaction Size: 0.5404613475434652 KB
+Number of Transactions: 1522.5271815620226
+Block Interval: 78.81968951225281
+
+Block Created: 68ad881ada4f825684d8679eb50f09019e7a2d7afb557f698304e04ba2763140
+Block Depth: 122
+Previous Block: 6fbe6a7d86ddff91302b5bdc1f8fd823b033b9c06572e37f442a281712dd9d1e
+Size: 492.4615343513619 KB
+Transaction Size: 0.4122463967971761 KB
+Number of Transactions: 1474.238682545782
+Block Interval: 69.24790048599243
+
+Block Created: 3fd5cedd60b99b7c2fa4506ea58656e3b0b649de126e85a8f5f46460b5d0b599
+Block Depth: 123
+Previous Block: 68ad881ada4f825684d8679eb50f09019e7a2d7afb557f698304e04ba2763140
+Size: 614.1277509465358 KB
+Transaction Size: 0.41526208611454724 KB
+Number of Transactions: 1707.0709335011259
+Block Interval: 49.966500997543335
+
+Block Created: e50caafb297371f0f1aa9422c5e63eaf05f06946432da9604c1d24e95b9ee94f
+Block Depth: 124
+Previous Block: 3fd5cedd60b99b7c2fa4506ea58656e3b0b649de126e85a8f5f46460b5d0b599
+Size: 843.3645994197343 KB
+Transaction Size: 0.5596906414862284 KB
+Number of Transactions: 1581.7847699607712
+Block Interval: 64.68263673782349
+
+Block Created: fed5dc42319bca47c2a9d06208d2b2cec6f2789f257d0e7933010b4ea1e64b0c
+Block Depth: 125
+Previous Block: e50caafb297371f0f1aa9422c5e63eaf05f06946432da9604c1d24e95b9ee94f
+Size: 1070.5518984733553 KB
+Transaction Size: 0.6810819850018031 KB
+Number of Transactions: 1672.953167032129
+Block Interval: 57.44009232521057
+
+Block Created: 9bff46f0fe2c8cd43c059da5ecd3ea5f6e60b9c932ee8cc4cca183d06e3b5279
+Block Depth: 126
+Previous Block: fed5dc42319bca47c2a9d06208d2b2cec6f2789f257d0e7933010b4ea1e64b0c
+Size: 1135.0619287490733 KB
+Transaction Size: 0.684447120080738 KB
+Number of Transactions: 1706.5084876808555
+Block Interval: 62.06327033042908
+
+Block Created: 6ce77a0d25540ab36cccfac3d53e40e85f0f2d36238145d0818d1fab1d7bf381
+Block Depth: 127
+Previous Block: 9bff46f0fe2c8cd43c059da5ecd3ea5f6e60b9c932ee8cc4cca183d06e3b5279
+Size: 683.1229094719173 KB
+Transaction Size: 0.46611486049854856 KB
+Number of Transactions: 1743.7737723714495
+Block Interval: 63.62835121154785
+
+Block Created: b21ef046529f2789a2596c3ceca53e560a6cdeb93b954da635bede08a8b8e217
+Block Depth: 128
+Previous Block: 6ce77a0d25540ab36cccfac3d53e40e85f0f2d36238145d0818d1fab1d7bf381
+Size: 774.3409638894456 KB
+Transaction Size: 0.46069621523006254 KB
+Number of Transactions: 1623.8314414351335
+Block Interval: 54.133973360061646
+
+Block Created: 58a5a6f1d0ae86e4237f7c7447feeb7db4ff7877986fa9fef56a22d51c0745c3
+Block Depth: 129
+Previous Block: b21ef046529f2789a2596c3ceca53e560a6cdeb93b954da635bede08a8b8e217
+Size: 722.9211695621718 KB
+Transaction Size: 0.5304310489677068 KB
+Number of Transactions: 1317.7616870951392
+Block Interval: 68.75414848327637
+
+Block Created: 679931857a45b836aa45a516836fb9fa7fddd9f1120421803eb0475b2f37a99f
+Block Depth: 130
+Previous Block: 58a5a6f1d0ae86e4237f7c7447feeb7db4ff7877986fa9fef56a22d51c0745c3
+Size: 880.7991461632365 KB
+Transaction Size: 0.6209776651685877 KB
+Number of Transactions: 1748.8069685151395
+Block Interval: 67.62143445014954
+
+Block Created: 3451ed19fb99d1cc5507a0bbf55850254f030de5406d9ea013b823be78b33b8b
+Block Depth: 131
+Previous Block: 679931857a45b836aa45a516836fb9fa7fddd9f1120421803eb0475b2f37a99f
+Size: 638.7877070061302 KB
+Transaction Size: 0.5550066289141307 KB
+Number of Transactions: 1308.6319892156223
+Block Interval: 56.28576612472534
+
+Block Created: 62f0cd076b9a9cc48f536c072b02a7a6126a186fd4c92dbb3fedab274361977b
+Block Depth: 132
+Previous Block: 3451ed19fb99d1cc5507a0bbf55850254f030de5406d9ea013b823be78b33b8b
+Size: 855.4437290126805 KB
+Transaction Size: 0.5214727540645621 KB
+Number of Transactions: 1437.659554476564
+Block Interval: 53.54018831253052
+
+Block Created: cc9178f2f0ebd5c789b73ab21e7917648c202b01512175348b502deec7b6c475
+Block Depth: 133
+Previous Block: 62f0cd076b9a9cc48f536c072b02a7a6126a186fd4c92dbb3fedab274361977b
+Size: 732.9120306355467 KB
+Transaction Size: 0.41683140658130124 KB
+Number of Transactions: 1899.0282430111556
+Block Interval: 81.30742883682251
+
+Block Created: 8c4f7ab6031c0bb6f2ae4709e6246364d16c86d9aec789a013a4545d06ab1870
+Block Depth: 134
+Previous Block: cc9178f2f0ebd5c789b73ab21e7917648c202b01512175348b502deec7b6c475
+Size: 989.6747713351176 KB
+Transaction Size: 0.701317148258162 KB
+Number of Transactions: 1323.7021484507097
+Block Interval: 66.8479232788086
+
+Block Created: 38b6071c9f32df7691c81c2105a77ad3155c61ffbfe9b6a4026c718185e69991
+Block Depth: 135
+Previous Block: 8c4f7ab6031c0bb6f2ae4709e6246364d16c86d9aec789a013a4545d06ab1870
+Size: 685.6524219630168 KB
+Transaction Size: 0.47942623748933055 KB
+Number of Transactions: 1743.8999204573875
+Block Interval: 72.60341095924377
+
+Block Created: 7b17e8c150860d0c64cbea7803b34615596ac1da8a820be624353cd60348b23b
+Block Depth: 136
+Previous Block: 38b6071c9f32df7691c81c2105a77ad3155c61ffbfe9b6a4026c718185e69991
+Size: 649.2520796507883 KB
+Transaction Size: 0.46640581053617847 KB
+Number of Transactions: 1541.0786554192605
+Block Interval: 55.43175411224365
+
+Block Created: c5ce12b43658c308a1e397078c03e28955ebfe761fdee256f88ba516220c2a9e
+Block Depth: 137
+Previous Block: 7b17e8c150860d0c64cbea7803b34615596ac1da8a820be624353cd60348b23b
+Size: 823.8667808751761 KB
+Transaction Size: 0.4111470181834394 KB
+Number of Transactions: 1747.149081344851
+Block Interval: 54.628840923309326
+
+Block Created: 72236c8504d11f2ce8c7280669e6c441270b1b6e876a377b7087cb05dfd4f0b6
+Block Depth: 138
+Previous Block: c5ce12b43658c308a1e397078c03e28955ebfe761fdee256f88ba516220c2a9e
+Size: 527.1204497145239 KB
+Transaction Size: 0.44781685019673007 KB
+Number of Transactions: 1307.998785414066
+Block Interval: 69.72857904434204
+
+Block Created: 933fe337eb202c58f14bebb54c4ca28ee16763f9bd78c1b41a437033de3c0052
+Block Depth: 139
+Previous Block: 72236c8504d11f2ce8c7280669e6c441270b1b6e876a377b7087cb05dfd4f0b6
+Size: 738.9925701102514 KB
+Transaction Size: 0.4960578375490365 KB
+Number of Transactions: 1824.3931470621112
+Block Interval: 67.58702611923218
+
+Block Created: a621396f5a57f1bede1a367477522eb80110426436ac116a7dc8434ec4a1977d
+Block Depth: 140
+Previous Block: 933fe337eb202c58f14bebb54c4ca28ee16763f9bd78c1b41a437033de3c0052
+Size: 781.9279412732204 KB
+Transaction Size: 0.6186299204657423 KB
+Number of Transactions: 1358.6187600736991
+Block Interval: 54.379279136657715
+
+Block Created: 5a8ea72096f45dfa08fe27834ea4c0b561ad754494a3280af65c849c37946102
+Block Depth: 141
+Previous Block: a621396f5a57f1bede1a367477522eb80110426436ac116a7dc8434ec4a1977d
+Size: 841.2300339642169 KB
+Transaction Size: 0.7201077985235782 KB
+Number of Transactions: 1397.0854650799724
+Block Interval: 69.08557605743408
+
+Block Created: 2c2f71e58f4dd29340eff52e49d48ad434ce65bc3052559da8a2bc79b8196837
+Block Depth: 142
+Previous Block: 5a8ea72096f45dfa08fe27834ea4c0b561ad754494a3280af65c849c37946102
+Size: 822.2349059537892 KB
+Transaction Size: 0.49141462236358435 KB
+Number of Transactions: 1932.2110871227592
+Block Interval: 57.05211043357849
+
+Block Created: b606697e2f8595961652e306d5cb379393582692c31291a81d2cba299fce9d29
+Block Depth: 143
+Previous Block: 2c2f71e58f4dd29340eff52e49d48ad434ce65bc3052559da8a2bc79b8196837
+Size: 977.1754001360367 KB
+Transaction Size: 0.6585064106530745 KB
+Number of Transactions: 1818.863568169817
+Block Interval: 55.419800996780396
+
+Block Created: d64e55b618ccb0d058168fe517cdb6908149d7c7c40f9a31241ced69438db81e
+Block Depth: 144
+Previous Block: b606697e2f8595961652e306d5cb379393582692c31291a81d2cba299fce9d29
+Size: 599.2869582929142 KB
+Transaction Size: 0.41655575090560343 KB
+Number of Transactions: 1434.8152374449382
+Block Interval: 62.260026931762695
+
+Block Created: 5d7c0fc435853f17c24e77a68ad055f22e26083f3577f82e8d205888f15bf3c8
+Block Depth: 145
+Previous Block: d64e55b618ccb0d058168fe517cdb6908149d7c7c40f9a31241ced69438db81e
+Size: 802.7067412614389 KB
+Transaction Size: 0.6145290579063498 KB
+Number of Transactions: 1437.5175398794693
+Block Interval: 68.68746519088745
+
+Block Created: d0f9425308aa00e992fc1b7f1aad81ddf0924d971e1b145bd38e888fa58875c3
+Block Depth: 146
+Previous Block: 5d7c0fc435853f17c24e77a68ad055f22e26083f3577f82e8d205888f15bf3c8
+Size: 696.7286556698007 KB
+Transaction Size: 0.4195514976239391 KB
+Number of Transactions: 1585.1455229122512
+Block Interval: 57.412623167037964
+
+Block Created: 43d3e86aa90599e200a45db2c6cc6eb508b55335f1b30aef61b8568d7c876a32
+Block Depth: 147
+Previous Block: d0f9425308aa00e992fc1b7f1aad81ddf0924d971e1b145bd38e888fa58875c3
+Size: 1213.3256929522774 KB
+Transaction Size: 0.6966695721962034 KB
+Number of Transactions: 1803.2202542668706
+Block Interval: 69.7842481136322
+
+Block Created: f8bea02bca4533a6ed26027ecd01240f9d965618fecc4de8bdf6d6d737af8942
+Block Depth: 148
+Previous Block: 43d3e86aa90599e200a45db2c6cc6eb508b55335f1b30aef61b8568d7c876a32
+Size: 1138.7528851269926 KB
+Transaction Size: 0.6328627373843344 KB
+Number of Transactions: 1739.9028095912236
+Block Interval: 65.65894937515259
+
+Block Created: 7a7720770e3c20d1ae14ab5efed06277e5424c6809661a6234846ca59887abe8
+Block Depth: 149
+Previous Block: f8bea02bca4533a6ed26027ecd01240f9d965618fecc4de8bdf6d6d737af8942
+Size: 763.714254423273 KB
+Transaction Size: 0.45556639279384825 KB
+Number of Transactions: 1881.089807016258
+Block Interval: 69.799325466156
+
+Block Created: 3977e429d50cdc6dad2ed33578ec0b4b5fa77843507217e6093adc219ab1ee74
+Block Depth: 150
+Previous Block: 7a7720770e3c20d1ae14ab5efed06277e5424c6809661a6234846ca59887abe8
+Size: 750.2675494972623 KB
+Transaction Size: 0.4417723352954303 KB
+Number of Transactions: 1445.892695190354
+Block Interval: 57.161240339279175
+
+Block Created: b219679df6c64568239a39e86571f0a9045285d869b9f35fd2220c010aceca81
+Block Depth: 151
+Previous Block: 3977e429d50cdc6dad2ed33578ec0b4b5fa77843507217e6093adc219ab1ee74
+Size: 863.2543485680409 KB
+Transaction Size: 0.7093366673353615 KB
+Number of Transactions: 1472.315518837925
+Block Interval: 73.06417441368103
+
+Block Created: 670e6b9b8a7cafed61ee39a7ee65c2cb7fef1173b27e25a6a58be2a994d62c86
+Block Depth: 152
+Previous Block: b219679df6c64568239a39e86571f0a9045285d869b9f35fd2220c010aceca81
+Size: 1183.4734496721621 KB
+Transaction Size: 0.5698430434291395 KB
+Number of Transactions: 1740.4965312079457
+Block Interval: 57.55527138710022
+
+Block Created: 1a96cfa6cf0374362be5142ddc492e138dc1196885079d8073675d1f8237e417
+Block Depth: 153
+Previous Block: 670e6b9b8a7cafed61ee39a7ee65c2cb7fef1173b27e25a6a58be2a994d62c86
+Size: 730.5673300946555 KB
+Transaction Size: 0.4954032144942137 KB
+Number of Transactions: 1399.2533769918543
+Block Interval: 79.25937509536743
+
+Block Created: 9a867431b2a64c6c96412522fe163f735963cc24cbcff49d56edf4df65e98b6a
+Block Depth: 154
+Previous Block: 1a96cfa6cf0374362be5142ddc492e138dc1196885079d8073675d1f8237e417
+Size: 795.7377780579417 KB
+Transaction Size: 0.6119411767656877 KB
+Number of Transactions: 1448.6245301506035
+Block Interval: 72.10208010673523
+
+Block Created: d5e345cebd56c80957b25b5e9b927e365fc8bbcadfb0b83bd61696535298ec81
+Block Depth: 155
+Previous Block: 9a867431b2a64c6c96412522fe163f735963cc24cbcff49d56edf4df65e98b6a
+Size: 1068.3942814953891 KB
+Transaction Size: 0.6153300134867226 KB
+Number of Transactions: 1648.9349165616795
+Block Interval: 57.56666040420532
+
+Block Created: 9781b8e715f166a4422a859db5e607b820a0666708105c64dfdcf2d41d20f825
+Block Depth: 156
+Previous Block: d5e345cebd56c80957b25b5e9b927e365fc8bbcadfb0b83bd61696535298ec81
+Size: 1405.8168355760574 KB
+Transaction Size: 0.6937811444947017 KB
+Number of Transactions: 1832.3389604645477
+Block Interval: 64.52449870109558
+
+Block Created: be0606430b416c8462a0ec27e7449bbb863c9997efac45fc65e81779eca4a7e3
+Block Depth: 157
+Previous Block: 9781b8e715f166a4422a859db5e607b820a0666708105c64dfdcf2d41d20f825
+Size: 636.1064309131823 KB
+Transaction Size: 0.46850840363310525 KB
+Number of Transactions: 1477.768743099269
+Block Interval: 77.94179463386536
+
+Block Created: 9fa6cf3e1bd848433dd146d57d3c59844844c82dbfed1531c63aea74d480f588
+Block Depth: 158
+Previous Block: be0606430b416c8462a0ec27e7449bbb863c9997efac45fc65e81779eca4a7e3
+Size: 1078.9600676074576 KB
+Transaction Size: 0.5249862865492925 KB
+Number of Transactions: 1674.9151869065797
+Block Interval: 56.8035831451416
+
+Block Created: 074a61d4ac146778ca3f304e31c9b317eb0deeff6ddc2e5e763f892ef134e6df
+Block Depth: 159
+Previous Block: 9fa6cf3e1bd848433dd146d57d3c59844844c82dbfed1531c63aea74d480f588
+Size: 1181.7082876710301 KB
+Transaction Size: 0.5759617242302639 KB
+Number of Transactions: 1931.1753301187537
+Block Interval: 83.93085265159607
+
+Block Created: ccf34559815e8d6d371a069017105c531750d5bcb76b6953bc1a191fe556ac74
+Block Depth: 160
+Previous Block: 074a61d4ac146778ca3f304e31c9b317eb0deeff6ddc2e5e763f892ef134e6df
+Size: 721.2161209974407 KB
+Transaction Size: 0.43337044797986835 KB
+Number of Transactions: 1648.658313787393
+Block Interval: 64.56307554244995
+
+Block Created: 4ca55cebdb1308588ab83472be74b3050ae5acfbe7dbfd6c6cc4e8831f654bac
+Block Depth: 161
+Previous Block: ccf34559815e8d6d371a069017105c531750d5bcb76b6953bc1a191fe556ac74
+Size: 908.6000891635093 KB
+Transaction Size: 0.569329967623909 KB
+Number of Transactions: 1942.1230200520356
+Block Interval: 72.3058512210846
+
+Block Created: 5a93a0b0edde5bdd5fa5abe91ca4c2631cbc40149b2c8be2c64a1bf5735e0a03
+Block Depth: 162
+Previous Block: 4ca55cebdb1308588ab83472be74b3050ae5acfbe7dbfd6c6cc4e8831f654bac
+Size: 897.7299231395762 KB
+Transaction Size: 0.5209906859969857 KB
+Number of Transactions: 1481.2901388326898
+Block Interval: 60.151692628860474
+
+Block Created: 16be2b5e03c0b5845c0ffa9c7cbc9b1d75c9cd091d115ef3cd788600112a4eb5
+Block Depth: 163
+Previous Block: 5a93a0b0edde5bdd5fa5abe91ca4c2631cbc40149b2c8be2c64a1bf5735e0a03
+Size: 893.1342760904683 KB
+Transaction Size: 0.501297040556751 KB
+Number of Transactions: 1915.0885562156218
+Block Interval: 78.04728579521179
+
+Block Created: b51615fcf4d58a164d4c21af6f92915bcb71e2674658d0149464b896cd7113a3
+Block Depth: 164
+Previous Block: 16be2b5e03c0b5845c0ffa9c7cbc9b1d75c9cd091d115ef3cd788600112a4eb5
+Size: 1047.5071571424412 KB
+Transaction Size: 0.6363970031884745 KB
+Number of Transactions: 1347.3662526787732
+Block Interval: 60.66783928871155
+
+Block Created: 00b284fcacc33bcdbcf58c7c317e96047d8d4a8ffc15659516468d0fab4fa911
+Block Depth: 165
+Previous Block: b51615fcf4d58a164d4c21af6f92915bcb71e2674658d0149464b896cd7113a3
+Size: 716.4848730067446 KB
+Transaction Size: 0.5205534894630744 KB
+Number of Transactions: 1499.5770043275402
+Block Interval: 76.08703470230103
+
+Block Created: d7b96311848627d6be13044595b413b1f5babc212fffac44ea309e4ee4c5a065
+Block Depth: 166
+Previous Block: 00b284fcacc33bcdbcf58c7c317e96047d8d4a8ffc15659516468d0fab4fa911
+Size: 964.8803847563412 KB
+Transaction Size: 0.5918727861113716 KB
+Number of Transactions: 1349.264293412056
+Block Interval: 59.07045269012451
+
+Block Created: 950754f6c0c50be17f60cca05a50d0ad1c1a605f86290af3caf2319e834f6f21
+Block Depth: 167
+Previous Block: d7b96311848627d6be13044595b413b1f5babc212fffac44ea309e4ee4c5a065
+Size: 536.6984817344135 KB
+Transaction Size: 0.42051876799213506 KB
+Number of Transactions: 1355.0027698686335
+Block Interval: 76.14672303199768
+
+Block Created: 72dd29a51a423d78482448412b9bc6877940c1f28002a47fa17dc9adffd333ca
+Block Depth: 168
+Previous Block: 950754f6c0c50be17f60cca05a50d0ad1c1a605f86290af3caf2319e834f6f21
+Size: 858.5577516542693 KB
+Transaction Size: 0.5155909638942684 KB
+Number of Transactions: 1884.0863171194471
+Block Interval: 56.858314514160156
+
+Block Created: 43ab4ab0a61bc13c245b2002453157208d581e151b7606ca9e2f3cc161260398
+Block Depth: 169
+Previous Block: 72dd29a51a423d78482448412b9bc6877940c1f28002a47fa17dc9adffd333ca
+Size: 675.0288916118737 KB
+Transaction Size: 0.4927661415947871 KB
+Number of Transactions: 1672.4868684942055
+Block Interval: 60.21576285362244
+
