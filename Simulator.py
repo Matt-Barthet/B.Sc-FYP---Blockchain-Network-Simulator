@@ -2,8 +2,9 @@ from Util import *
 import numpy as np
 import hashlib
 
-filename = "Bitcoin_Sim_" + str(time.time()) + ".txt"
-transit_file = "Bitcoin_Transit_" + str(time.time()) + ".txt"
+filename = "Ethereum_Sim" + str(time.time()) + ".txt"
+transit_file = "Ethereum_Transit_" + str(time.time()) + ".txt"
+
 '''
 Function to generate a random number from an exponential distribution,
 contained within an upper and lower bound.
@@ -37,9 +38,12 @@ class Block:
             self.hash = hash_object.hexdigest()
         else:
             self.depth = 0
-            self.size = 1024
-            self.transaction_count = 1650
-            self.transaction_size = 0.64
+            #self.size = 1024
+            self.size = 20
+            #self.transaction_count = 1650
+            self.transaction_count = 160
+            self.transaction_size = 0.125
+            #self.transaction_size = 0.64
             self.timestamp = time.time()
             self.father = None
             hash_object = hashlib.sha256(b'genesis')
@@ -107,7 +111,7 @@ class Process(Pyc.CComponent):
     def generate_block_properties(self):
         transaction_size = generateBoundedExponential(self.transaction_size)
         transaction_count = generateBoundedExponential(self.transaction_count)
-        size = [self.oracle.v_meanBlockTime * transaction_size * (transaction_count), transaction_size, transaction_count]
+        size = [self.oracle.v_meanBlockTime / 5 * transaction_size * (transaction_count), transaction_size, transaction_count]
         return size
 
     def consumeToken(self):
@@ -130,7 +134,8 @@ class Process(Pyc.CComponent):
 
     def newPendingBlock(self):
         new_pending = self.blocktree.blocks[self.r_appendedBlock.value(0)]
-        meanTransitTime = np.random.exponential(self.v_connectionSpeed.value() * new_pending.size)
+        #meanTransitTime = np.random.exponential(self.v_connectionSpeed.value() * new_pending.size)
+        meanTransitTime = np.random.exponential(self.v_connectionSpeed.value())
         print(new_pending.depth, "      ", np.round(meanTransitTime, 3), file=open(transit_file, "at"))
         self.pendingBlocks.append(new_pending)
         for connection in self.connections:
@@ -370,11 +375,15 @@ if __name__ == '__main__':
     Establishing the parameters to be used by the simulator.
     The process count refers to the number of nodes/miners in the system.
     """
-    process_count = 100
-    block_interval = [0.98, 0.81, 1.23]
-    transaction_count = [1650, 1300, 2000]
-    transaction_size = [0.64, 0.41, 0.75]
-    connection_speed = 0.08/600
+    process_count = 1000
+    #block_interval = [0.98, 0.81, 1.23]
+    block_interval = [1.04 * 5, 0.867 * 5, 1.2 * 5]
+    #transaction_count = [1650, 1300, 2000]
+    #transaction_size = [0.64, 0.41, 0.75]
+    transaction_count = [160,110,200]
+    transaction_size = [0.125, 0.1, 0.18]
+    #connection_speed = 0.08/600
+    connection_speed = 0.033 * 5
 
     simulator = Simulator("Simulator", process_count, transaction_count, transaction_size, connection_speed, block_interval)
     simulator.loadParameters("Simulator.xml")
@@ -396,7 +405,7 @@ if __name__ == '__main__':
     Running the simulation, recording its execution time and the results of the indicators.
     The result of the simulation is dumped into a text file with the current timestamp.
     """
-    print("Bitcoin Simulation Run:\n", file=open(filename, "wt"))
+    print("Ethereum Simulation Run:\n", file=open(filename, "wt"))
     startTime = time.time()
     simulator.simulate()
     endTime = time.time()
