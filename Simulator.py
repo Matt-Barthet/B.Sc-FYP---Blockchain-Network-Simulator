@@ -1,70 +1,34 @@
-from Util import *
-import numpy as np
-import hashlib
+from Simulator_Utility import *
 
-filename = "Ethereum_Sim" + str(time.time()) + ".txt"
-transit_file = "Ethereum_Transit_" + str(time.time()) + ".txt"
-
-'''
-Function to generate a random number from an exponential distribution,
-contained within an upper and lower bound.
-'''
-def generateBoundedExponential(values):
-    while True:
-        value = np.random.exponential(values[0])
-        if values[1] < value < values[2]:
-            return value
-
-'''
-Block (pure python) class represents a collection of on-chain transactions.
-'''
-class Block:
-    def __init__(self, father = None, process = None, size = None, transaction_size = None, transaction_count = None):
-
-        """
-        If the block provided is not the genesis block, create the object according to parent block.
-        If the block has no father, ie: is the genesis block of the blockchain, create a preset genesis block.
-        """
-        if father is not None:
-            self.size = size
-            self.transaction_size = transaction_size
-            self.transaction_count = transaction_count
-            self.father = father
-            self.timestamp = time.time()
-            self.process = process
-            self.depth = father.depth + 1
-            string_to_hash = father.hash + str(self.timestamp) + process + str(size) + str(transaction_count) + str(transaction_size)
-            hash_object = hashlib.sha256(string_to_hash.encode('utf-8'))
-            self.hash = hash_object.hexdigest()
-        else:
-            self.depth = 0
-            #self.size = 1024
-            self.size = 20
-            #self.transaction_count = 1650
-            self.transaction_count = 160
-            self.transaction_size = 0.125
-            #self.transaction_size = 0.64
-            self.timestamp = time.time()
-            self.father = None
-            hash_object = hashlib.sha256(b'genesis')
-            self.hash = hash_object.hexdigest()
+"""
+Establishing the parameters to be used by the simulator.
+The process count refers to the number of nodes/miners in the system.
+"""
+filename = "Arbitrary_Sim" + str(time.time()) + ".txt"
+transit_file = "Arbitrary_Transit" + str(time.time()) + ".txt"
+process_count = 5
+block_interval = [0, 0.81, 1.23]
+transaction_count = [1650, 1300, 2000]
+transaction_size = [0.64, 0.41, 0.75]
+connection_speed = 0.08 / 6000
+connection_count = 100
+genesis = Block()
 
 '''
 Process class represents the miners in a PoW blockchain network.
 Their network power is depicted by their merit.
 '''
 class Process(Pyc.CComponent):
-    def __init__(self, name, address, merit, blocktree, genesis, oracle, transaction_count, transaction_size, connection_speed):
+    def __init__(self, name, address, merit, blocktree, oracle):
         Pyc.CComponent.__init__(self, name)
         self.connections = []
+        self.connectedNodes = []
+        self.pendingPort = 0
         self.blocktree = blocktree
         self.oracle = oracle
         self.pendingBlocks = []
-        self.knownBlocks = [genesis]
-        self.transaction_count = transaction_count
-        self.transaction_size = transaction_size
+        self.knownBlocks = {genesis.hash: genesis}
 
-        self.v_connectionSpeed = self.addVariable("Mean Transit Time", Pyc.TVarType.t_float, connection_speed)
         self.v_lastBlock = self.addVariable("Last Block", Pyc.TVarType.t_string, genesis.hash)
         self.v_merit = self.addVariable("Merit", Pyc.TVarType.t_int, merit)
         self.v_address = self.addVariable("Address", Pyc.TVarType.t_string, address)
@@ -80,9 +44,10 @@ class Process(Pyc.CComponent):
         self.addMessageBoxExport("Oracle", self.v_address, "Address")
         self.addMessageBoxExport("Oracle", self.v_merit, "Merit")
 
-        self.addMessageBox("Blocktree")
-        self.addMessageBoxImport("Blocktree", self.r_appendedBlock, "Appended Block")
-        self.addMessageBoxExport("Blocktree", self.v_lastBlock, "Last Block")
+        self.addMessageBox("Inbound Connection")
+        self.addMessageBox("Outbound Connection")
+        self.addMessageBoxImport("Inbound Connection", self.r_appendedBlock, "Last Block")
+        self.addMessageBoxExport("Outbound Connection", self.v_lastBlock, "Last Block")
 
         self.processAutomaton = self.addAutomaton("Process Automaton")
         self.working = self.addState("Process Automaton", "Working", 0)
@@ -109,19 +74,19 @@ class Process(Pyc.CComponent):
         self.claimToWorking.addSensitiveMethod("New Pending Block", self.newPendingBlock)
 
     def generate_block_properties(self):
-        transaction_size = generateBoundedExponential(self.transaction_size)
-        transaction_count = generateBoundedExponential(self.transaction_count)
-        size = [self.oracle.v_meanBlockTime / 5 * transaction_size * (transaction_count), transaction_size, transaction_count]
-        return size
+        tr_size = generateBoundedExponential(transaction_size)
+        tr_count = generateBoundedExponential(transaction_count)
+        return [self.oracle.v_meanBlockTime * tr_size * tr_count, tr_size, tr_count]
 
     def consumeToken(self):
         properties = self.generate_block_properties()
-        father = self.knownBlocks[len(self.knownBlocks) - 1]
+        father = list(self.knownBlocks.values())[-1]
         author = self.v_address.value()
-        block = Block(father, author, properties[0], properties[1], properties[2])
-        self.knownBlocks.append(block)
+        block = Block(father, author, properties)
+        self.knownBlocks.update({block.hash:block})
         self.v_lastBlock.setValue(block.hash)
         self.blocktree.blocks.update({block.hash: block})
+        print(self.knownBlocks)
 
         print("Block Created:", block.hash, file=open(filename, "at"))
         print("Block Depth:", block.depth, file=open(filename, "at"))
@@ -133,42 +98,28 @@ class Process(Pyc.CComponent):
         print(file=open(filename, "at"))
 
     def newPendingBlock(self):
-        new_pending = self.blocktree.blocks[self.r_appendedBlock.value(0)]
-        #meanTransitTime = np.random.exponential(self.v_connectionSpeed.value() * new_pending.size)
-        meanTransitTime = np.random.exponential(self.v_connectionSpeed.value())
-        print(new_pending.depth, "      ", np.round(meanTransitTime, 3), file=open(transit_file, "at"))
+        print("Block Received", self.v_address.value())
+        new_pending = self.blocktree.blocks[self.r_appendedBlock.value(self.pendingPort)]
+        transit_time = np.random.exponential(connection_speed * new_pending.size)
+        self.connections[self.pendingPort].newBlock(new_pending, transit_time)
         self.pendingBlocks.append(new_pending)
-        for connection in self.connections:
-            if connection.currentBlock is None:
-                connection.currentBlock = new_pending
-                connection.currentTransitTime = meanTransitTime
-                return
-        for connection in self.connections:
-            if len(connection.idleQueue) == 0:
-                connection.currentBlock = new_pending
-                connection.currentTransitTime = meanTransitTime
-                return
-        for connection in self.connections:
-            if smallest is 0:
-                smallest = connection
-            elif len(connection.idleQueue) < len(self.connections[smallest]):
-                smallest = connection
-        smallest.idleQueue.append(new_pending)
-        smallest.transitTimes.append(meanTransitTime)
 
     def receiveBlock(self, block):
-        self.knownBlocks.append(block)
+        self.knownBlocks.update({block.hash:block})
         self.pendingBlocks.remove(block)
+        self.v_lastBlock.setValue(block.hash)
 
     def workingCondition(self):
-        if self.r_appendedBlock.value(0) != self.v_lastBlock.value():
-            for i in range(0, len(self.pendingBlocks)):
-                if self.pendingBlocks[i].hash is self.r_appendedBlock.value(0):
-                    return False
-            for i in range(0, len(self.knownBlocks)):
-                if self.knownBlocks[i].hash is self.r_appendedBlock.value(0):
-                    return False
-            return True
+        for connection in range(0, connection_count):
+            if self.r_appendedBlock.value(connection) != self.v_lastBlock.value():
+                for block in range(0, len(self.pendingBlocks)):
+                    if self.pendingBlocks[block].hash is self.r_appendedBlock.value(connection):
+                        return False
+                for block in self.knownBlocks.keys():
+                    if self.knownBlocks[block].hash is self.r_appendedBlock.value(connection):
+                        return False
+                self.pendingPort = connection
+                return True
         return False
 
 
@@ -198,9 +149,17 @@ class ProcessConnection(Pyc.CComponent):
 
         self.arrivedToIdle = self.arrived.addTransition("Arrived-to-Idle")
         self.arrivedToIdle.addTarget(self.idle, Pyc.TTransType.trans)
-        self.arrivedToIdle.setCondition(lambda: self.currentBlock.father in parent.knownBlocks)
-
+        self.arrivedToIdle.setCondition(lambda: self.currentBlock.father in parent.knownBlocks.values())
         self.arrivedToIdle.addSensitiveMethod("Receive Block", self.receiveBlock)
+
+    def newBlock(self, new_block, transit_time):
+        print(new_block.depth, "      ", np.round(transit_time, 3), file=open(transit_file, "at"))
+        if self.currentBlock is None:
+            self.currentBlock = new_block
+            self.currentTransitTime = transit_time
+        else:
+            self.idleQueue.append(new_block)
+            self.transitTimes.append(transit_time)
 
     def receiveBlock(self):
         self.parent.receiveBlock(self.currentBlock)
@@ -217,7 +176,7 @@ Block Tree class represent the collection of blocks in the network.
 Uses depth values to identify the ordering of blocks.
 '''
 class Blocktree(Pyc.CComponent):
-    def __init__(self, name, genesis):
+    def __init__(self, name):
         Pyc.CComponent.__init__(self, name)
         self.blocks = {genesis.hash: genesis}
 
@@ -237,14 +196,12 @@ class Blocktree(Pyc.CComponent):
     def appendBlock(self):
         self.v_appendedBlock.setValue(self.r_lastBlock.value(int(self.r_selection.value(0)) - 1))
 
-
 '''
 Oracle class represents the abstract oracle entity.
 Randomly selects the next winning process based on their merit.
 '''
 class Oracle(Pyc.CComponent):
-
-    def __init__(self, name, total_merit, blockInterval):
+    def __init__(self, name, total_merit):
         Pyc.CComponent.__init__(self, name)
 
         self.merits = {}
@@ -252,11 +209,9 @@ class Oracle(Pyc.CComponent):
         self.last_time = time.time()
         self.total_merit = total_merit
 
-        self.blockInterval = blockInterval
-
         self.v_tokenHolder = self.addVariable("Token Holder", Pyc.TVarType.t_string, "1")
         self.v_tokenGenerated = self.addVariable("Token Generated", Pyc.TVarType.t_bool, False)
-        self.v_meanBlockTime = generateBoundedExponential(self.blockInterval)
+        self.v_meanBlockTime = generateBoundedExponential(block_interval)
 
         self.addMessageBox("Process")
         self.addMessageBoxExport("Process", self.v_tokenHolder, "Token Holder")
@@ -280,12 +235,10 @@ class Oracle(Pyc.CComponent):
         self.waitingToGenerated.addSensitiveMethod("Generate Token", self.generate, 0)
         self.generatedToWaiting.addSensitiveMethod("Select Process", self.selectProcess, 0)
 
-
     def addProcesses(self, processes):
         for i in range(0, len(processes)):
             normalised_merit = processes[i].v_merit.value() / self.total_merit
             self.merits.update({processes[i].v_address.value(): normalised_merit})
-            self.transitTimes.update({processes[i].v_address.value(): processes[i].v_connectionSpeed.value()})
 
     '''
     Oracle Method to choose the next process to generate the latest block.
@@ -294,7 +247,7 @@ class Oracle(Pyc.CComponent):
     '''
     def selectProcess(self):
         choice = np.random.choice(list(self.merits.keys()), 1, p=list(self.merits.values()))
-        self.v_meanBlockTime = generateBoundedExponential(self.blockInterval)
+        self.v_meanBlockTime = generateBoundedExponential(block_interval)
         self.v_tokenHolder.setValue(choice[0])
         self.v_tokenGenerated.setValue(False)
         self.last_time = time.time()
@@ -307,26 +260,25 @@ Simulator class represents the implemented simulator system.
 Creates and connects the various components outlined above.
 '''
 class Simulator(Pyc.CSystem):
-    def __init__(self, name, process_count, transaction_count, transaction_size, connection_speed, blockInterval):
+    def __init__(self, name):
         Pyc.CSystem.__init__(self, name)
+        self.blocktree = Blocktree("Blocktree")
 
-        genesis = Block()
-        self.blocktree = Blocktree("Blocktree", genesis)
-
-        merits = []
-        for i in range(0, process_count):
-            merits.append(np.random.randint(1,10))
-
-        self.oracle = Oracle("System Oracle", sum(merits), blockInterval)
+        self.oracle = Oracle("System Oracle", process_count)
         self.connect(self.blocktree, "System Oracle", self.oracle, "Blocktree")
         self.processes = []
 
         for i in range(0, process_count):
-            self.processes.append(Process("Process " + str(i + 1), str(i + 1), merits[i], self.blocktree, genesis, self.oracle, transaction_count, transaction_size, connection_speed))
+            self.processes.append(Process("Process " + str(i + 1), str(i + 1), 1, self.blocktree, self.oracle))
             self.connect(self.oracle, "Process", self.processes[i], "Oracle")
-            self.connect(self.processes[i], "Blocktree", self.blocktree, "Process")
-            for j in range(0, 5):
+
+            for j in range(0,connection_count):
                 self.processes[i].connections.append(ProcessConnection("Process" + str(i) + "Connection" + str(j), self.processes[i]))
+
+        for i in range(0, process_count):
+            for j in np.random.choice([x for x in range(0, process_count) if x != i], 3, replace=False):
+                self.connect(self.processes[i], "Outbound Connection", self.processes[j], "Inbound Connection")
+                self.processes[i].connectedNodes.append(self.processes[j])
 
         self.oracle.addProcesses(self.processes)
 
@@ -338,7 +290,7 @@ class Simulator(Pyc.CSystem):
         counter = 0
         agree = 0
         for i in range(0, len(self.processes)):
-            if set(self.processes[i].knownBlocks) == set(self.blocktree.blocks.values()):
+            if list(self.processes[i].knownBlocks.values())[-1].depth == list(self.blocktree.blocks.values())[-1].depth:
                 agree += 1
         if agree == len(self.processes):
             yesCount += 1
@@ -348,14 +300,14 @@ class Simulator(Pyc.CSystem):
     def consistencyFunction(self):
         agree = 0
         for i in range(0, len(self.processes)):
-            if set(self.processes[i].knownBlocks) == set(self.blocktree.blocks.values()):
+            if set(self.processes[i].knownBlocks.values()) == set(self.blocktree.blocks.values()):
                 agree += 1
         return agree / len(self.processes)
 
     def delayFunction(self):
         differences = []
         for i in range(0, len(self.processes)):
-            differences.append(len(self.blocktree.blocks) - len(self.processes[i].knownBlocks))
+            differences.append(len(self.blocktree.blocks) - len(self.processes[i].knownBlocks.values()))
         return max(differences)
 
     def blockSizeCalculator(self):
@@ -371,21 +323,7 @@ class Simulator(Pyc.CSystem):
 
 if __name__ == '__main__':
 
-    """
-    Establishing the parameters to be used by the simulator.
-    The process count refers to the number of nodes/miners in the system.
-    """
-    process_count = 1000
-    #block_interval = [0.98, 0.81, 1.23]
-    block_interval = [1.04 * 5, 0.867 * 5, 1.2 * 5]
-    #transaction_count = [1650, 1300, 2000]
-    #transaction_size = [0.64, 0.41, 0.75]
-    transaction_count = [160,110,200]
-    transaction_size = [0.125, 0.1, 0.18]
-    #connection_speed = 0.08/600
-    connection_speed = 0.033 * 5
-
-    simulator = Simulator("Simulator", process_count, transaction_count, transaction_size, connection_speed, block_interval)
+    simulator = Simulator("Simulator")
     simulator.loadParameters("Simulator.xml")
     simulator.addInstants(0, simulator.tMax(), 60)
     """
