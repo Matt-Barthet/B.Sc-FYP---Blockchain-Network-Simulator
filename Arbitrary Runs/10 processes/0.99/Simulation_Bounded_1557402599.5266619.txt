@@ -1,0 +1,21 @@
+Time taken: 131.919 seconds.
+
+Network Parameters:
+Number of Nodes: 10
+Number of Connections/Node: 3
+Block Interval: 1.49684519846
+Block Transit: 0.984163953551
+
+Indicators:
+Mean Consensus Probability: 0.205
+Mean Consistency: 0.648
+Worst Process Delay: 1.433
+Block Size: 901.575KB
+Transaction Size: 0.559KB
+Transaction Count: 1611.839
+
+Block Statistics:
+Total # of Blocks: 116
+# of Valid Blocks: 62
+# of Orphaned Blocks: 36
+# of Invalid Blocks: 18
