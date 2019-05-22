@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f794acc1-f886-4bad-9df4-0e95e651fae4" name="Default" comment="Added beginning of second version of the simulator:&#10;Began modelling p2p connections between nodes and">
-      <change beforePath="" afterPath="$PROJECT_DIR$/Simulator_V2.py" />
+    <list default="true" id="f794acc1-f886-4bad-9df4-0e95e651fae4" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Simulator copy.py" afterPath="$PROJECT_DIR$/Simulator_V2.py" />
-      <change beforePath="$PROJECT_DIR$/Simulator_Utility.py" afterPath="$PROJECT_DIR$/Simulator_Utility.py" />
+      <change beforePath="$PROJECT_DIR$/Simulator_V2.py" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -59,8 +57,8 @@
       <file leaf-file-name="Simulator.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Simulator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4275">
-              <caret line="392" column="0" lean-forward="false" selection-start-line="392" selection-start-column="0" selection-end-line="392" selection-end-column="0" />
+            <state relative-caret-position="137">
+              <caret line="358" column="76" lean-forward="true" selection-start-line="358" selection-start-column="76" selection-end-line="358" selection-end-column="76" />
               <folding>
                 <element signature="e#1448#4327#0" expanded="false" />
                 <element signature="e#5687#5849#0" expanded="false" />
@@ -162,11 +160,15 @@
   <component name="Git.Settings">
     <option name="UPDATE_TYPE" value="MERGE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="Version_2" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Simulation-Run-1554418289.txt" />
         <option value="$PROJECT_DIR$/Simulation-Run-1554418431.txt" />
         <option value="$PROJECT_DIR$/Simulation-Run-1554418399.txt" />
         <option value="$PROJECT_DIR$/Simulation-Run-1554418410.txt" />
@@ -217,13 +219,13 @@
         <option value="$PROJECT_DIR$/Bitcoin Runs/10,000 Nodes/Simulation_Output_1558003819.335892.txt" />
         <option value="$PROJECT_DIR$/Bitcoin Runs/10,000 Nodes/Simulation_Output_1558174912.408405.txt" />
         <option value="$PROJECT_DIR$/Simulator.py" />
+        <option value="$PROJECT_DIR$/Simulator_V2.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="23" />
-    <option name="width" value="1920" />
-    <option name="height" value="1122" />
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="1440" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -243,7 +245,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -256,6 +257,7 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -402,11 +404,12 @@
       <item index="5" class="java.lang.String" itemvalue="Python.Simulator copy" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Python.Simulator-Old" />
-        <item index="1" class="java.lang.String" itemvalue="Python.Simulator copy" />
-        <item index="2" class="java.lang.String" itemvalue="Python.ReadOutputFiles" />
-        <item index="3" class="java.lang.String" itemvalue="Python.dataPlotter" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Python.Simulator copy" />
+        <item index="1" class="java.lang.String" itemvalue="Python.Simulator-Old" />
+        <item index="2" class="java.lang.String" itemvalue="Python.dataPlotter" />
+        <item index="3" class="java.lang.String" itemvalue="Python.ReadOutputFiles" />
+        <item index="4" class="java.lang.String" itemvalue="Python.Simulator-Old" />
       </list>
     </recent_temporary>
   </component>
@@ -585,7 +588,14 @@
       <option name="project" value="LOCAL" />
       <updated>1558515290508</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Removed Version 2">
+      <created>1558516044305</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1558516044305</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TodoView">
@@ -598,13 +608,13 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="822" extended-state="6" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329105" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23185341" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.20101011" sideWeight="0.5021008" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4373178" sideWeight="0.49789914" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32860938" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32810616" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24960506" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949513" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -689,7 +699,8 @@
     <MESSAGE value="Added Output Files and Utility File" />
     <MESSAGE value="Modified queuing system for new pending blocks in a process&#10;Modified output to separate data into distinct files&#10;Added more Indicators that evolve over simulation time instead of at the end." />
     <MESSAGE value="Clean up and organisation for final submission.&#10;Added all output files for simulation runs." />
-    <option name="LAST_COMMIT_MESSAGE" value="Clean up and organisation for final submission.&#10;Added all output files for simulation runs." />
+    <MESSAGE value="Removed Version 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed Version 2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -705,7 +716,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/Simulation_Output_1558081265.296062.txt" />
     <entry file="file://$PROJECT_DIR$/Bitcoin Runs/Simulation_Output_1558028978.910371.txt" />
     <entry file="file://$PROJECT_DIR$/Bitcoin Runs/Simulation_Output_1558082077.869568.txt" />
     <entry file="file://$PROJECT_DIR$/Bitcoin Runs/Simulation_Output_1558081325.8093991.txt" />
@@ -788,38 +798,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/Legit_Interval_Averages1558174912.4084082.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/Legit_Interval_Averages1558174912.4084082.txt" />
     <entry file="file://$PROJECT_DIR$/Bitcoin Runs/Simulation_Output_1558174912.408397.txt" />
     <entry file="file://$PROJECT_DIR$/Bitcoin Runs/10,000 Nodes/Stale_Percentage1558174912.40841.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/Stale_Percentage1558089769.411654.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/Stale_Percentage1558089769.411654.txt" />
     <entry file="file://$PROJECT_DIR$/Bitcoin Runs/10,000 Nodes/Simulation_Output_1558082300.520097.txt" />
     <entry file="file://$PROJECT_DIR$/Bitcoin Runs/10,000 Nodes/Simulation_Output_1557968211.831798.txt" />
     <entry file="file://$PROJECT_DIR$/Bitcoin Runs/10,000 Nodes/Size_Averages1558174912.408405.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="19" column="13" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -827,14 +821,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="19" column="13" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="19" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/10,000 Nodes/Transit_Values_1558174912.408403.txt">
+    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/Interval_Averages1558089144.5448372.txt" />
+    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/Simulation_Output_1558174738.011084.txt" />
+    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/Simulation_Output_1558089769.411642.txt" />
+    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/Simulation_Output_1558089144.544827.txt" />
+    <entry file="file://$PROJECT_DIR$/Ethereum Runs/10,000 Nodes/Size_Averages1558048854.6992471.txt" />
+    <entry file="file://$PROJECT_DIR$/Ethereum Runs/10,000 Nodes/Simulation_Output_1558048854.69924.txt" />
+    <entry file="file://$PROJECT_DIR$/Simulator_V2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="14" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="19" selection-end-column="14" />
+        <state relative-caret-position="-453">
+          <caret line="312" column="0" lean-forward="false" selection-start-line="312" selection-start-column="0" selection-end-line="312" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -847,7 +846,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/Interval_Averages1558089144.5448372.txt">
+    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/1,000 Nodes/Simulation_Output_1557862769.636719.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -855,26 +854,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/Simulation_Output_1558174738.011084.txt">
+    <entry file="file://$PROJECT_DIR$/Ethereum Runs/1,000 Nodes/Simulation_Output_1558045810.1821172.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="180">
+          <caret line="12" column="23" lean-forward="false" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/Simulation_Output_1558089769.411642.txt">
+    <entry file="file://$PROJECT_DIR$/Ethereum Runs/10,000 Nodes/Simulation_Output_1558077345.050658.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/Simulation_Output_1558089144.544827.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="270">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -903,50 +894,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/1,000 Nodes/Simulation_Output_1557862769.636719.txt">
+    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/10,000 Nodes/Transit_Values_1558174912.408403.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Ethereum Runs/1,000 Nodes/Simulation_Output_1558045810.1821172.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="23" lean-forward="false" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Ethereum Runs/10,000 Nodes/Size_Averages1558048854.6992471.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Ethereum Runs/10,000 Nodes/Simulation_Output_1558077345.050658.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Ethereum Runs/10,000 Nodes/Simulation_Output_1558048854.69924.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="21" lean-forward="true" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+        <state relative-caret-position="285">
+          <caret line="19" column="14" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="19" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Simulator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4275">
-          <caret line="392" column="0" lean-forward="false" selection-start-line="392" selection-start-column="0" selection-end-line="392" selection-end-column="0" />
+        <state relative-caret-position="137">
+          <caret line="358" column="76" lean-forward="true" selection-start-line="358" selection-start-column="76" selection-end-line="358" selection-end-column="76" />
           <folding>
             <element signature="e#1448#4327#0" expanded="false" />
             <element signature="e#5687#5849#0" expanded="false" />
