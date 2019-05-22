@@ -5,19 +5,19 @@ Establishing the properties of the network.
 The process count refers to the number of nodes/miners in the system.
 Connection count refers to the number of automaton assigned to each connection to schedule block arrivals.
 """
-process_count = 1000
-connection_count = 5
-block_interval  = 1
+process_count = 10000
+connection_count = 3
+block_interval  = 5
 transaction_count = [1650, 1300, 2000]
 transaction_size = [0.64, 0.41, 0.75]
-connection_speed = (8.7/600)
+connection_speed = (8.7/(600/block_interval))
 genesis = Block()
 
-filename = "./Bitcoin Runs/1,000 Nodes/Simulation_Output_" + str(time.time()) + ".txt"
-transit_file = "./Bitcoin Runs/1,000 Nodes/Transit_Values_" + str(time.time()) + ".txt"
-block_file = "./Bitcoin Runs/1,000 Nodes/Size_Averages" + str(time.time()) + ".txt"
-interval_file = "./Bitcoin Runs/1,000 Nodes/Interval_Averages" + str(time.time()) + ".txt"
-stale_file = "./Bitcoin Runs/1,000 Nodes/Stale_Percentage" + str(time.time()) + ".txt"
+filename = "./Bitcoin Runs/Simulation_Output_" + str(time.time()) + ".txt"
+transit_file = "./Bitcoin Runs/Transit_Values_" + str(time.time()) + ".txt"
+block_file = "./Bitcoin Runs/Size_Averages" + str(time.time()) + ".txt"
+interval_file = "./Bitcoin Runs/Interval_Averages" + str(time.time()) + ".txt"
+stale_file = "./Bitcoin Runs/Stale_Percentage" + str(time.time()) + ".txt"
 
 intervals = []
 interval_averages = []
@@ -97,7 +97,6 @@ class Process(Pyc.CComponent):
         return size
 
     def consumeToken(self):
-        consensusProbability.append(self.blocktree.consensusFunction())
         consistencyRate.append(self.blocktree.consistencyFunction())
         processDelay.append(self.blocktree.delayFunction())
 
@@ -126,10 +125,16 @@ class Process(Pyc.CComponent):
                 connection.currentBlock = new_pending
                 connection.currentTransitTime = np.random.exponential(self.v_connectionSpeed.value())
                 transits.append(connection.currentTransitTime)
-                print(connection.currentTransitTime, file=open(transit_file, "at"))
+                self.transitIndicator()
                 return
         print("The connections for process", self.v_address.value() ,"are full!\n")
         self.idleQueue.append(new_pending)
+
+    def transitIndicator(self):
+        if len(transits) == process_count * 10:
+            transit_averages.append(np.mean(transits))
+            print(transit_averages[-1], file=open(transit_file, "at"))
+            transits.clear()
 
     def receiveBlock(self, block):
         if block.depth > self.knownBlocks[-1].depth:
@@ -211,14 +216,13 @@ class Blocktree(Pyc.CComponent):
         self.addMessageBox("System Oracle")
         self.addMessageBoxImport("System Oracle", self.r_selection, "Token Holder")
 
-        self.r_lastBlock.addSensitiveMethod("Update Blocktree", self.updateBlocktree)
 
     def updateBlocktree(self, block):
         lastBlock = list(self.blocks.values())[-1]
         if block.depth > lastBlock.depth:
             self.blocks.update({block.hash: block})
             self.v_appendedBlock.setValue(block.hash)
-            print("[Block Accepted]: Creator ID:", block.process, "at depth:", block.depth, "\n")
+            #print("[Block Accepted]: Creator ID:", block.process, "at depth:", block.depth, "\n")
         elif block.father == lastBlock.father and block.depth == lastBlock.depth:
             counter = 1
             self.orphan_count += 1
@@ -247,21 +251,6 @@ class Blocktree(Pyc.CComponent):
             stale_averages.append(self.orphan_count)
             print(stale_averages[-1], file=open(stale_file, "at"))
             self.orphan_count = 0
-
-    '''
-    Functions to compute the values of the three indicators specified below:
-    '''
-    def consensusFunction(self):
-        yesCount = 0
-        counter = 0
-        agree = 0
-        for i in range(0, len(self.processes)):
-            if self.processes[i].knownBlocks[-1].depth == list(self.blocks.values())[-1].depth:
-                agree += 1
-        if agree == len(self.processes):
-            yesCount += 1
-        counter += 1
-        return yesCount / counter
 
     def consistencyFunction(self):
         agree = 0
@@ -426,12 +415,9 @@ if __name__ == '__main__':
     printLine("Block Transit: " + str(np.mean(transits)), filename)
 
     printLine("\nIndicators:",filename)
-    printLine("Mean Consensus Probability: " + str(round(np.mean(consensusProbability),3)),filename)
     printLine("Mean Consistency: " + str(round(np.mean(consistencyRate), 3)),filename)
     printLine("Worst Process Delay: " + str(round(np.mean(processDelay), 3)), filename)
     printLine("Block Size: " +  str(np.mean(size_averages)) + "KB", filename)
-    #printLine("Transaction Size: " + str(round(blockSize[2], 3)) + "KB", filename)
-    #printLine("Transaction Count: " + str(round(blockSize[1], 3)) , filename)
 
     printLine("\nBlock Statistics:",filename)
     printLine("Total # of Blocks: " + str(len(simulator.blocktree.blocks.values()) + len(simulator.blocktree.discarded_blocks)), filename)

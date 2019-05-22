@@ -1,0 +1,19 @@
+Bitcoin Simulation Run:
+
+Network Parameters:
+Number of Nodes: 10000
+Number of Connections/Node: 3
+Block Interval: 60.5337329826
+Block Transit: 0.868902626382
+
+Indicators:
+Mean Consensus Probability: 0.932
+Mean Consistency: 1.0
+Worst Process Delay: 0.068
+Block Size: 909.402488596KB
+
+Block Statistics:
+Total # of Blocks: 200
+# of Valid Blocks: 197
+# of Orphaned Blocks: 3
+# of Invalid Blocks: 0

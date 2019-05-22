@@ -1,2 +1,2 @@
-<PY_PARAM NAME="Simulator Parameters" TMAX="1000" SEQ_NB="1200">
+<PY_PARAM NAME="Simulator Parameters" TMAX="10000" SEQ_NB="4000">
 </PY_PARAM>

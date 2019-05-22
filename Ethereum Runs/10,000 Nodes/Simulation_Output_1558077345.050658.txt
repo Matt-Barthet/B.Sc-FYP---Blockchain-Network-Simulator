@@ -1,0 +1,18 @@
+Ethereum Simulation Run:
+
+Time taken: 2040.037 seconds.
+
+Network Parameters:
+Number of Nodes: 10000
+Number of Connections/Node: 3
+Block Interval: 13.9007649722
+Block Transit: 0.500273241579
+
+Indicators:
+Block Size: 19.4178989768KB
+
+Block Statistics:
+Total # of Blocks: 144
+# of Valid Blocks: 136
+# of Orphaned Blocks: 8
+# of Invalid Blocks: 0

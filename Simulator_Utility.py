@@ -47,11 +47,11 @@ def printLine(text, filename):
     print(text, file=open(filename, "at"))
 
 def printBlockDetails(block, filename):
-    print("Block Created: " + block.hash, file=open(filename, "at"))
+    '''print("Block Created: " + block.hash, file=open(filename, "at"))
     print("Block Depth: " + str(block.depth), file=open(filename, "at"))
     print("Block Author: " + str(block.process), file=open(filename, "at"))
     print("Previous Block: " + block.father.hash, file=open(filename, "at"))
     print("Size: " + str(block.size) + "KB", file=open(filename, "at"))
     print("Transaction Size: " + str(block.transaction_size) + "KB", file=open(filename, "at"))
     print("Number of Transactions:" + str(block.transaction_count), file=open(filename, "at"))
-    print("Block Interval:" + str(block.timestamp - block.father.timestamp) + "\n", file=open(filename, "at"))
+    print("Block Interval:" + str(block.timestamp - block.father.timestamp) + "\n", file=open(filename, "at"))'''

@@ -1,0 +1,18 @@
+Bitcoin Simulation Run:
+
+Time taken: 1462.426 seconds.
+
+Network Parameters:
+Number of Nodes: 1000
+Number of Connections/Node: 3
+Block Interval: 5.63838447477
+Block Transit: 0.230784440514
+
+Indicators:
+Block Size: 919.895569702KB
+
+Block Statistics:
+Total # of Blocks: 255
+# of Valid Blocks: 252
+# of Orphaned Blocks: 3
+# of Invalid Blocks: 0

@@ -1,56 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f794acc1-f886-4bad-9df4-0e95e651fae4" name="Default" comment="Added Output Files and Utility File">
+    <list default="true" id="f794acc1-f886-4bad-9df4-0e95e651fae4" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/Simulator_V2.py" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Bitcoin Runs/1,000 Nodes/Bitcoin_Sim_1555358620.241941.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Bitcoin Runs/1,000 Nodes/Bitcoin_Transit_1555358620.241947.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Bitcoin Runs/10,000 Nodes/Bitcoin_Sim_1555440957.7147593.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Bitcoin Runs/10,000 Nodes/Bitcoin_Sim_1555500542.9153588.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Bitcoin Runs/10,000 Nodes/Bitcoin_Sim_1555523894.9491653.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Bitcoin Runs/10,000 Nodes/Bitcoin_Transit_1555440957.7147593.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Bitcoin Runs/10,000 Nodes/Bitcoin_Transit_1555500542.9153588.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Bitcoin Runs/10,000 Nodes/Bitcoin_Transit_1555523894.9491653.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Bitcoin Runs/100 Nodes/Bitcoin_Sim_1555095060.538634.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Bitcoin Runs/100 Nodes/Bitcoin_Sim_1555095279.101758.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Bitcoin Runs/100 Nodes/Bitcoin_Sim_1555095424.533463.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Bitcoin Runs/100 Nodes/Bitcoin_Sim_1555095940.570233.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Bitcoin Runs/100 Nodes/Bitcoin_Sim_1555096250.8635368.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Bitcoin Runs/100 Nodes/Bitcoin_Sim_1555096525.952458.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Bitcoin Runs/100 Nodes/Bitcoin_Sim_1555098550.0781708.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Bitcoin Runs/100 Nodes/Bitcoin_Sim_1555098842.4552782.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Bitcoin Runs/100 Nodes/Bitcoin_Sim_1555099026.711963.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Bitcoin Runs/100 Nodes/Bitcoin_Sim_1555099246.268029.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Bitcoin Runs/100 Nodes/Bitcoin_Sim_1555099445.305094.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Ethereum Runs/1,000 Nodes/Ethereum_Sim1555596292.4145799.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Ethereum Runs/1,000 Nodes/Ethereum_Sim1555860286.478213.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Ethereum Runs/1,000 Nodes/Ethereum_Sim1555860459.32747.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Ethereum Runs/1,000 Nodes/Ethereum_Sim1555861188.828662.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Ethereum Runs/1,000 Nodes/Ethereum_Transit_1555596292.414586.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Ethereum Runs/1,000 Nodes/Ethereum_Transit_1555860286.478219.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Ethereum Runs/1,000 Nodes/Ethereum_Transit_1555860459.32748.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Ethereum Runs/1,000 Nodes/Ethereum_Transit_1555861188.8286688.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Ethereum Runs/100 Nodes/Ethereum_Sim1555588608.418817.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Ethereum Runs/100 Nodes/Ethereum_Sim1555589072.272088.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Ethereum Runs/100 Nodes/Ethereum_Sim1555589247.859523.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Ethereum Runs/100 Nodes/Ethereum_Sim1555589455.48051.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Ethereum Runs/100 Nodes/Ethereum_Sim1555589958.726946.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Ethereum Runs/100 Nodes/Ethereum_Sim1555591499.5473669.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Ethereum Runs/100 Nodes/Ethereum_Sim1555592543.038168.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Ethereum Runs/100 Nodes/Ethereum_Sim1555592668.5254998.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Ethereum Runs/100 Nodes/Ethereum_Sim1555592846.6313019.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Ethereum Runs/100 Nodes/Ethereum_Sim1555593010.0381901.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Ethereum Runs/100 Nodes/Ethereum_Transit_1555588608.418823.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Ethereum Runs/100 Nodes/Ethereum_Transit_1555589072.272094.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Ethereum Runs/100 Nodes/Ethereum_Transit_1555589247.859529.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Ethereum Runs/100 Nodes/Ethereum_Transit_1555589455.4805171.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Ethereum Runs/100 Nodes/Ethereum_Transit_1555589958.726951.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Ethereum Runs/100 Nodes/Ethereum_Transit_1555591499.547372.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Ethereum Runs/100 Nodes/Ethereum_Transit_1555592543.038174.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Ethereum Runs/100 Nodes/Ethereum_Transit_1555592668.5255082.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Ethereum Runs/100 Nodes/Ethereum_Transit_1555592846.631308.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Ethereum Runs/100 Nodes/Ethereum_Transit_1555593010.038197.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Simulator-Old.py" afterPath="$PROJECT_DIR$/Simulator_V2.py" />
+      <change beforePath="$PROJECT_DIR$/Bitcoin Runs/100 Nodes/Interval_Averages1557755263.632376.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Bitcoin Runs/100 Nodes/Simulation_Output_1557755263.6323671.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Bitcoin Runs/100 Nodes/Size_Averages1557755263.632375.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Bitcoin Runs/100 Nodes/Stale_Percentage1557755263.6323771.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Bitcoin Runs/100 Nodes/Transit_Values_1557755263.632373.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Simulator copy.py" afterPath="$PROJECT_DIR$/Simulator copy.py" />
       <change beforePath="$PROJECT_DIR$/Simulator.py" afterPath="$PROJECT_DIR$/Simulator.py" />
       <change beforePath="$PROJECT_DIR$/Simulator.xml" afterPath="$PROJECT_DIR$/Simulator.xml" />
       <change beforePath="$PROJECT_DIR$/Simulator_Utility.py" afterPath="$PROJECT_DIR$/Simulator_Utility.py" />
@@ -64,11 +23,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-      <file leaf-file-name="Simulator.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Simulator.xml">
+      <file leaf-file-name="Simulation_Output_1558174912.408405.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Bitcoin Runs/10,000 Nodes/Simulation_Output_1558174912.408405.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Simulation_Output_1557862769.636719.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Bitcoin Runs/1,000 Nodes/Simulation_Output_1557862769.636719.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="60" lean-forward="false" selection-start-line="0" selection-start-column="60" selection-end-line="0" selection-end-column="60" />
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Simulation_Output_1558045810.1821172.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Ethereum Runs/1,000 Nodes/Simulation_Output_1558045810.1821172.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="23" lean-forward="false" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Simulation_Output_1558077345.050658.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Ethereum Runs/10,000 Nodes/Simulation_Output_1558077345.050658.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -77,8 +66,55 @@
       <file leaf-file-name="Simulator.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Simulator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5790">
-              <caret line="386" column="62" lean-forward="false" selection-start-line="386" selection-start-column="62" selection-end-line="386" selection-end-column="62" />
+            <state relative-caret-position="4275">
+              <caret line="392" column="4" lean-forward="false" selection-start-line="392" selection-start-column="4" selection-end-line="392" selection-end-column="4" />
+              <folding>
+                <element signature="e#1448#4327#0" expanded="false" />
+                <element signature="e#5687#5849#0" expanded="false" />
+                <element signature="e#9270#10000#0" expanded="false" />
+                <element signature="e#10048#11650#0" expanded="false" />
+                <element signature="e#11690#11884#0" expanded="false" />
+                <element signature="e#13803#14110#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Stale_Percentage1557862769.636728.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Bitcoin Runs/1,000 Nodes/Stale_Percentage1557862769.636728.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Stale_Percentage1557937445.5513752.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Bitcoin Runs/1,000 Nodes/Stale_Percentage1557937445.5513752.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Stale_Percentage1557940069.2436008.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Bitcoin Runs/1,000 Nodes/Stale_Percentage1557940069.2436008.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Transit_Values_1558174912.408403.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Bitcoin Runs/10,000 Nodes/Transit_Values_1558174912.408403.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" column="14" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="19" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -123,6 +159,7 @@
       <find>tps</find>
       <find>f79b18b7b01d65be60bd21a5384dbbc904b70eed46eabaefc9ba3dd0e1e8e3c9</find>
       <find>stale_a</find>
+      <find>transit_av</find>
     </findStrings>
     <replaceStrings>
       <replace>v_connectionSpeed</replace>
@@ -136,16 +173,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Test.py" />
-        <option value="$PROJECT_DIR$/Backup.py" />
-        <option value="$PROJECT_DIR$/Simulation-Run-1554417957.txt" />
-        <option value="$PROJECT_DIR$/Simulation-Run-1554417930.txt" />
-        <option value="$PROJECT_DIR$/Simulation-Run-1554417940.txt" />
-        <option value="$PROJECT_DIR$/Simulation-Run-1554417948.txt" />
-        <option value="$PROJECT_DIR$/Simulation-Run-1554417920.txt" />
-        <option value="$PROJECT_DIR$/Simulation-Run-1554418261.txt" />
-        <option value="$PROJECT_DIR$/Simulation-Run-1554418271.txt" />
-        <option value="$PROJECT_DIR$/Simulation-Run-1554418280.txt" />
         <option value="$PROJECT_DIR$/Simulation-Run-1554418289.txt" />
         <option value="$PROJECT_DIR$/Simulation-Run-1554418431.txt" />
         <option value="$PROJECT_DIR$/Simulation-Run-1554418399.txt" />
@@ -180,17 +207,30 @@
         <option value="$PROJECT_DIR$/ReadOutputFiles.py" />
         <option value="$PROJECT_DIR$/Arbitrary Runs/100 processes/0.99/Simulation_Bounded_1557398375.407192.txt" />
         <option value="$PROJECT_DIR$/Arbitrary Runs/3 processes/0.2/Simulation_Bounded_1557407511.8646028.txt" />
-        <option value="$PROJECT_DIR$/Simulator_Utility.py" />
         <option value="$PROJECT_DIR$/Simulator-Old.py" />
         <option value="$PROJECT_DIR$/Bitcoin Runs/100 Nodes/Stale_Percentage1557755263.6323771.txt" />
-        <option value="$PROJECT_DIR$/Simulator.py" />
+        <option value="$PROJECT_DIR$/Bitcoin Runs/100 Nodes/Stale_Percentage1557852664.6821709.txt" />
+        <option value="$PROJECT_DIR$/Bitcoin Runs/Simulation_Output_1557876513.6001458.txt" />
+        <option value="$PROJECT_DIR$/Simulator copy.py" />
+        <option value="$PROJECT_DIR$/Bitcoin Runs/Simulation_Output_1557913479.092201.txt" />
+        <option value="$PROJECT_DIR$/Bitcoin Runs/1,000 Nodes/Simulation_Output_1557862769.636719.txt" />
+        <option value="$PROJECT_DIR$/Bitcoin Runs/Simulation_Output_1557968211.831798.txt" />
+        <option value="$PROJECT_DIR$/Simulator_Utility.py" />
+        <option value="$PROJECT_DIR$/Ethereum Runs/1,000 Nodes/Interval_Averages1558047170.4888551.txt" />
         <option value="$PROJECT_DIR$/Simulator.xml" />
+        <option value="$PROJECT_DIR$/Bitcoin Runs/Size_Averages1558174912.408405.txt" />
+        <option value="$PROJECT_DIR$/Bitcoin Runs/Interval_Averages1558174912.408407.txt" />
+        <option value="$PROJECT_DIR$/Bitcoin Runs/Transit_Values_1558174912.408403.txt" />
+        <option value="$PROJECT_DIR$/Bitcoin Runs/10,000 Nodes/Simulation_Output_1558003819.335892.txt" />
+        <option value="$PROJECT_DIR$/Bitcoin Runs/10,000 Nodes/Simulation_Output_1558174912.408405.txt" />
+        <option value="$PROJECT_DIR$/Simulator.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="23" />
     <option name="width" value="1920" />
-    <option name="height" value="1200" />
+    <option name="height" value="1122" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -218,22 +258,6 @@
               <item name="Final-Year-Project" type="b2602c69:ProjectViewProjectNode" />
               <item name="Final-Year-Project" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Final-Year-Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Final-Year-Project" type="462c0819:PsiDirectoryNode" />
-              <item name="Bitcoin Runs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Final-Year-Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Final-Year-Project" type="462c0819:PsiDirectoryNode" />
-              <item name="Bitcoin Runs" type="462c0819:PsiDirectoryNode" />
-              <item name="100 Nodes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Final-Year-Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Final-Year-Project" type="462c0819:PsiDirectoryNode" />
-              <item name="Ethereum Runs" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -248,11 +272,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Arbitrary Runs/100 processes/0.99_Unbounded copy 4" />
-      <recent name="$PROJECT_DIR$/Arbitrary Runs/100 processes/0.7_Unbounded copy 3" />
-      <recent name="$PROJECT_DIR$/Arbitrary Runs/100 processes/0.5_Unbounded copy 2" />
-      <recent name="$PROJECT_DIR$/Arbitrary Runs/100 processes/0.2_Unbounded copy" />
-      <recent name="$PROJECT_DIR$/Arbitrary Runs/100 processes/0.1_Unbounded" />
+      <recent name="$PROJECT_DIR$/Bitcoin Runs/10,000 Nodes" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/Ethereum Runs/10,000 Nodes" />
+      <recent name="$PROJECT_DIR$/Ethereum Runs/1,000 Nodes" />
+      <recent name="$PROJECT_DIR$/Ethereum Runs" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -281,6 +305,24 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Blockchain_Simulator" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ReadOutputFiles.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="Simulator copy" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Blockchain_Simulator" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Simulator copy.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -358,18 +400,20 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <list size="5">
+    <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Python.Unnamed" />
       <item index="1" class="java.lang.String" itemvalue="Python.Unnamed (1)" />
       <item index="2" class="java.lang.String" itemvalue="Python.ReadOutputFiles" />
       <item index="3" class="java.lang.String" itemvalue="Python.dataPlotter" />
       <item index="4" class="java.lang.String" itemvalue="Python.Simulator-Old" />
+      <item index="5" class="java.lang.String" itemvalue="Python.Simulator copy" />
     </list>
     <recent_temporary>
-      <list size="3">
+      <list size="4">
         <item index="0" class="java.lang.String" itemvalue="Python.Simulator-Old" />
-        <item index="1" class="java.lang.String" itemvalue="Python.ReadOutputFiles" />
-        <item index="2" class="java.lang.String" itemvalue="Python.dataPlotter" />
+        <item index="1" class="java.lang.String" itemvalue="Python.Simulator copy" />
+        <item index="2" class="java.lang.String" itemvalue="Python.ReadOutputFiles" />
+        <item index="3" class="java.lang.String" itemvalue="Python.dataPlotter" />
       </list>
     </recent_temporary>
   </component>
@@ -534,7 +578,14 @@
       <option name="project" value="LOCAL" />
       <updated>1556821376757</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Modified queuing system for new pending blocks in a process&#10;Modified output to separate data into distinct files&#10;Added more Indicators that evolve over simulation time instead of at the end.">
+      <created>1557764867299</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1557764867299</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TodoView">
@@ -547,13 +598,13 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="822" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24170616" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329105" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.20101011" sideWeight="0.5021008" order="11" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.43755537" sideWeight="0.49789914" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4373178" sideWeight="0.49789914" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32860938" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24960506" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -580,9 +631,9 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32860938" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34986714" sideWeight="0.49789914" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.43755537" sideWeight="0.49789914" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949513" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16166404" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24170616" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24960506" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -637,7 +688,8 @@
     <MESSAGE value="Added session dumps for block statistics and propagation statistics." />
     <MESSAGE value="Attempting to commit text files" />
     <MESSAGE value="Added Output Files and Utility File" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Output Files and Utility File" />
+    <MESSAGE value="Modified queuing system for new pending blocks in a process&#10;Modified output to separate data into distinct files&#10;Added more Indicators that evolve over simulation time instead of at the end." />
+    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -648,416 +700,261 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="37" />
+      <option name="time" value="38" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Arbitrary Runs/100 processes/0.7/Simulation_Bounded_1557398213.787589.txt">
+    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/Simulation_Output_1558081265.296062.txt" />
+    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/Simulation_Output_1558028978.910371.txt" />
+    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/Simulation_Output_1558082077.869568.txt" />
+    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/Simulation_Output_1558081325.8093991.txt" />
+    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/Simulation_Output_1558085315.407725.txt" />
+    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/Legit_Interval_Averages1558085077.238302.txt" />
+    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/Legit_Interval_Averages1558083348.808623.txt" />
+    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/1MB/Simulation_Output_1558023003.63078.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Arbitrary Runs/100 processes/0.7/Simulation_Bounded_1557419005.125243.txt">
+    <entry file="file://$PROJECT_DIR$/Ethereum Runs/1,000 Nodes/Size_Averages1558045810.182125.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Simulation_Bounded_1557492775.399842.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4283">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Simulation_Bounded_1557493180.337845.txt">
+    <entry file="file://$PROJECT_DIR$/Ethereum Runs/1,000 Nodes/Interval_Averages1558047170.4888551.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="24" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Simulation_Bounded_1557498655.650239.txt">
+    <entry file="file://$PROJECT_DIR$/Ethereum Runs/10,000 Nodes/Interval_Averages1558077345.050666.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Simulation_Bounded_1557498536.764812.txt">
+    <entry file="file://$PROJECT_DIR$/Ethereum Runs/10,000 Nodes/Size_Averages1558077345.050665.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Simulation_Bounded_1557498400.55438.txt">
+    <entry file="file://$PROJECT_DIR$/Ethereum Runs/10,000 Nodes/Transit_Values_1558077345.050663.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Simulation_Bounded_1557500459.293816.txt">
+    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/1MB/Simulation_Output_1558021431.2092109.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="240">
+          <caret line="16" column="23" lean-forward="false" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Simulation_Bounded_1557500728.5820339.txt">
+    <entry file="file://$PROJECT_DIR$/Ethereum Runs/1,000 Nodes/Transit_Values_1558045810.182123.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="225">
+          <caret line="15" column="9" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Simulation_Bounded_1557567798.805321.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Simulation_Bounded_1557568062.844576.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Simulation_Bounded_1557680395.51122.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1793">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Simulation_Bounded_1557680424.456488.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Simulation_Transit_1557686711.7113311.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Simulation_Bounded_1557686711.711325.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Simulation_Bounded_1557698327.512536.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-81998">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Simulation_Bounded_1557694316.503309.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Simulation_Bounded_1557693916.3647418.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-183248">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Simulation_Bounded_1557692708.722264.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-137393">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Simulation_Bounded_1557688371.692506.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-93248">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Simulation_Bounded_1557704144.236821.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-902933">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Simulation_Bounded_1557702505.5416331.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-214298">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Simulation_Bounded_1557701177.888225.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-181358">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Simulation_Bounded_1557699078.833663.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-270458">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Simulator_V2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="20" lean-forward="false" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Simulation_Bounded_1557695270.015137.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="619">
-          <caret line="10720" column="23" lean-forward="false" selection-start-line="10720" selection-start-column="23" selection-end-line="10720" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Simulation_Transit_1557742875.808791.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3851">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Simulation_Bounded_1557744820.6339011.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1268">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Simulation_Bounded_1557744801.945703.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Simulation_Bounded_1557742875.808786.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="3207" column="0" lean-forward="false" selection-start-line="3207" selection-start-column="0" selection-end-line="3207" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Simulation_Bounded_1557684654.627775.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="517">
-          <caret line="6737" column="0" lean-forward="false" selection-start-line="6737" selection-start-column="0" selection-end-line="6737" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/Interval_Averages1557746043.4736562.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/Size_Averages1557746043.473655.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/Simulation_Output_1557746043.473647.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-24403">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/100 Nodes/Interval_Averages1557746497.4379258.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1148">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/100 Nodes/Stale_Percentage1557747946.6793962.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/100 Nodes/Stale_Percentage1557750327.5492659.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/100 Nodes/Interval_Averages1557750939.478227.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Simulator_Utility.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="56" column="81" lean-forward="false" selection-start-line="56" selection-start-column="81" selection-end-line="56" selection-end-column="81" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/1,000 Nodes/Bitcoin_Sim_1555358620.241941.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/100 Nodes/Stale_Percentage1557755263.6323771.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/100 Nodes/Simulation_Output_1557755263.6323671.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-90518">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/100 Nodes/Interval_Averages1557756198.572926.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/100 Nodes/Size_Averages1557756198.5729249.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/100 Nodes/Stale_Percentage1557756198.572928.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/100 Nodes/Simulation_Output_1557756198.572918.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/1,000 Nodes/Interval_Averages1557757524.570765.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/1,000 Nodes/Simulation_Output_1557757524.5707562.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/1,000 Nodes/Stale_Percentage1557757613.0665128.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/Simulation_Output_1558085347.003343.txt" />
+    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/Simulation_Output_1558086228.349706.txt" />
+    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/Simulation_Output_1558085077.238292.txt" />
+    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/Simulation_Output_1558083348.808613.txt" />
+    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/Transit_Values_1558086228.349712.txt" />
+    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/Transit_Values_1558085347.0033479.txt" />
+    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/Transit_Values_1558085077.238297.txt" />
+    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/Transit_Values_1558083348.808618.txt" />
+    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/Stale_Percentage1558086228.349718.txt" />
+    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/Size_Averages1558086228.3497138.txt" />
+    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/Stale_Percentage1558083348.808624.txt" />
+    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/Stale_Percentage1558088412.0708249.txt" />
     <entry file="file://$PROJECT_DIR$/Simulator.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="60" lean-forward="false" selection-start-line="0" selection-start-column="60" selection-end-line="0" selection-end-column="60" />
+          <caret line="0" column="49" lean-forward="false" selection-start-line="0" selection-start-column="49" selection-end-line="0" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/Legit_Interval_Averages1558174912.4084082.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/Simulation_Output_1558174912.408397.txt" />
+    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/10,000 Nodes/Stale_Percentage1558174912.40841.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/Stale_Percentage1558089769.411654.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/10,000 Nodes/Simulation_Output_1558082300.520097.txt" />
+    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/10,000 Nodes/Simulation_Output_1557968211.831798.txt" />
+    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/10,000 Nodes/Size_Averages1558174912.408405.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="13" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/10,000 Nodes/Interval_Averages1558174912.408407.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="13" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="19" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/10,000 Nodes/Transit_Values_1558174912.408403.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="14" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="19" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/10,000 Nodes/Simulation_Output_1558174912.408405.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/Interval_Averages1558089144.5448372.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/Simulation_Output_1558174738.011084.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/Simulation_Output_1558089769.411642.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/Simulation_Output_1558089144.544827.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/1,000 Nodes/Stale_Percentage1557862769.636728.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/1,000 Nodes/Stale_Percentage1557937445.5513752.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/1,000 Nodes/Stale_Percentage1557940069.2436008.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Bitcoin Runs/1,000 Nodes/Simulation_Output_1557862769.636719.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Ethereum Runs/1,000 Nodes/Simulation_Output_1558045810.1821172.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="23" lean-forward="false" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Ethereum Runs/10,000 Nodes/Size_Averages1558048854.6992471.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Ethereum Runs/10,000 Nodes/Simulation_Output_1558077345.050658.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Ethereum Runs/10,000 Nodes/Simulation_Output_1558048854.69924.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="21" lean-forward="true" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Simulator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5790">
-          <caret line="386" column="62" lean-forward="false" selection-start-line="386" selection-start-column="62" selection-end-line="386" selection-end-column="62" />
-          <folding />
+        <state relative-caret-position="4275">
+          <caret line="392" column="4" lean-forward="false" selection-start-line="392" selection-start-column="4" selection-end-line="392" selection-end-column="4" />
+          <folding>
+            <element signature="e#1448#4327#0" expanded="false" />
+            <element signature="e#5687#5849#0" expanded="false" />
+            <element signature="e#9270#10000#0" expanded="false" />
+            <element signature="e#10048#11650#0" expanded="false" />
+            <element signature="e#11690#11884#0" expanded="false" />
+            <element signature="e#13803#14110#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

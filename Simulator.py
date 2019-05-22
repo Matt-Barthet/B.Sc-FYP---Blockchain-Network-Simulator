@@ -6,21 +6,30 @@ The process count refers to the number of nodes/miners in the system.
 Connection count refers to the number of automaton assigned to each connection to schedule block arrivals.
 """
 process_count = 1000
-connection_count = 5
-block_interval  = 1
+connection_count = 3
+block_interval  = 5
 transaction_count = [1650, 1300, 2000]
 transaction_size = [0.64, 0.41, 0.75]
-connection_speed = (8.7/600)
+connection_speed = (8.7/(600/block_interval))
 genesis = Block()
 
-filename = "./Bitcoin Runs/1,000 Nodes/Simulation_Output_" + str(time.time()) + ".txt"
-transit_file = "./Bitcoin Runs/1,000 Nodes/Transit_Values_" + str(time.time()) + ".txt"
-block_file = "./Bitcoin Runs/1,000 Nodes/Size_Averages" + str(time.time()) + ".txt"
-interval_file = "./Bitcoin Runs/1,000 Nodes/Interval_Averages" + str(time.time()) + ".txt"
-stale_file = "./Bitcoin Runs/1,000 Nodes/Stale_Percentage" + str(time.time()) + ".txt"
+"""
+Various filenames for file output.
+"""
+filename = "./Bitcoin Runs/Simulation_Output_" + str(time.time()) + ".txt"
+transit_file = "./Bitcoin Runs/Transit_Values_" + str(time.time()) + ".txt"
+block_file = "./Bitcoin Runs/Size_Averages" + str(time.time()) + ".txt"
+interval_file = "./Bitcoin Runs/Interval_Averages" + str(time.time()) + ".txt"
+b_interval_file = "./Bitcoin Runs/Legit_Interval_Averages" + str(time.time()) + ".txt"
+stale_file = "./Bitcoin Runs/Stale_Percentage" + str(time.time()) + ".txt"
 
+"""
+Establishing indicator arrays that are used to extract averages.
+"""
 intervals = []
 interval_averages = []
+b_intervals = []
+b_interval_averages = []
 transits = []
 transit_averages = []
 sizes = []
@@ -103,13 +112,6 @@ class Process(Pyc.CComponent):
         printBlockDetails(block, filename)
         self.blockIndicator(block, sizes)
 
-    def blockIndicator(self, block, sizes):
-        sizes.append(block.size)
-        if len(sizes) % 10 == 0:
-            size_averages.append(np.mean(sizes))
-            print(size_averages[-1], file=open(block_file, "at"))
-            sizes.clear()
-
     def newPendingBlock(self):
         new_pending = self.blocktree.blocks[self.r_appendedBlock.value(0)]
         self.pendingBlocks.append(new_pending)
@@ -118,9 +120,9 @@ class Process(Pyc.CComponent):
                 connection.currentBlock = new_pending
                 connection.currentTransitTime = np.random.exponential(self.v_connectionSpeed.value())
                 transits.append(connection.currentTransitTime)
-                print(connection.currentTransitTime, file=open(transit_file, "at"))
+                self.transitIndicator()
                 return
-        print("The connections for process", self.v_address.value() ,"are full!\n")
+        #print("The connections for process", self.v_address.value() ,"are full!\n")
         self.idleQueue.append(new_pending)
 
     def receiveBlock(self, block):
@@ -128,6 +130,23 @@ class Process(Pyc.CComponent):
             self.leadingBlock = block
         self.knownBlocks.append(block)
         self.pendingBlocks.remove(block)
+
+    def blockIndicator(self, block, sizes):
+        sizes.append(block.size)
+        b_intervals.append(block.timestamp - block.father.timestamp)
+        if len(sizes) % 10 == 0:
+            size_averages.append(np.mean(sizes))
+            b_interval_averages.append(np.mean(b_intervals))
+            print(size_averages[-1], file=open(block_file, "at"))
+            print(b_interval_averages[-1], file=open(b_interval_file, "at"))
+            sizes.clear()
+            b_intervals.clear()
+
+    def transitIndicator(self):
+        if len(transits) == process_count * 10:
+            transit_averages.append(np.mean(transits))
+            print(transit_averages[-1], file=open(transit_file, "at"))
+            transits.clear()
 
     def workingCondition(self):
         if self.r_appendedBlock.value(0) != self.v_lastBlock.value():
@@ -170,6 +189,7 @@ class ProcessConnection(Pyc.CComponent):
         self.arrivedToIdle.addSensitiveMethod("Receive Block", self.receiveBlock)
 
     def receiveBlock(self):
+        #print((time.time()- self.currentBlock.timestamp) - self.currentTransitTime)
         if self.currentBlock.father in self.parent.knownBlocks:
             self.parent.receiveBlock(self.currentBlock)
             if len(self.parent.idleQueue) > 0:
@@ -202,8 +222,6 @@ class Blocktree(Pyc.CComponent):
 
         self.addMessageBox("System Oracle")
         self.addMessageBoxImport("System Oracle", self.r_selection, "Token Holder")
-
-        self.r_lastBlock.addSensitiveMethod("Update Blocktree", self.updateBlocktree)
 
     def updateBlocktree(self, block):
         lastBlock = list(self.blocks.values())[-1]
@@ -337,7 +355,6 @@ class Simulator(Pyc.CSystem):
         self.oracle.addProcesses(self.processes)
         self.blocktree.processes = self.processes
 
-
     '''
     Functions to compute the values of the three indicators specified below:
     '''
@@ -373,6 +390,7 @@ if __name__ == '__main__':
     simulator = Simulator("Simulator")
     simulator.loadParameters("Simulator.xml")
     simulator.addInstants(0, simulator.tMax(), 60)
+
     """
     Defining the system indicators used to quantify the performance of the model.
     1) Consensus Probability - The probability that all miners agree on the absolute blockchain
@@ -392,10 +410,6 @@ if __name__ == '__main__':
     """
     printLine("Bitcoin Simulation Run:\n", filename)
     startTime = time.time()
-
-    if simulator.MPIRank() > 0:
-        exit(0)
-
     simulator.simulate()
     endTime = time.time()
     timeTaken = endTime - startTime
@@ -404,27 +418,18 @@ if __name__ == '__main__':
     meanConsistency = list(consistencyRate.means())[0]
     meanDelay = list(worstDelay.means())[0]
 
-    '''printLine(str(round(meanConsensus,3)), filename)
-    printLine(str(round(meanConsistency, 3)), filename)
-    printLine(str(round(meanDelay, 3)), filename)
-    printLine(str(round(staleBlocks / len(simulator.blocktree.blocks.values()), 3)), filename)
-
-    print("Time taken: " + str(round(timeTaken, 3)) + " seconds.\n")'''
-
     printLine("Time taken: " + str(round(timeTaken, 3)) + " seconds.\n", filename)
     printLine("Network Parameters:", filename)
     printLine("Number of Nodes: " + str(process_count), filename)
     printLine("Number of Connections/Node: " + str(connection_count), filename)
     printLine("Block Interval: " + str(np.mean(interval_averages)), filename)
-    printLine("Block Transit: " + str(np.mean(transits)), filename)
+    printLine("Block Transit: " + str(np.mean(transit_averages)), filename)
 
     printLine("\nIndicators:",filename)
     printLine("Mean Consensus Probability: " + str(round(meanConsensus,3)),filename)
     printLine("Mean Consistency: " + str(round(meanConsistency, 3)),filename)
     printLine("Worst Process Delay: " + str(round(meanDelay, 3)), filename)
     printLine("Block Size: " +  str(np.mean(size_averages)) + "KB", filename)
-    printLine("Transaction Size: " + str(round(blockSize[2], 3)) + "KB", filename)
-    printLine("Transaction Count: " + str(round(blockSize[1], 3)) , filename)
 
     printLine("\nBlock Statistics:",filename)
     printLine("Total # of Blocks: " + str(len(simulator.blocktree.blocks.values()) + len(simulator.blocktree.discarded_blocks)), filename)
