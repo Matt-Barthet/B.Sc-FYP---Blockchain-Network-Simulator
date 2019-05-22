@@ -1,17 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f794acc1-f886-4bad-9df4-0e95e651fae4" name="Default" comment="">
+    <list default="true" id="f794acc1-f886-4bad-9df4-0e95e651fae4" name="Default" comment="Added beginning of second version of the simulator:&#10;Began modelling p2p connections between nodes and">
       <change beforePath="" afterPath="$PROJECT_DIR$/Simulator_V2.py" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Bitcoin Runs/100 Nodes/Interval_Averages1557755263.632376.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Bitcoin Runs/100 Nodes/Simulation_Output_1557755263.6323671.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Bitcoin Runs/100 Nodes/Size_Averages1557755263.632375.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Bitcoin Runs/100 Nodes/Stale_Percentage1557755263.6323771.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Bitcoin Runs/100 Nodes/Transit_Values_1557755263.632373.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Simulator copy.py" afterPath="$PROJECT_DIR$/Simulator copy.py" />
-      <change beforePath="$PROJECT_DIR$/Simulator.py" afterPath="$PROJECT_DIR$/Simulator.py" />
-      <change beforePath="$PROJECT_DIR$/Simulator.xml" afterPath="$PROJECT_DIR$/Simulator.xml" />
+      <change beforePath="$PROJECT_DIR$/Simulator copy.py" afterPath="$PROJECT_DIR$/Simulator_V2.py" />
       <change beforePath="$PROJECT_DIR$/Simulator_Utility.py" afterPath="$PROJECT_DIR$/Simulator_Utility.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -67,7 +60,7 @@
         <entry file="file://$PROJECT_DIR$/Simulator.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="4275">
-              <caret line="392" column="4" lean-forward="false" selection-start-line="392" selection-start-column="4" selection-end-line="392" selection-end-column="4" />
+              <caret line="392" column="0" lean-forward="false" selection-start-line="392" selection-start-column="0" selection-end-line="392" selection-end-column="0" />
               <folding>
                 <element signature="e#1448#4327#0" expanded="false" />
                 <element signature="e#5687#5849#0" expanded="false" />
@@ -585,7 +578,14 @@
       <option name="project" value="LOCAL" />
       <updated>1557764867299</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Clean up and organisation for final submission.&#10;Added all output files for simulation runs.">
+      <created>1558515290508</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1558515290508</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TodoView">
@@ -599,9 +599,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="822" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329105" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329105" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.20101011" sideWeight="0.5021008" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4373178" sideWeight="0.49789914" order="2" side_tool="false" content_ui="tabs" />
@@ -689,7 +688,8 @@
     <MESSAGE value="Attempting to commit text files" />
     <MESSAGE value="Added Output Files and Utility File" />
     <MESSAGE value="Modified queuing system for new pending blocks in a process&#10;Modified output to separate data into distinct files&#10;Added more Indicators that evolve over simulation time instead of at the end." />
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="Clean up and organisation for final submission.&#10;Added all output files for simulation runs." />
+    <option name="LAST_COMMIT_MESSAGE" value="Clean up and organisation for final submission.&#10;Added all output files for simulation runs." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -946,7 +946,7 @@
     <entry file="file://$PROJECT_DIR$/Simulator.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4275">
-          <caret line="392" column="4" lean-forward="false" selection-start-line="392" selection-start-column="4" selection-end-line="392" selection-end-column="4" />
+          <caret line="392" column="0" lean-forward="false" selection-start-line="392" selection-start-column="0" selection-end-line="392" selection-end-column="0" />
           <folding>
             <element signature="e#1448#4327#0" expanded="false" />
             <element signature="e#5687#5849#0" expanded="false" />
